@@ -1,6 +1,8 @@
 import bookProfitFirst from "@/assets/book-profit-first.jpg";
 import bookEmyth from "@/assets/book-emyth.jpg";
 import bookEssentialism from "@/assets/book-essentialism.jpg";
+import bookReceitaPrevisivel from "@/assets/book-receita-previsivel.jpg";
+import bookVendaDesafiadora from "@/assets/book-venda-desafiadora.jpg";
 
 const books = [
   {
@@ -22,7 +24,21 @@ const books = [
     title: "Essencialismo",
     description:
       "Domine a arte de focar nos 20% de atividades que geram 80% dos resultados, eliminando a sobrecarga e o caos do dia a dia.",
-    tool: "+ Matriz de Eisenhower Simplificada para MEIs",
+    tool: "+ Matriz de Eisenhower Simplificada para Empreendedores",
+  },
+  {
+    image: bookReceitaPrevisivel,
+    title: "Receita Previsível",
+    description:
+      "Aprenda a criar um processo de vendas escalável e previsível, transformando seu negócio em uma máquina de geração de receita constante.",
+    tool: "+ Template 'Pipeline de Vendas Simplificado'",
+  },
+  {
+    image: bookVendaDesafiadora,
+    title: "A Venda Desafiadora",
+    description:
+      "Descubra como os melhores vendedores desafiam seus clientes com insights valiosos, ensinando-os a pensar de forma diferente sobre seus problemas.",
+    tool: "+ Script 'Abordagem Desafiadora em 3 Passos'",
   },
 ];
 
@@ -31,7 +47,7 @@ const BooksSection = () => {
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-16 text-foreground">
-          Um MBA para MEIs, entregue em seu e-mail em{" "}
+          Um MBA para Empreendedores, entregue em seu e-mail em{" "}
           <span className="text-primary">5 minutos</span>.
         </h2>
 

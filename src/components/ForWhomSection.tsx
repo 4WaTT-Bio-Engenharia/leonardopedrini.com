@@ -1,7 +1,7 @@
 import { Check, X } from "lucide-react";
 
 const forYou = [
-  "...você é MEI, autônomo ou dono de um pequeno negócio.",
+  "...você é empreendedor, autônomo ou dono de um pequeno negócio.",
   "...você se sente sobrecarregado e sem tempo.",
   "...você quer organizar suas finanças e ter mais lucro.",
   "...você está pronto para aplicar um método simples e comprovado.",
