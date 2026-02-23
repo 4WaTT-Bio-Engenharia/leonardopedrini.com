@@ -17,7 +17,7 @@ const AboutSection = () => {
             <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-foreground">
               De projetos de{" "}
               <span className="text-primary">R$ 5 bilhões</span> para a
-              realidade do seu MEI.
+              realidade do seu negócio.
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg">
               Meu nome é Leonardo Pedrini. Sou engenheiro, empreendedor e
