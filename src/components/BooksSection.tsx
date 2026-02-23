@@ -3,6 +3,7 @@ import bookEmyth from "@/assets/book-emyth.jpg";
 import bookEssentialism from "@/assets/book-essentialism.jpg";
 import bookReceitaPrevisivel from "@/assets/book-receita-previsivel.jpg";
 import bookVendaDesafiadora from "@/assets/book-venda-desafiadora.jpg";
+import bookAMeta from "@/assets/book-a-meta.jpg";
 
 const books = [
   {
@@ -39,6 +40,13 @@ const books = [
     description:
       "Descubra como os melhores vendedores desafiam seus clientes com insights valiosos, ensinando-os a pensar de forma diferente sobre seus problemas.",
     tool: "+ Script 'Abordagem Desafiadora em 3 Passos'",
+  },
+  {
+    image: bookAMeta,
+    title: "A Meta",
+    description:
+      "Entenda a Teoria das Restrições e aprenda a identificar e eliminar os gargalos que impedem seu negócio de crescer e gerar mais resultados.",
+    tool: "+ Diagrama 'Encontre Seu Gargalo em 10 Minutos'",
   },
 ];
 
