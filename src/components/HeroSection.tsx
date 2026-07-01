@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   const scrollToForm = () => {
@@ -6,32 +7,66 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      <div className="absolute inset-0 bg-background/75" />
-      
-      <div className="relative z-10 container mx-auto px-6 py-20 text-center max-w-4xl">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-foreground">
-          A Biblioteca Essencial do Empreendedor:{" "}
-          <span className="text-primary">5 Livros que Valem um MBA</span> e as
-          Ferramentas para Aplicá-los Hoje.
-        </h1>
+      <div className="absolute inset-0 bg-gradient-hero" />
+      <div className="absolute inset-0 bg-background/40" />
 
-        <h2 className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-3xl mx-auto">
-          Receba de graça os resumos executivos dos 5 livros que me ajudaram a
-          construir um ecossistema de R$ 5 bilhões, junto com planilhas e
-          templates prontos para você usar no seu negócio hoje.
-        </h2>
+      <div className="relative z-10 container mx-auto px-6 py-24 md:py-32">
+        <div className="max-w-3xl animate-fade-up">
+          <div className="inline-flex items-center gap-3 mb-8 text-xs uppercase tracking-[0.25em] text-primary font-medium">
+            <span className="h-px w-8 bg-primary" />
+            Consultoria Estratégica Executiva
+          </div>
 
-        <button
-          onClick={scrollToForm}
-          className="inline-block bg-primary text-primary-foreground font-bold text-lg px-10 py-5 rounded-lg animate-glow-pulse hover:scale-105 transition-transform duration-300 cursor-pointer"
-        >
-          QUERO MINHA BIBLIOTECA GRATUITA
-        </button>
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.05] text-foreground mb-8">
+            Seu negócio não precisa trabalhar mais.{" "}
+            <span className="italic text-gradient-gold">
+              Precisa crescer com estratégia.
+            </span>
+          </h1>
+
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
+            Planejamento estratégico, comercial e financeiro para empresários
+            que querem <span className="text-foreground font-medium">triplicar o faturamento em até 18 meses</span> utilizando IA e
+            gestão orientada por dados.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <button
+              onClick={scrollToForm}
+              className="group inline-flex items-center gap-3 bg-primary text-primary-foreground font-semibold text-base px-8 py-4 rounded-md shadow-gold hover:shadow-[0_15px_50px_-10px_hsl(40_55%_45%/0.5)] hover:-translate-y-0.5 transition-all duration-300"
+            >
+              Agendar Diagnóstico Gratuito
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+
+            <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              <div className="flex -space-x-2">
+                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              </div>
+              Sessão executiva de 60 minutos · Sem custo
+            </div>
+          </div>
+
+          <div className="mt-16 pt-8 border-t border-border/40 grid grid-cols-3 gap-6 max-w-2xl">
+            <div>
+              <div className="font-display text-3xl md:text-4xl text-primary font-medium">3x</div>
+              <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Faturamento em 18 meses</div>
+            </div>
+            <div>
+              <div className="font-display text-3xl md:text-4xl text-primary font-medium">R$ 5bi</div>
+              <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Em projetos operados</div>
+            </div>
+            <div>
+              <div className="font-display text-3xl md:text-4xl text-primary font-medium">3</div>
+              <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Empresas fundadas</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
