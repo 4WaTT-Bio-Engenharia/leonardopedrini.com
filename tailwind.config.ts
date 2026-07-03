@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Manrope", "system-ui", "sans-serif"],
-        display: ["Fraunces", "Times New Roman", "serif"],
+        sans: ["Inter", "SF Pro Text", "system-ui", "sans-serif"],
+        display: ["Montserrat", "SF Pro Display", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -74,6 +74,7 @@ export default {
       },
       boxShadow: {
         premium: "var(--shadow-premium)",
+        soft: "var(--shadow-soft)",
         gold: "var(--shadow-gold)",
       },
       keyframes: {
