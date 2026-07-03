@@ -1,5 +1,6 @@
 import heroBg from "@/assets/hero-bg.jpg";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const scrollToForm = () => {
@@ -38,18 +39,18 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
             <button
               onClick={scrollToForm}
-              className="group inline-flex items-center gap-3 bg-primary text-primary-foreground font-semibold text-base px-8 py-4 rounded-md shadow-gold hover:shadow-[0_15px_50px_-10px_hsl(40_55%_45%/0.5)] hover:-translate-y-0.5 transition-all duration-300"
+              className="group inline-flex items-center gap-3 bg-primary text-primary-foreground font-semibold text-base px-8 py-4 rounded-full shadow-gold hover:shadow-[0_15px_50px_-10px_hsl(40_55%_45%/0.5)] hover:-translate-y-0.5 transition-all duration-300"
             >
               Agendar Diagnóstico Gratuito
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
 
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <div className="flex -space-x-2">
-                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              </div>
-              Sessão executiva de 60 minutos · Sem custo
-            </div>
+            <Link
+              to="/comunidade"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-4 decoration-primary/40"
+            >
+              Ou entre na Comunidade · R$ 19,90/mês
+            </Link>
           </div>
 
           <div className="mt-16 pt-8 border-t border-border/40 grid grid-cols-3 gap-6 max-w-2xl">
