@@ -1,25 +1,30 @@
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 const Navbar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const scrollTo = (id: string) => {
+    if (location.pathname !== "/") {
+      navigate("/#" + id);
+      setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 100);
+      return;
+    }
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-background/70 border-b border-border/60">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border/40">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="font-display text-xl font-semibold tracking-tight">
-            <span className="text-primary">LP</span>
-            <span className="text-foreground/60 mx-1.5">·</span>
-            <span className="text-foreground">Pedrini</span>
-          </div>
-        </div>
+        <Link to="/" className="font-display text-xl tracking-tight">
+          <span className="text-primary">LP</span>
+          <span className="text-foreground/50 mx-1.5">·</span>
+          <span className="text-foreground">Pedrini</span>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <button onClick={() => scrollTo("autoridade")} className="hover:text-foreground transition-colors">
             Autoridade
-          </button>
-          <button onClick={() => scrollTo("problemas")} className="hover:text-foreground transition-colors">
-            Diagnóstico
           </button>
           <button onClick={() => scrollTo("metodo")} className="hover:text-foreground transition-colors">
             Método
@@ -27,11 +32,14 @@ const Navbar = () => {
           <button onClick={() => scrollTo("sobre")} className="hover:text-foreground transition-colors">
             Sobre
           </button>
+          <Link to="/comunidade" className="hover:text-foreground transition-colors">
+            Comunidade
+          </Link>
         </nav>
 
         <button
           onClick={() => scrollTo("lead-form")}
-          className="hidden sm:inline-flex items-center gap-2 text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:bg-primary/90 transition-colors"
+          className="hidden sm:inline-flex items-center gap-2 text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-full hover:bg-primary/90 transition-colors"
         >
           Diagnóstico Gratuito
         </button>
