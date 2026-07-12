@@ -19,29 +19,21 @@ const Navbar = () => {
         <Link to="/" className="font-display text-xl tracking-tight">
           <span className="text-primary">LP</span>
           <span className="text-foreground/50 mx-1.5">·</span>
-          <span className="text-foreground">Pedrini</span>
+          <span className="text-foreground">Traciona</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-          <button onClick={() => scrollTo("autoridade")} className="hover:text-foreground transition-colors">
-            Autoridade
-          </button>
-          <button onClick={() => scrollTo("metodo")} className="hover:text-foreground transition-colors">
-            Método
-          </button>
-          <button onClick={() => scrollTo("sobre")} className="hover:text-foreground transition-colors">
-            Sobre
-          </button>
-          <Link to="/comunidade" className="hover:text-foreground transition-colors">
-            Comunidade
-          </Link>
+          <button onClick={() => scrollTo("dores")} className="hover:text-foreground transition-colors">Dores</button>
+          <button onClick={() => scrollTo("sprint")} className="hover:text-foreground transition-colors">A Sprint</button>
+          <button onClick={() => scrollTo("como-funciona")} className="hover:text-foreground transition-colors">Como funciona</button>
+          <button onClick={() => scrollTo("faq")} className="hover:text-foreground transition-colors">FAQ</button>
         </nav>
 
         <button
           onClick={() => scrollTo("lead-form")}
           className="hidden sm:inline-flex items-center gap-2 text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-full hover:bg-primary/90 transition-colors"
         >
-          Diagnóstico Gratuito
+          Quero meu diagnóstico
         </button>
       </div>
     </header>
