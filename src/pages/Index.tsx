@@ -1,10 +1,14 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import AuthoritySection from "@/components/AuthoritySection";
-import ProblemsSection from "@/components/ProblemsSection";
-import MethodSection from "@/components/MethodSection";
+import PainPointsSection from "@/components/PainPointsSection";
+import ForWhomSection from "@/components/ForWhomSection";
+import SprintOfferSection from "@/components/SprintOfferSection";
+import DeliverablesSection from "@/components/DeliverablesSection";
+import TransformationSection from "@/components/TransformationSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
 import DifferentialSection from "@/components/DifferentialSection";
-import AboutSection from "@/components/AboutSection";
+import AuthoritySection from "@/components/AuthoritySection";
+import FaqSection from "@/components/FaqSection";
 import LeadForm from "@/components/LeadForm";
 import Footer from "@/components/Footer";
 
@@ -14,11 +18,15 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <AuthoritySection />
-        <ProblemsSection />
-        <MethodSection />
+        <PainPointsSection />
+        <ForWhomSection />
+        <SprintOfferSection />
+        <DeliverablesSection />
+        <TransformationSection />
+        <HowItWorksSection />
         <DifferentialSection />
-        <AboutSection />
+        <AuthoritySection />
+        <FaqSection />
         <LeadForm />
       </main>
       <Footer />
