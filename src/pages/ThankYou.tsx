@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const ThankYou = () => {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-6 py-16">
+      <SEO
+        title="Aplicação recebida"
+        description="Sua aplicação foi recebida e está em análise. Retorno em até 48h úteis."
+        path="/obrigado"
+        noindex
+      />
       <div className="text-center max-w-2xl">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 border border-primary/30 mb-8">
           <CheckCircle2 className="w-8 h-8 text-primary" />

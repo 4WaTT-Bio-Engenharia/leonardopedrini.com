@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /obrigado
+
+Sitemap: https://www.lvpedrini.com.br/sitemap.xml
