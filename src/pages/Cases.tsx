@@ -68,6 +68,9 @@ const Cases = () => (
       </div>
     </section>
 
+    {/* Faixa de logos */}
+    <LogoStrip label="Empresas e operações onde o método foi aplicado" />
+
     {/* Empresas próprias */}
     <section className="border-b border-border">
       <div className="container py-28 md:py-36">
@@ -75,55 +78,39 @@ const Cases = () => (
           <SectionHeading
             eyebrow="Onde o método nasceu"
             title="O que está rodando nas minhas próprias empresas"
-            description="Aplico na 4WaTT e na 4W Energia o mesmo padrão que implanto em clientes: processo desenhado, sistema em produção, operação medida."
+            description="Aplico na 4WaTT, na 4W Energia e na Traciona AI o mesmo padrão que implanto em clientes: processo desenhado, sistema em produção, operação medida."
           />
         </Reveal>
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {casesProprios.map((c, i) => (
             <Reveal key={c.id} delay={i * 140} className="h-full">
-              <article
-                className="card-lux h-full p-9 md:p-11"
-                onClick={() => trackEvent("case_view", { case_id: c.id, sector: c.sector })}
-              >
-                <div className="flex items-center justify-between gap-4">
-                  <span className="eyebrow text-medicao">{c.tag}</span>
-                </div>
-                <h3 className="mt-5 font-display text-3xl font-bold tracking-[-0.015em] text-foreground">{c.title}</h3>
-                <div className="mt-2 font-mono text-xs text-muted-foreground">{c.sector}</div>
-                <p className="mt-6 text-base leading-relaxed text-muted-foreground">{c.text}</p>
-              </article>
+              <CaseCard item={c} />
             </Reveal>
           ))}
         </div>
       </div>
     </section>
 
-    {/* Cases em documentação */}
+    {/* Projetos em clientes */}
     <section className="border-b border-border bg-secondary/50">
       <div className="container py-28 md:py-36">
         <Reveal>
           <SectionHeading
-            eyebrow="Em documentação"
-            title="Cases de clientes em processo de autorização e auditoria"
-            description="Anonimizados por setor até que os números possam ser publicados com evidência. Sem nome, sem número não validado."
+            eyebrow="Projetos executados"
+            title="Onde apliquei o método fora de casa"
+            description="Escopo do trabalho executado em operações de terceiros — jurídico em setores regulados e indústria. Números auditados são publicados apenas com evidência e autorização."
           />
         </Reveal>
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
-          {casesDocumentacao.map((c, i) => (
+        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {casesClientes.map((c, i) => (
             <Reveal key={c.id} delay={i * 140} className="h-full">
-              <article
-                className="h-full rounded-lg border border-dashed border-border bg-card p-9 transition-colors duration-500 ease-luxury hover:border-cobre/40 md:p-11"
-                onClick={() => trackEvent("case_view", { case_id: c.id, sector: "anonimizado" })}
-              >
-                <span className="eyebrow text-aco-dark">{c.tag}</span>
-                <h3 className="mt-5 font-display text-2xl font-bold tracking-[-0.015em] text-foreground">{c.title}</h3>
-                <p className="mt-6 text-base leading-relaxed text-muted-foreground">{c.text}</p>
-              </article>
+              <CaseCard item={c} />
             </Reveal>
           ))}
         </div>
       </div>
     </section>
+
 
     {/* Nota de integridade */}
     <section className="border-b border-border">
