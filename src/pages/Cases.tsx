@@ -2,41 +2,15 @@ import PageLayout from "@/components/layout/PageLayout";
 import SectionHeading from "@/components/conversion/SectionHeading";
 import CTASection from "@/components/conversion/CTASection";
 import Reveal from "@/components/motion/Reveal";
-import { trackEvent } from "@/lib/analytics";
+import LogoStrip from "@/components/sections/LogoStrip";
+import CaseCard from "@/components/sections/CaseCard";
+import { cases } from "@/data/cases";
 
-const casesProprios = [
-  {
-    id: "4watt",
-    tag: "Empresa própria · verificado",
-    title: "4WaTT Bio Engenharia",
-    sector: "Bioenergia / engenharia",
-    text: "Deeptech que projeta e constrói usinas que transformam resíduos em energia, com engenharia, automação e tecnologia proprietárias. É onde o padrão de processo desenhado e operação medida foi forjado — antes de virar método para clientes.",
-  },
-  {
-    id: "4w-energia",
-    tag: "Empresa própria · verificado",
-    title: "4W Energia",
-    sector: "Energia renovável por assinatura",
-    text: "Cooperativa de energia 100% renovável por assinatura, com software próprio e operação regulada (Lei 14.300/22). Aplico nela o mesmo padrão que implanto em clientes: processo desenhado, sistema em produção, operação medida. Números internos serão publicados com metodologia e auditoria.",
-  },
-];
-
-const casesDocumentacao = [
-  {
-    id: "juridico",
-    tag: "Case em documentação",
-    title: "Escritório de advocacia — setor elétrico",
-    text: "Boutique jurídica com processos repetitivos de análise e elaboração de documentos. Projeto em estrutura C-A-R-G-A, em processo de autorização do cliente e auditoria de números. Publicação prevista com baseline, resultado em horas e R$, e evidência.",
-  },
-  {
-    id: "servicos",
-    tag: "Case em documentação",
-    title: "Empresa de serviços — atendimento e backoffice",
-    text: "Operação de serviços com alto volume de atendimento e rotinas administrativas manuais. Mesma estrutura: contexto, mapa do processo, blueprint, piloto, governança e resultado medido. Publicamos quando houver autorização e números auditados.",
-  },
-];
+const casesProprios = cases.filter((c) => c.owned);
+const casesClientes = cases.filter((c) => !c.owned);
 
 const estruturaCase = ["Contexto", "Mapa do processo", "Blueprint", "Piloto", "Governança", "Resultado medido"];
+
 
 const Cases = () => (
   <PageLayout
