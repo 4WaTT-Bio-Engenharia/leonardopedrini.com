@@ -230,6 +230,11 @@ const Index = () => (
       </div>
     </div>
 
+    {/* Faixa de logos — onde o método foi aplicado */}
+    <LogoStrip />
+
+
+
     {/* 2 — Credibilidade (empresas fundadas) */}
     <section className="border-b border-border">
       <div className="container py-28 md:py-36">
