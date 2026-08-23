@@ -409,39 +409,17 @@ const Index = () => (
       <div className="container py-28 md:py-36">
         <Reveal>
           <SectionHeading
-            eyebrow="Cases"
-            title="Trabalho executado, medido em horas e em reais"
+            eyebrow="Cases de sucesso"
+            title="Trabalho executado em deeptech, energia, jurídico e indústria"
+            description="Planejamento estratégico, sistemas RAG, data science e automação aplicados dentro de operações reais — nas minhas empresas e em clientes."
           />
         </Reveal>
-        <div className="mt-16 grid gap-8 md:grid-cols-2">
-          <Reveal>
-            <article className="card-lux h-full p-9 md:p-11">
-              <div className="eyebrow text-cobre-dark">
-                Nas minhas próprias empresas
-              </div>
-              <h3 className="mt-5 font-display text-2xl font-bold tracking-[-0.015em] text-foreground">
-                O que está rodando na 4WaTT e na 4W Energia
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Aplico nas minhas empresas o mesmo padrão que implanto em clientes: processo desenhado,
-                sistema em produção, operação medida.
-              </p>
-            </article>
-          </Reveal>
-          <Reveal delay={140}>
-            <article className="h-full rounded-lg border border-dashed border-border bg-secondary/40 p-9 transition-colors duration-500 ease-luxury hover:border-cobre/40 md:p-11">
-              <div className="eyebrow text-aco-dark">
-                Cases em documentação
-              </div>
-              <h3 className="mt-5 font-display text-2xl font-bold tracking-[-0.015em] text-foreground">
-                Setores jurídico e de serviços
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Projetos em clientes em processo de autorização e auditoria de números. Publicamos só o
-                que podemos provar.
-              </p>
-            </article>
-          </Reveal>
+        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {cases.map((c, i) => (
+            <Reveal key={c.id} delay={i * 100} className="h-full">
+              <CaseCard item={c} />
+            </Reveal>
+          ))}
         </div>
         <Reveal delay={220}>
           <div className="mt-14">
@@ -452,6 +430,7 @@ const Index = () => (
         </Reveal>
       </div>
     </section>
+
 
     {/* 7 — Soluções (value ladder) — navy, o catálogo de luxo */}
     <section className="relative overflow-hidden border-b border-grafite-500/30 bg-gradient-navy text-papel">
