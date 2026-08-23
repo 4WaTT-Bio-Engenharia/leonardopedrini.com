@@ -5,7 +5,11 @@ import SectionHeading from "@/components/conversion/SectionHeading";
 import CTAButton from "@/components/conversion/CTAButton";
 import CTASection from "@/components/conversion/CTASection";
 import NewsletterSection from "@/components/sections/NewsletterSection";
+import LogoStrip from "@/components/sections/LogoStrip";
+import CaseCard from "@/components/sections/CaseCard";
+import { cases } from "@/data/cases";
 import Reveal from "@/components/motion/Reveal";
+
 import { trackEvent } from "@/lib/analytics";
 import { SITE_URL } from "@/components/SEO";
 import leonardoAbout from "@/assets/leonardo-about.jpg";
