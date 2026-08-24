@@ -24,6 +24,7 @@ const Contato = lazy(() => import("./pages/Contato"));
 const Privacidade = lazy(() => import("./pages/Privacidade"));
 const Termos = lazy(() => import("./pages/Termos"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
+const LinkBio = lazy(() => import("./pages/LinkBio"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const LPCurso = lazy(() => import("./pages/lp/LPCurso"));
