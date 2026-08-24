@@ -81,6 +81,7 @@ const App = () => (
             <Route path="/lp/empresas" element={<LPEmpresas />} />
             <Route path="/lp/diagnostico" element={<LPDiagnostico />} />
             <Route path="/obrigado" element={<ThankYou />} />
+            <Route path="/link-bio" element={<LinkBio />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
