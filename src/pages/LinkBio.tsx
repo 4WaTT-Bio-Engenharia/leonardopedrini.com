@@ -1,9 +1,7 @@
 import SEO from "@/components/SEO";
 import { trackEvent } from "@/lib/analytics";
 import { Globe, Linkedin, Users } from "lucide-react";
-import authorPhotoAsset from "@/assets/leonardo-rosto-linkbio.png.asset.json";
-
-const authorPhoto = authorPhotoAsset.url;
+import authorPhoto from "@/assets/leonardo-rosto-linkbio.png";
 
 const links = [
   {
