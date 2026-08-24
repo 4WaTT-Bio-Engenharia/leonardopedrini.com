@@ -98,15 +98,12 @@ const LinkBio = () => {
             const Icon = l.icon;
             const delay = rise(i + 4);
             const cls =
-              "group relative flex w-full items-center gap-4 overflow-hidden rounded-xl border border-papel/12 bg-papel/[0.05] px-5 py-4 text-left backdrop-blur-sm transition-all duration-300 ease-luxury hover:-translate-y-0.5 hover:border-cobre/55 hover:bg-papel/[0.09] active:translate-y-1 active:shadow-[0_1px_0_0_hsl(41_35%_44%)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cobre/50 motion-reduce:animate-none";
-            const base3D =
-              "absolute inset-x-0 bottom-0 h-[5px] bg-cobre-dark/70 rounded-b-xl shadow-[0_5px_0_0_hsl(41_35%_44%)] transition-all duration-300 ease-luxury group-hover:shadow-[0_6px_0_0_hsl(41_49%_59%)] group-active:shadow-[0_1px_0_0_hsl(41_35%_44%)]";
+              "group relative flex w-full items-center gap-4 overflow-hidden rounded-xl border border-papel/12 bg-papel/[0.05] px-5 py-4 pb-5 text-left backdrop-blur-sm shadow-[0_5px_0_0_hsl(41_35%_44%)] transition-all duration-300 ease-luxury hover:-translate-y-0.5 hover:border-cobre/55 hover:bg-papel/[0.09] hover:shadow-[0_7px_0_0_hsl(41_49%_59%)] active:translate-y-1 active:shadow-[0_1px_0_0_hsl(41_35%_44%)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cobre/50 motion-reduce:animate-none";
             const highlight =
-              "pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/[0.08] to-transparent";
+              "pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/[0.10] to-transparent";
             const inner = (
               <>
                 <span className={highlight} aria-hidden />
-                <span className={base3D} aria-hidden />
                 <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-cobre/30 bg-cobre/10 text-cobre-light transition-colors duration-300 group-hover:bg-cobre/20">
                   <Icon className="h-5 w-5" />
                 </span>
