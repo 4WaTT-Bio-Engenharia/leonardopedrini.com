@@ -96,9 +96,9 @@ const LinkBio = () => {
             const Icon = l.icon;
             const delay = rise(i + 4);
             const cls =
-              "group relative flex w-full items-center gap-4 overflow-hidden rounded-xl border border-papel/12 bg-papel/[0.05] px-5 py-4 pb-5 text-left backdrop-blur-sm shadow-[0_5px_0_0_hsl(41_35%_44%)] transition-all duration-300 ease-luxury hover:-translate-y-0.5 hover:border-cobre/55 hover:bg-papel/[0.09] hover:shadow-[0_7px_0_0_hsl(41_49%_59%)] active:translate-y-1 active:shadow-[0_1px_0_0_hsl(41_35%_44%)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cobre/50 motion-reduce:animate-none";
+              "group relative flex w-full items-center gap-4 rounded-xl border border-papel/12 bg-papel/[0.05] px-5 py-4 pb-5 text-left backdrop-blur-sm shadow-[0_5px_0_0_hsl(41_35%_44%)] transition-all duration-300 ease-luxury hover:-translate-y-0.5 hover:border-cobre/55 hover:bg-papel/[0.09] hover:shadow-[0_7px_0_0_hsl(41_49%_59%)] active:translate-y-[5px] active:shadow-[0_0_0_0_hsl(41_35%_44%)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cobre/50 motion-reduce:animate-none";
             const highlight =
-              "pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/[0.10] to-transparent";
+              "pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-xl bg-gradient-to-b from-white/[0.12] to-transparent";
             const inner = (
               <>
                 <span className={highlight} aria-hidden />
