@@ -1,7 +1,7 @@
 import SEO from "@/components/SEO";
 import { trackEvent } from "@/lib/analytics";
 import { Globe, Linkedin, Users } from "lucide-react";
-import authorPhoto from "@/assets/leonardo-de-pe-fundo-branco.png";
+import authorPhoto from "@/assets/leonardo-rosto-linkbio.png";
 
 const links = [
   {
@@ -22,13 +22,21 @@ const links = [
   },
   {
     label: "Comunidade",
-    sub: "Acesso a aulas, ferramentas e IAs",
+    sub: "Ferramentas e conteúdo exclusivo que geram valor na vida real",
     href: "https://www.leonardopedrini.com/comunidade",
     icon: Users,
     internal: false,
     trackingParams: { destination: "comunidade" },
   },
 ];
+
+// Delays escalonados para o efeito de "surgir de baixo para cima" no carregamento.
+const delays = ["0ms", "120ms", "220ms", "320ms", "420ms", "520ms", "620ms", "720ms"];
+
+const rise = (i: number) => ({
+  animation: "fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both",
+  animationDelay: delays[i] ?? `${i * 90}ms`,
+});
 
 const LinkBio = () => {
   return (
@@ -52,9 +60,12 @@ const LinkBio = () => {
         }}
       />
 
-      <div className="relative z-10 flex w-full max-w-md flex-col items-center">
+      <div className="relative z-10 flex w-full max-w-md flex-col items-center motion-reduce:animate-none">
         {/* Foto */}
-        <div className="relative">
+        <div
+          className="relative motion-reduce:animate-none"
+          style={rise(0)}
+        >
           <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-cobre-light/40 via-cobre/20 to-transparent blur-sm" aria-hidden />
           <img
             src={authorPhoto}
@@ -64,33 +75,43 @@ const LinkBio = () => {
         </div>
 
         {/* Nome */}
-        <h1 className="mt-6 font-display text-2xl font-extrabold tracking-[-0.02em]">
+        <h1
+          className="mt-6 font-display text-2xl font-extrabold tracking-[-0.02em] motion-reduce:animate-none"
+          style={rise(1)}
+        >
           L.V. <span className="text-cobre">Pedrini</span>
         </h1>
-        <p className="mt-2 max-w-xs text-center text-sm leading-relaxed text-papel/55">
+        <p
+          className="mt-2 max-w-xs text-center text-sm leading-relaxed text-papel/55 motion-reduce:animate-none"
+          style={rise(2)}
+        >
           Engenharia de crescimento para pequenas empresas: método, dados e IA aplicada.
         </p>
 
-        <div className="hairline-gold mt-7 w-24" aria-hidden />
+        <div className="hairline-gold mt-7 w-24 motion-reduce:animate-none" aria-hidden style={rise(3)} />
 
-        {/* Botões */}
+        {/* Botões 3D */}
         <nav className="mt-7 flex w-full flex-col gap-3.5" aria-label="Links">
-          {links.map((l) => {
+          {links.map((l, i) => {
             const Icon = l.icon;
+            const delay = rise(i + 4);
             const cls =
-              "group flex w-full items-center gap-4 rounded-lg border border-papel/12 bg-papel/[0.04] px-5 py-4 text-left backdrop-blur-sm transition-all duration-300 ease-luxury hover:-translate-y-0.5 hover:border-cobre/50 hover:bg-papel/[0.07] focus:outline-none focus-visible:ring-2 focus-visible:ring-cobre/50";
+              "group relative flex w-full items-center gap-4 rounded-xl border border-papel/12 bg-papel/[0.05] px-5 py-4 pb-5 text-left backdrop-blur-sm shadow-[0_5px_0_0_hsl(41_35%_44%)] transition-all duration-300 ease-luxury hover:-translate-y-0.5 hover:border-cobre/55 hover:bg-papel/[0.09] hover:shadow-[0_7px_0_0_hsl(41_49%_59%)] active:translate-y-[5px] active:shadow-[0_0_0_0_hsl(41_35%_44%)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cobre/50 motion-reduce:animate-none";
+            const highlight =
+              "pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-xl bg-gradient-to-b from-white/[0.12] to-transparent";
             const inner = (
               <>
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-cobre/30 bg-cobre/10 text-cobre-light transition-colors duration-300 group-hover:bg-cobre/20">
+                <span className={highlight} aria-hidden />
+                <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-cobre/30 bg-cobre/10 text-cobre-light transition-colors duration-300 group-hover:bg-cobre/20">
                   <Icon className="h-5 w-5" />
                 </span>
-                <span className="flex flex-1 flex-col">
+                <span className="relative flex flex-1 flex-col">
                   <span className="text-sm font-semibold tracking-tight text-papel">
                     {l.label}
                   </span>
                   <span className="text-xs text-papel/45">{l.sub}</span>
                 </span>
-                <span className="font-mono text-[11px] text-cobre-light/50 transition-transform duration-300 group-hover:translate-x-0.5">
+                <span className="relative font-mono text-[11px] text-cobre-light/50 transition-transform duration-300 group-hover:translate-x-0.5">
                   →
                 </span>
               </>
@@ -101,13 +122,14 @@ const LinkBio = () => {
                 <a
                   key={l.label}
                   href={l.href}
+                  style={delay}
                   onClick={() =>
                     trackEvent("link_bio_click", {
                       form_location: "link-bio",
                       ...l.trackingParams,
                     })
                   }
-                  className={cls}
+                  className={`${cls} motion-reduce:animate-none`}
                 >
                   {inner}
                 </a>
@@ -117,6 +139,7 @@ const LinkBio = () => {
               <a
                 key={l.label}
                 href={l.href}
+                style={delay}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() =>
@@ -125,7 +148,7 @@ const LinkBio = () => {
                     ...l.trackingParams,
                   })
                 }
-                className={cls}
+                className={`${cls} motion-reduce:animate-none`}
               >
                 {inner}
               </a>
@@ -133,7 +156,10 @@ const LinkBio = () => {
           })}
         </nav>
 
-        <p className="mt-10 font-mono text-[11px] text-papel/30">
+        <p
+          className="mt-10 font-mono text-[11px] text-papel/30 motion-reduce:animate-none"
+          style={rise(7)}
+        >
           © {new Date().getFullYear()} L.V. Pedrini
         </p>
       </div>
