@@ -1,6 +1,7 @@
 import SEO from "@/components/SEO";
 import { trackEvent } from "@/lib/analytics";
 import { Globe, Linkedin, Users } from "lucide-react";
+import authorPhoto from "@/assets/leonardo-de-pe-fundo-branco.png";
 
 const links = [
   {
@@ -56,7 +57,7 @@ const LinkBio = () => {
         <div className="relative">
           <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-cobre-light/40 via-cobre/20 to-transparent blur-sm" aria-hidden />
           <img
-            src="/leonardo-de-pe-fundo-branco.png"
+            src={authorPhoto}
             alt="Leonardo Pedrini"
             className="relative h-28 w-28 rounded-full border border-cobre/40 object-cover shadow-premium"
           />
