@@ -157,17 +157,26 @@ const Index = () => (
     {/* 1 — Hero imersivo navy */}
     <section className="bg-navy-hero relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-navy" aria-hidden />
-      <div className="container relative pb-28 pt-40 md:pb-40 md:pt-52">
-        <div className="grid items-center gap-16 lg:grid-cols-12">
+      {/* Numeral editorial de fundo — textura, nunca compete com o texto */}
+      <span
+        className="pointer-events-none absolute -right-6 top-16 select-none font-mono text-[16rem] font-bold leading-none text-papel/[0.035] md:-right-10 md:top-24 md:text-[22rem]"
+        aria-hidden
+      >
+        01
+      </span>
+      <div className="container relative pb-28 pt-32 md:pb-40 md:pt-40">
+        <Reveal>
+          <div className="border-b border-papel/10 pb-7">
+            <div className="eyebrow text-cobre-light">
+              <span className="h-px w-10 bg-cobre-light/70" />
+              IA que trabalha
+            </div>
+          </div>
+        </Reveal>
+        <div className="grid items-center gap-16 pt-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <Reveal>
-              <div className="eyebrow text-cobre-light">
-                <span className="h-px w-10 bg-cobre-light/70" />
-                IA que trabalha
-              </div>
-            </Reveal>
             <Reveal delay={120}>
-              <h1 className="mt-7 font-display text-5xl font-extrabold leading-[1.02] tracking-[-0.025em] text-papel md:text-7xl">
+              <h1 className="font-display text-6xl font-extrabold leading-[0.98] tracking-[-0.03em] text-papel md:text-7xl lg:text-[5.25rem]">
                 Pare de conversar com a IA.{" "}
                 <span className="text-gradient-gold">Coloque a IA para trabalhar.</span>
               </h1>
@@ -278,43 +287,67 @@ const Index = () => (
     {/* 3 — O problema (PAS) */}
     <section className="border-b border-border bg-secondary/50">
       <div className="container py-28 md:py-36">
-        <div className="max-w-3xl">
-          <Reveal>
-            <SectionHeading
-              eyebrow="O problema"
-              title={
-                <>
-                  <CountUp to={88} suffix="%" /> das empresas já usam IA em alguma função. Só{" "}
-                  <CountUp to={6} suffix="%" /> capturam valor de forma consistente.
-                </>
-              }
-              description="Fonte: McKinsey, State of AI 2025."
-            />
-          </Reveal>
-          <Reveal delay={140}>
-            <div className="mt-12 space-y-7 text-lg leading-relaxed text-foreground/85">
-              <p>
-                O sintoma é sempre o mesmo: o ChatGPT aberto o dia todo, e nada mudou na operação.
+        <div className="grid gap-14 lg:grid-cols-12 lg:items-start lg:gap-20">
+          <div className="lg:col-span-7">
+            <Reveal>
+              <SectionHeading
+                eyebrow="O problema"
+                title="O ChatGPT fica aberto o dia todo. A operação continua igual."
+              />
+            </Reveal>
+            <Reveal delay={140}>
+              <div className="mt-12 space-y-7 text-lg leading-relaxed text-foreground/85">
+                <p>
+                  O sintoma é sempre o mesmo: o ChatGPT aberto o dia todo, e nada mudou na operação.
+                </p>
+                <p>
+                  Cada uso é um evento isolado. Nada fica salvo. Nada vira rotina. Ninguém mais na equipe
+                  usa do mesmo jeito. O ganho depende de você lembrar de usar.
+                </p>
+                <p>
+                  Enquanto isso: leads esfriam no WhatsApp, propostas levam dias, o financeiro vive de
+                  planilha manual — e a assinatura de IA vira custo, não investimento.
+                </p>
+                <p>
+                  Isso tem nome: <strong className="text-foreground">turismo de prompts</strong>. Curso de
+                  ferramenta sem processo. Prompt solto sem dono. Automação sem KPI. Piloto que nunca
+                  chega em produção.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={240}>
+              <p className="mt-14 font-display text-3xl font-extrabold tracking-[-0.02em] text-cobre-dark md:text-4xl">
+                IA que não executa é enfeite.
               </p>
-              <p>
-                Cada uso é um evento isolado. Nada fica salvo. Nada vira rotina. Ninguém mais na equipe
-                usa do mesmo jeito. O ganho depende de você lembrar de usar.
-              </p>
-              <p>
-                Enquanto isso: leads esfriam no WhatsApp, propostas levam dias, o financeiro vive de
-                planilha manual — e a assinatura de IA vira custo, não investimento.
-              </p>
-              <p>
-                Isso tem nome: <strong className="text-foreground">turismo de prompts</strong>. Curso de
-                ferramenta sem processo. Prompt solto sem dono. Automação sem KPI. Piloto que nunca
-                chega em produção.
+            </Reveal>
+          </div>
+
+          {/* Cartão de dado — o contraste vira número, não frase */}
+          <Reveal delay={180} className="lg:col-span-5">
+            <div className="rounded-xl border border-cobre/25 bg-card p-9 shadow-soft md:p-11">
+              <div className="eyebrow text-cobre-dark">O paradoxo da adoção</div>
+              <div className="mt-9 grid grid-cols-2 gap-8">
+                <div>
+                  <div className="font-mono text-6xl font-bold leading-none tracking-[-0.02em] text-foreground md:text-7xl">
+                    <CountUp to={88} suffix="%" />
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    das empresas já usam IA em alguma função
+                  </p>
+                </div>
+                <div className="border-l border-border pl-8">
+                  <div className="font-mono text-6xl font-bold leading-none tracking-[-0.02em] text-cobre-dark md:text-7xl">
+                    <CountUp to={6} suffix="%" />
+                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    capturam valor de forma consistente
+                  </p>
+                </div>
+              </div>
+              <p className="mt-9 border-t border-border pt-6 text-xs text-muted-foreground/70">
+                Fonte: McKinsey, State of AI 2025.
               </p>
             </div>
-          </Reveal>
-          <Reveal delay={240}>
-            <p className="mt-14 font-display text-3xl font-extrabold tracking-[-0.02em] text-cobre-dark md:text-4xl">
-              IA que não executa é enfeite.
-            </p>
           </Reveal>
         </div>
       </div>
@@ -389,6 +422,12 @@ const Index = () => (
     {/* 5 — Método CARGA (navy imersivo) */}
     <section className="relative overflow-hidden border-b border-grafite-500/30 bg-gradient-navy text-papel">
       <div className="absolute inset-0 bg-grid-navy" aria-hidden />
+      <span
+        className="pointer-events-none absolute -bottom-16 left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-mono text-[7rem] font-bold leading-none tracking-[0.05em] text-papel/[0.035] md:text-[10rem]"
+        aria-hidden
+      >
+        C A R G A
+      </span>
       <div className="container relative py-28 md:py-36">
         <Reveal>
           <SectionHeading
