@@ -266,16 +266,30 @@ const SiteHeader = () => {
         </Sheet>
       </div>
 
-      {/* Mega menu — painel amplo navy com grupos + coluna de destaque */}
-      {megaOpen && (
-        <div
-          className="absolute inset-x-0 top-full hidden lg:block"
-          onMouseEnter={openMega}
-          onMouseLeave={scheduleClose}
-        >
-          <div className="animate-mega-in border-b border-papel/10 bg-grafite-900/[0.98] shadow-[0_40px_80px_-30px_rgba(4,12,22,0.8)] backdrop-blur-xl">
-            <div className="hairline-gold" />
-            <div className="container grid grid-cols-4 gap-10 py-10">
+      {/* Mega menu — painel amplo navy com grupos + coluna de destaque.
+          Sempre montado (não unmount condicional) para poder animar a saída:
+          transições CSS são interrompíveis, keyframes reiniciam do zero.
+          `visibility` só troca para hidden ao final da transição de saída
+          (transitionDelay condicional), o que também tira o painel da ordem
+          de tab quando fechado — sem isso, links ficariam focáveis invisíveis. */}
+      <div
+        className={cn(
+          "absolute inset-x-0 top-full hidden lg:block transition-[opacity,transform,visibility] ease-luxury motion-reduce:transition-none",
+          megaOpen
+            ? "visible pointer-events-auto translate-y-0 opacity-100"
+            : "invisible pointer-events-none -translate-y-1.5 opacity-0",
+        )}
+        style={{
+          transitionDuration: "200ms",
+          transitionDelay: megaOpen ? "0ms" : "0ms, 0ms, 200ms",
+        }}
+        onMouseEnter={openMega}
+        onMouseLeave={scheduleClose}
+        aria-hidden={!megaOpen}
+      >
+        <div className="border-b border-papel/10 bg-grafite-900/[0.98] shadow-[0_40px_80px_-30px_rgba(4,12,22,0.8)] backdrop-blur-xl">
+          <div className="hairline-gold" />
+          <div className="container grid grid-cols-4 gap-10 py-10">
               {grupos.map((g) => (
                 <div key={g.title}>
                   <div className="eyebrow text-cobre-light/80">{g.title}</div>
@@ -323,7 +337,6 @@ const SiteHeader = () => {
             </div>
           </div>
         </div>
-      )}
     </header>
   );
 };

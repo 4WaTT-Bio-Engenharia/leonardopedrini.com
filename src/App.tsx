@@ -11,6 +11,7 @@ const Index = lazy(() => import("./pages/Index"));
 const Sobre = lazy(() => import("./pages/Sobre"));
 const Metodo = lazy(() => import("./pages/Metodo"));
 const Cases = lazy(() => import("./pages/Cases"));
+const CaseDetail = lazy(() => import("./pages/CaseDetail"));
 const Solucoes = lazy(() => import("./pages/Solucoes"));
 const Cursos = lazy(() => import("./pages/Cursos"));
 const Imersao = lazy(() => import("./pages/Imersao"));
@@ -61,6 +62,7 @@ const App = () => (
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/metodo" element={<Metodo />} />
             <Route path="/cases" element={<Cases />} />
+            <Route path="/cases/:id" element={<CaseDetail />} />
             <Route path="/solucoes" element={<Solucoes />} />
             <Route path="/cursos" element={<Cursos />} />
             <Route path="/imersao" element={<Imersao />} />

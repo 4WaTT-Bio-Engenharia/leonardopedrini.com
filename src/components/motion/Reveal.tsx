@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ElementType, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface RevealProps {
@@ -8,6 +8,8 @@ interface RevealProps {
   /** Deslocamento vertical inicial em px (default 28). */
   y?: number;
   className?: string;
+  /** Elemento raiz renderizado (default "div") — use "li" dentro de listas. */
+  as?: ElementType;
 }
 
 /**
@@ -19,8 +21,8 @@ interface RevealProps {
  *   <Reveal>…</Reveal>
  *   <Reveal delay={120} y={20}>…</Reveal>
  */
-const Reveal = ({ children, delay = 0, y = 28, className }: RevealProps) => {
-  const ref = useRef<HTMLDivElement>(null);
+const Reveal = ({ children, delay = 0, y = 28, className, as: Tag = "div" }: RevealProps) => {
+  const ref = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -49,7 +51,7 @@ const Reveal = ({ children, delay = 0, y = 28, className }: RevealProps) => {
   }, []);
 
   return (
-    <div
+    <Tag
       ref={ref}
       className={cn(
         "transition-all duration-[900ms] ease-luxury will-change-transform",
@@ -62,7 +64,7 @@ const Reveal = ({ children, delay = 0, y = 28, className }: RevealProps) => {
       }}
     >
       {children}
-    </div>
+    </Tag>
   );
 };
 

@@ -21,15 +21,15 @@ interface CTAButtonProps {
 }
 
 const base =
-  "group inline-flex items-center justify-center gap-2.5 rounded-md font-semibold uppercase transition-all duration-300 ease-luxury focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
+  "group inline-flex items-center justify-center gap-2.5 rounded-md font-semibold uppercase transition-all duration-200 ease-luxury focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:duration-100";
 
 const variants = {
   /* Dourado champagne sólido, texto navy — o CTA de luxo */
   primary:
-    "bg-cobre text-grafite-900 shadow-gold hover:bg-cobre-light hover:-translate-y-0.5 hover:shadow-[0_18px_50px_-14px_hsl(40_45%_50%/0.5)] active:translate-y-0",
+    "bg-cobre text-grafite-900 shadow-gold hover:bg-cobre-light hover:-translate-y-0.5 hover:shadow-[0_18px_50px_-14px_hsl(40_45%_50%/0.5)] active:translate-y-0 active:scale-[0.98] motion-reduce:hover:translate-y-0 motion-reduce:active:scale-100",
   /* Ghost refinado — hairline + texto, herda a cor do contexto */
   outline:
-    "border border-foreground/25 bg-transparent text-foreground hover:border-cobre-dark hover:text-cobre-dark hover:-translate-y-0.5",
+    "border border-foreground/25 bg-transparent text-foreground hover:border-cobre-dark hover:text-cobre-dark hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] motion-reduce:hover:translate-y-0 motion-reduce:active:scale-100",
 };
 
 const sizes = {

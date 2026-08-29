@@ -9,6 +9,7 @@ import LogoStrip from "@/components/sections/LogoStrip";
 import CaseCard from "@/components/sections/CaseCard";
 import { cases } from "@/data/cases";
 import Reveal from "@/components/motion/Reveal";
+import CountUp from "@/components/motion/CountUp";
 
 import { trackEvent } from "@/lib/analytics";
 import { SITE_URL } from "@/components/SEO";
@@ -104,7 +105,10 @@ const flowNodes = ["Prompt", "Workflow", "Agente", "Sistema"];
 const FlowVisual = () => (
   <div className="relative hidden lg:block" aria-hidden>
     <div className="absolute -inset-8 rounded-full bg-cobre/[0.06] blur-3xl" />
-    <div className="relative rounded-xl border border-papel/10 bg-papel/[0.03] p-8 backdrop-blur-sm">
+    <div
+      className="relative rounded-xl border border-papel/10 bg-papel/[0.03] p-8 backdrop-blur-md"
+      style={{ boxShadow: "inset 0 1px 0 0 hsl(40 27% 96% / 0.08), var(--shadow-premium)" }}
+    >
       <div className="eyebrow text-cobre-light/70">Do chat ao sistema</div>
       <div className="relative mt-10">
         {/* Linha de fluxo */}
@@ -119,7 +123,7 @@ const FlowVisual = () => (
         </svg>
         <ol className="space-y-9">
           {flowNodes.map((node, i) => (
-            <li key={node} className="relative flex items-center gap-5 pl-0">
+            <Reveal key={node} delay={i * 100} y={10} as="li" className="relative flex items-center gap-5 pl-0">
               <span
                 className="animate-node-pulse relative z-10 h-[15px] w-[15px] rounded-full border border-cobre-light/70 bg-grafite-900"
                 style={{ animationDelay: `${i * 0.8}s`, boxShadow: "0 0 0 4px hsl(41 49% 59% / 0.12)" }}
@@ -128,7 +132,7 @@ const FlowVisual = () => (
                 <span className="font-mono text-[11px] text-cobre-light/60">{String(i + 1).padStart(2, "0")}</span>
                 <span className="font-display text-xl font-bold tracking-[-0.01em] text-papel">{node}</span>
               </span>
-            </li>
+            </Reveal>
           ))}
         </ol>
       </div>
@@ -215,18 +219,20 @@ const Index = () => (
     {/* Barra de credibilidade */}
     <div className="border-b border-border bg-papel-light">
       <div className="container py-7">
-        <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-2.5 text-center">
-          {credibilityItems.map((item, i) => (
-            <li key={item} className="flex items-center gap-7">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-aco-dark md:text-xs">
-                {item}
-              </span>
-              {i < credibilityItems.length - 1 && (
-                <span className="hidden text-cobre md:inline" aria-hidden>·</span>
-              )}
-            </li>
-          ))}
-        </ul>
+        <Reveal>
+          <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-2.5 text-center">
+            {credibilityItems.map((item, i) => (
+              <li key={item} className="flex items-center gap-7">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-aco-dark md:text-xs">
+                  {item}
+                </span>
+                {i < credibilityItems.length - 1 && (
+                  <span className="hidden text-cobre md:inline" aria-hidden>·</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </div>
 
@@ -276,7 +282,12 @@ const Index = () => (
           <Reveal>
             <SectionHeading
               eyebrow="O problema"
-              title="88% das empresas já usam IA em alguma função. Só 6% capturam valor de forma consistente."
+              title={
+                <>
+                  <CountUp to={88} suffix="%" /> das empresas já usam IA em alguma função. Só{" "}
+                  <CountUp to={6} suffix="%" /> capturam valor de forma consistente.
+                </>
+              }
               description="Fonte: McKinsey, State of AI 2025."
             />
           </Reveal>
@@ -459,7 +470,7 @@ const Index = () => (
                 <Link
                   to={s.to}
                   onClick={() => trackEvent("product_view", { product_name: s.name, ladder_step: i })}
-                  className="group grid gap-5 rounded-lg border border-papel/12 bg-papel/[0.03] p-7 backdrop-blur-sm transition-all duration-500 ease-luxury hover:-translate-y-0.5 hover:border-cobre/50 hover:bg-papel/[0.05] md:grid-cols-[3.5rem_1fr_auto] md:items-center md:p-9"
+                  className="pressable group grid gap-5 rounded-lg border border-papel/12 bg-papel/[0.03] p-7 backdrop-blur-sm transition-all duration-500 ease-luxury hover:-translate-y-0.5 hover:border-cobre/50 hover:bg-papel/[0.05] md:grid-cols-[3.5rem_1fr_auto] md:items-center md:p-9"
                 >
                   <div className="font-mono text-sm text-cobre-light/70">{String(i).padStart(2, "0")}</div>
                   <div>
@@ -512,7 +523,7 @@ const Index = () => (
                 <Link
                   to={icp.to}
                   onClick={() => trackEvent("cta_click", { cta_label: icp.cta, cta_position: "home_icp", cta_destination: icp.to })}
-                  className="mt-7 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cobre-dark transition-colors duration-300 hover:text-foreground"
+                  className="pressable mt-7 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cobre-dark transition-colors duration-300 hover:text-foreground"
                 >
                   {icp.cta} <ArrowRight className="h-4 w-4 transition-transform duration-300 ease-luxury group-hover:translate-x-1" />
                 </Link>
@@ -591,7 +602,7 @@ const Index = () => (
               <Link
                 to="/insights"
                 onClick={() => trackEvent("cta_click", { cta_label: post.title, cta_position: "home_insights", cta_destination: "/insights" })}
-                className="card-lux group flex h-full flex-col p-9"
+                className="card-lux pressable group flex h-full flex-col p-9"
               >
                 <div className="flex items-center justify-between">
                   <span className="eyebrow text-cobre-dark">{post.tag}</span>

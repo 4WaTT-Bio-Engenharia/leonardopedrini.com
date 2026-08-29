@@ -1,4 +1,5 @@
 import { cases } from "@/data/cases";
+import Reveal from "@/components/motion/Reveal";
 
 type LogoStripProps = {
   label?: string;
@@ -7,12 +8,14 @@ type LogoStripProps = {
 const LogoStrip = ({ label = "Onde o método foi aplicado" }: LogoStripProps) => (
   <div className="border-b border-border bg-papel-light">
     <div className="container py-12 md:py-14">
-      <p className="eyebrow justify-center text-center text-aco-dark">
-        {label}
-      </p>
+      <Reveal>
+        <p className="eyebrow justify-center text-center text-aco-dark">
+          {label}
+        </p>
+      </Reveal>
       <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-8 md:gap-x-16">
-        {cases.map((c) => (
-          <li key={c.id} className="flex items-center">
+        {cases.map((c, i) => (
+          <Reveal key={c.id} as="li" delay={i * 60} y={12} className="flex items-center">
             {c.logo ? (
               <img
                 src={c.logo}
@@ -25,7 +28,7 @@ const LogoStrip = ({ label = "Onde o método foi aplicado" }: LogoStripProps) =>
                 {c.short}
               </span>
             )}
-          </li>
+          </Reveal>
         ))}
       </ul>
     </div>

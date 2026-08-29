@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import type { CaseItem } from "@/data/cases";
 import { trackEvent } from "@/lib/analytics";
@@ -45,12 +46,23 @@ const CaseCard = ({ item }: { item: CaseItem }) => (
       ))}
     </ul>
 
+    {item.photos && item.photos.length > 0 && (
+      <Link
+        to={`/cases/${item.id}`}
+        onClick={() => trackEvent("case_detail_click", { case_id: item.id })}
+        className="pressable mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-cobre-dark transition-colors hover:text-foreground"
+      >
+        Ver case completo
+        <ArrowUpRight className="h-4 w-4" aria-hidden />
+      </Link>
+    )}
+
     {item.site && (
       <a
         href={item.site}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-cobre-dark transition-colors hover:text-foreground"
+        className={`pressable inline-flex items-center gap-1.5 text-sm font-semibold text-cobre-dark transition-colors hover:text-foreground ${item.photos && item.photos.length > 0 ? "mt-2" : "mt-7"}`}
       >
         {item.siteLabel ?? item.site}
         <ArrowUpRight className="h-4 w-4" aria-hidden />
