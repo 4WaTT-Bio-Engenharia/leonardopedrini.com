@@ -64,10 +64,11 @@ export default {
          * medicao → verde sálvia · risco → vinho técnico.
          */
         grafite: {
-          DEFAULT: "#0E233A", // navy principal
-          900: "#081626", // navy profundo (footer, faixas)
-          700: "#122E4D", // navy médio (gradientes, cards escuros)
-          500: "#1E3A5C", // navy claro (bordas em escuro)
+          DEFAULT: "#0A1524", // navy principal — mais escuro, tom "midnight"
+          950: "#02050A", // preto-azulado (vinhetas, profundidade máxima)
+          900: "#050810", // navy profundo (footer, faixas)
+          700: "#101F33", // navy médio (gradientes, cards escuros)
+          500: "#1B3350", // navy claro (bordas em escuro)
         },
         papel: {
           DEFAULT: "#F7F5F1", // off-white quente

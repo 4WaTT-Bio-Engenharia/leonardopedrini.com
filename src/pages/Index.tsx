@@ -10,6 +10,7 @@ import CaseCard from "@/components/sections/CaseCard";
 import { cases } from "@/data/cases";
 import Reveal from "@/components/motion/Reveal";
 import CountUp from "@/components/motion/CountUp";
+import TiltCard from "@/components/motion/TiltCard";
 
 import { trackEvent } from "@/lib/analytics";
 import { SITE_URL } from "@/components/SEO";
@@ -105,7 +106,8 @@ const flowNodes = ["Prompt", "Workflow", "Agente", "Sistema"];
 const FlowVisual = () => (
   <div className="relative hidden lg:block" aria-hidden>
     <div className="absolute -inset-8 rounded-full bg-cobre/[0.06] blur-3xl" />
-    <div
+    <TiltCard
+      strength={5}
       className="relative rounded-xl border border-papel/10 bg-papel/[0.03] p-8 backdrop-blur-md"
       style={{ boxShadow: "inset 0 1px 0 0 hsl(40 27% 96% / 0.08), var(--shadow-premium)" }}
     >
@@ -142,7 +144,7 @@ const FlowVisual = () => (
           medida, governada, sua.
         </p>
       </div>
-    </div>
+    </TiltCard>
   </div>
 );
 
@@ -176,17 +178,18 @@ const Index = () => (
         <div className="grid items-center gap-16 pt-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Reveal delay={120}>
-              <h1 className="font-display text-6xl font-extrabold leading-[0.98] tracking-[-0.03em] text-papel md:text-7xl lg:text-[5.25rem]">
+              <h1 className="font-display text-6xl font-extrabold leading-[0.96] tracking-[-0.035em] text-papel md:text-7xl lg:text-[5.75rem] xl:text-[6.5rem]">
                 Pare de conversar com a IA.{" "}
                 <span className="text-gradient-gold">Coloque a IA para trabalhar.</span>
               </h1>
             </Reveal>
             <Reveal delay={240}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-papel/65 md:text-xl">
-                Sua empresa não precisa de mais um curso de prompt. Precisa de processos, workflows e
-                agentes que executam trabalho de verdade — com retorno medido em horas e em reais. Eu sou
-                engenheiro, fundei a 4WaTT e a 4W Energia, e implanto IA dentro de operações reais.
-                Inclusive nas minhas.
+                Você já testou o ChatGPT, talvez já tenha pago um curso, e a operação continua exatamente
+                igual. O problema não é falta de ferramenta — é falta de processo. Eu construo processos,
+                workflows e agentes que executam trabalho de verdade, com retorno medido em horas e em
+                reais. Sou engenheiro, fundei a 4WaTT e a 4W Energia, e implanto IA dentro de operações
+                reais. Inclusive as minhas.
               </p>
             </Reveal>
             <Reveal delay={360}>
@@ -298,20 +301,23 @@ const Index = () => (
             <Reveal delay={140}>
               <div className="mt-12 space-y-7 text-lg leading-relaxed text-foreground/85">
                 <p>
-                  O sintoma é sempre o mesmo: o ChatGPT aberto o dia todo, e nada mudou na operação.
+                  Você conhece o sintoma, porque provavelmente já viveu ele: o ChatGPT aberto o dia
+                  todo, e nada mudou na operação.
                 </p>
                 <p>
                   Cada uso é um evento isolado. Nada fica salvo. Nada vira rotina. Ninguém mais na equipe
-                  usa do mesmo jeito. O ganho depende de você lembrar de usar.
+                  usa do mesmo jeito. O ganho depende de você lembrar de usar — e lembrar não é um
+                  processo, é sorte.
                 </p>
                 <p>
-                  Enquanto isso: leads esfriam no WhatsApp, propostas levam dias, o financeiro vive de
-                  planilha manual — e a assinatura de IA vira custo, não investimento.
+                  Enquanto isso, o relógio da operação continua correndo: leads esfriam no WhatsApp,
+                  propostas levam dias, o financeiro vive de planilha manual — e a assinatura de IA vira
+                  custo no fim do mês, não investimento.
                 </p>
                 <p>
                   Isso tem nome: <strong className="text-foreground">turismo de prompts</strong>. Curso de
                   ferramenta sem processo. Prompt solto sem dono. Automação sem KPI. Piloto que nunca
-                  chega em produção.
+                  chega em produção — e a diretoria que perguntou "e a IA, como está?" mais uma vez.
                 </p>
               </div>
             </Reveal>
@@ -324,7 +330,7 @@ const Index = () => (
 
           {/* Cartão de dado — o contraste vira número, não frase */}
           <Reveal delay={180} className="lg:col-span-5">
-            <div className="rounded-xl border border-cobre/25 bg-card p-9 shadow-soft md:p-11">
+            <TiltCard strength={4} className="rounded-xl border border-cobre/25 bg-card p-9 shadow-soft md:p-11">
               <div className="eyebrow text-cobre-dark">O paradoxo da adoção</div>
               <div className="mt-9 grid grid-cols-2 gap-8">
                 <div>
@@ -347,7 +353,7 @@ const Index = () => (
               <p className="mt-9 border-t border-border pt-6 text-xs text-muted-foreground/70">
                 Fonte: McKinsey, State of AI 2025.
               </p>
-            </div>
+            </TiltCard>
           </Reveal>
         </div>
       </div>
@@ -372,13 +378,16 @@ const Index = () => (
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <div className="h-full rounded-lg border border-cobre/50 bg-cobre-soft/50 p-9 shadow-gold transition-all duration-500 ease-luxury hover:-translate-y-1">
+            <TiltCard
+              strength={5}
+              className="h-full rounded-lg border border-cobre/50 bg-cobre-soft/50 p-9 shadow-gold transition-transform duration-500 ease-luxury hover:-translate-y-1"
+            >
               <div className="eyebrow text-cobre-dark">Depois</div>
               <p className="mt-5 text-lg leading-relaxed text-foreground/85">
                 A IA responde o cliente, processa o pedido, monta a proposta, audita o contrato — com
                 processo desenhado, gente preparada e número no relatório.
               </p>
-            </div>
+            </TiltCard>
           </Reveal>
           <Reveal delay={240}>
             <div className="card-lux h-full p-9">
@@ -674,8 +683,8 @@ const Index = () => (
 
     {/* 12 — CTA final */}
     <CTASection
-      title="Sua empresa está pronta para IA que trabalha?"
-      description="Descubra em 8 minutos. O AI Work Audit mede sua maturidade em 6 dimensões e devolve um relatório com os 3 processos que você deveria automatizar primeiro."
+      title="Pronto para parar de conversar com a IA?"
+      description="8 minutos é o tempo que leva para descobrir. O AI Work Audit mede sua maturidade em 6 dimensões e devolve um relatório com os 3 processos que você deveria automatizar primeiro — sem compromisso, sem enrolação."
       ctaTo="/diagnostico"
       ctaLabel="Fazer o AI Work Audit gratuito"
     />

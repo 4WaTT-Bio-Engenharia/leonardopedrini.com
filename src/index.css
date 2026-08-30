@@ -5,18 +5,18 @@
 @layer base {
   /*
    * Luxo Navy & Champagne — sistema visual L.V. Pedrini
-   * navy #0E233A · navy profundo #081626 · navy médio #122E4D
+   * navy #0A1524 · navy profundo #050810 · preto-azulado #02050A · navy médio #101F33
    * off-white quente #F7F5F1 · dourado champagne #C9A962
    * azul-acinzentado #5A6B80 · sálvia #3F6B5A · vinho #8A3A34
    */
   :root {
     --background: 40 27% 96%; /* off-white quente */
-    --foreground: 211 61% 14%; /* navy #0E233A */
+    --foreground: 215 55% 9%; /* navy #0A1524 */
 
     --card: 40 30% 98%;
-    --card-foreground: 211 61% 14%;
+    --card-foreground: 215 55% 9%;
 
-    --popover: 212 65% 9%; /* navy profundo — dropdowns/menus */
+    --popover: 224 52% 4%; /* preto-azulado — dropdowns/menus */
     --popover-foreground: 40 27% 96%;
 
     --primary: 40 39% 47%; /* dourado profundo — texto/links sobre claro */
@@ -58,19 +58,19 @@
     --gradient-gold: linear-gradient(135deg, hsl(41 49% 59%), hsl(40 39% 42%));
     --gradient-hero: linear-gradient(
       180deg,
-      hsl(212 65% 9% / 0) 0%,
-      hsl(212 65% 9% / 0.55) 60%,
-      hsl(211 61% 14%) 100%
+      hsl(224 52% 4% / 0) 0%,
+      hsl(224 52% 4% / 0.6) 60%,
+      hsl(224 60% 2% / 1) 100%
     );
-    --gradient-navy: linear-gradient(180deg, hsl(211 61% 14%) 0%, hsl(212 65% 9%) 100%);
+    --gradient-navy: linear-gradient(180deg, hsl(215 55% 9%) 0%, hsl(224 60% 2%) 100%);
     --gradient-glass: linear-gradient(160deg, hsl(40 30% 98% / 0.92) 0%, hsl(40 27% 96% / 0.7) 100%);
-    --shadow-premium: 0 40px 100px -40px hsl(211 61% 14% / 0.28);
-    --shadow-soft: 0 20px 60px -30px hsl(211 61% 14% / 0.18);
+    --shadow-premium: 0 50px 120px -40px hsl(224 60% 2% / 0.45);
+    --shadow-soft: 0 20px 60px -30px hsl(215 55% 9% / 0.2);
     --shadow-gold: 0 12px 40px -14px hsl(40 45% 50% / 0.4);
   }
 
   .dark {
-    --background: 211 61% 14%;
+    --background: 215 55% 9%;
     --foreground: 40 27% 96%;
   }
 }
@@ -163,12 +163,12 @@
     -webkit-backdrop-filter: blur(20px) saturate(140%);
   }
 
-  /* Hero navy imersivo: brilho champagne radial + vinheta */
+  /* Hero navy imersivo: brilho champagne radial + vinheta — tom "midnight" profundo */
   .bg-navy-hero {
     background:
-      radial-gradient(ellipse 60% 50% at 78% 18%, hsl(41 49% 59% / 0.14), transparent 65%),
-      radial-gradient(ellipse 55% 60% at 12% 85%, hsl(212 62% 22% / 0.55), transparent 70%),
-      linear-gradient(180deg, hsl(211 61% 14%) 0%, hsl(212 65% 9%) 100%);
+      radial-gradient(ellipse 60% 50% at 78% 18%, hsl(41 49% 59% / 0.16), transparent 65%),
+      radial-gradient(ellipse 55% 60% at 12% 85%, hsl(213 50% 21% / 0.6), transparent 70%),
+      linear-gradient(180deg, hsl(215 55% 9%) 0%, hsl(224 60% 2%) 100%);
   }
 
   /* Grid fino para seções navy (linhas a 4% de opacidade) */
@@ -200,16 +200,68 @@
     height: 1px;
     background: hsl(var(--primary));
   }
+
+  /* Sistema de profundidade 3D — cards com tilt de cursor + brilho direcional */
+  .tilt-card {
+    transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg))
+      translateZ(var(--tilt-z, 0px));
+    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .tilt-glare {
+    background: radial-gradient(
+      circle at var(--mx, 50%) var(--my, 50%),
+      hsl(0 0% 100% / 0.18),
+      transparent 55%
+    );
+  }
+
+  /* Faixa de logos em movimento contínuo (marquee) */
+  @keyframes marquee-x {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee-x 34s linear infinite;
+  }
+
+  @keyframes logo-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-7px);
+    }
+  }
+
+  .animate-logo-float {
+    animation: logo-float 4.5s ease-in-out infinite;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-flow-dash,
-  .animate-node-pulse {
+  .animate-node-pulse,
+  .animate-marquee,
+  .animate-logo-float {
     animation: none;
   }
 
   .card-lux:hover,
   .pressable:active {
     transform: none;
+  }
+
+  .tilt-card {
+    transform: none !important;
+    transition: none;
   }
 }

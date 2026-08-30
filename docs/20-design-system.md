@@ -10,10 +10,11 @@ hierarquia tipográfica forte**, alternância de seções navy escuras e off-whi
 
 | Token | Hex | Uso |
 |---|---|---|
-| `grafite` (navy) | `#0E233A` | Fundo escuro principal, texto sobre claro (`foreground`) |
-| `grafite-900` | `#081626` | Navy profundo — header sólido, footer, gradientes |
-| `grafite-700` | `#122E4D` | Navy médio — hover de cards escuros, gradientes |
-| `grafite-500` | `#1E3A5C` | Navy claro — bordas em contexto escuro |
+| `grafite` (navy) | `#0A1524` | Fundo escuro principal, texto sobre claro (`foreground`) — tom "midnight", mais escuro que a v1 |
+| `grafite-950` | `#02050A` | Preto-azulado — profundidade máxima (vinhetas) |
+| `grafite-900` | `#050810` | Navy profundo — header sólido, footer, gradientes |
+| `grafite-700` | `#101F33` | Navy médio — hover de cards escuros, gradientes |
+| `grafite-500` | `#1B3350` | Navy claro — bordas em contexto escuro |
 | `papel` | `#F7F5F1` | Off-white quente — fundo claro, texto sobre navy |
 | `papel-dark` | `#EAE6DD` | Off-white profundo |
 | `papel-light` | `#FCFBF8` | Quase branco — cards, barra de credibilidade |
@@ -72,6 +73,15 @@ sistema antigo; eyebrow é sempre Montserrat 600 uppercase.
 - Animações contínuas (hero): `animate-flow-dash` (linha tracejada SVG), `animate-node-pulse`
   (nós), ambas desligadas em `prefers-reduced-motion` via CSS.
 - Entrada de painéis (mega menu): `animate-mega-in` (fade + slide −10px, 0.32s ease-luxury).
+- **`TiltCard`** (`src/components/motion/TiltCard.tsx`): profundidade 3D estilo Apple —
+  `perspective` + `rotateX/rotateY` via cursor (pointermove, só mouse) e brilho direcional
+  (`.tilt-glare`, radial-gradient que segue `--mx`/`--my`). Prop `strength` (graus, default 7)
+  controla a intensidade — usar valores baixos (4–5) em cards de conteúdo denso, mais alto
+  (8–10) em cards decorativos/logos. Desligado em `prefers-reduced-motion` via `.tilt-card`
+  em `index.css`. **Sem dependências** — CSS custom properties + pointer events apenas.
+- Faixa de logos (`LogoStrip`): marquee contínuo (`animate-marquee`, loop 34s linear, lista
+  duplicada) + flutuação idle por item (`animate-logo-float`, stagger por `animationDelay`) +
+  `TiltCard` por logo. Pausa no hover via `group-hover/marquee:[animation-play-state:paused]`.
 
 ## 5. Componentes
 
