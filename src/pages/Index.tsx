@@ -14,7 +14,7 @@ import TiltCard from "@/components/motion/TiltCard";
 
 import { trackEvent } from "@/lib/analytics";
 import { SITE_URL } from "@/components/SEO";
-import leonardoAbout from "@/assets/leonardo-about.jpg";
+import leonardoAbout from "@/assets/lvpedrini_ai.jpg";
 
 const credibilityItems = [
   "Engenheiro",

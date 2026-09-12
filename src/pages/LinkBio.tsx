@@ -1,7 +1,7 @@
 import SEO from "@/components/SEO";
 import { trackEvent } from "@/lib/analytics";
 import { Globe, Linkedin, Users } from "lucide-react";
-import authorPhoto from "@/assets/leonardo-rosto-linkbio.png";
+import authorPhoto from "@/assets/lvpedrini_ai.jpg";
 
 const links = [
   {
