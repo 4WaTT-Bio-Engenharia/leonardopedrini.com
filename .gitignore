@@ -7,6 +7,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Repositório separado da página de links (link in bio) — só a pasta na raiz
+/link/
+
 node_modules
 dist
 dist-ssr
