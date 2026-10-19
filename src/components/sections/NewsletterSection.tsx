@@ -66,7 +66,7 @@ const NewsletterSection = () => {
             <span className="h-px w-8 bg-primary" />
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-medium leading-[1.1] text-foreground">
-            IA que Trabalha — 1 implementação real por semana
+            IA que Trabalha: 1 implementação real por semana
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
             Toda semana na sua caixa de entrada: um processo real decomposto e automatizado, um

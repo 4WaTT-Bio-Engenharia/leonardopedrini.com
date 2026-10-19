@@ -18,6 +18,7 @@ import {
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import CTAButton from "@/components/conversion/CTAButton";
 import { cn } from "@/lib/utils";
+import logoBranca from "@/assets/logo-branca.png";
 
 type Solucao = { to: string; label: string; desc: string; icon: LucideIcon };
 type Grupo = { title: string; items: Solucao[] };
@@ -152,10 +153,8 @@ const SiteHeader = () => {
       )}
     >
       <div className="container flex h-20 items-center justify-between gap-8">
-        <Link to="/" className="flex shrink-0 items-center gap-2" aria-label="L.V. Pedrini — início">
-          <span className="font-display text-xl font-extrabold tracking-[-0.02em] text-papel">
-            L.V. <span className="text-cobre">Pedrini</span>
-          </span>
+        <Link to="/" className="flex shrink-0 items-center" aria-label="L.V. Pedrini — início">
+          <img src={logoBranca} alt="L.V. Pedrini" className="h-10 w-10" />
         </Link>
 
         {/* Desktop */}
@@ -202,8 +201,8 @@ const SiteHeader = () => {
             side="right"
             className="w-full max-w-sm overflow-y-auto border-papel/10 bg-grafite-900 text-papel"
           >
-            <SheetTitle className="font-display text-left text-lg font-extrabold tracking-[-0.02em] text-papel">
-              L.V. <span className="text-cobre">Pedrini</span>
+            <SheetTitle className="flex items-center text-left">
+              <img src={logoBranca} alt="L.V. Pedrini" className="h-8 w-8" />
             </SheetTitle>
 
             {/* Destaque: AI Work Audit */}

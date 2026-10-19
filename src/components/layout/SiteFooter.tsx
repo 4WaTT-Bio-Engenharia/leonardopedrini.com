@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import useUTM from "@/hooks/useUTM";
 import { trackEvent } from "@/lib/analytics";
+import logoBranca from "@/assets/logo-branca.png";
 
 const columns: { title: string; links: { to: string; label: string }[] }[] = [
   {
@@ -84,9 +85,11 @@ const SiteFooter = () => {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
           {/* Marca + newsletter */}
           <div className="lg:col-span-4">
-            <div className="font-display text-2xl font-extrabold tracking-[-0.02em]">
-              L.V. <span className="text-cobre">Pedrini</span>
-            </div>
+            <img
+              src={logoBranca}
+              alt="L.V. Pedrini"
+              className="h-12 w-12"
+            />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-papel/55">
               Engenharia de crescimento para pequenas empresas de serviços: método, dados e IA aplicada.
             </p>

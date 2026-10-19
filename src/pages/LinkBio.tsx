@@ -2,6 +2,7 @@ import SEO from "@/components/SEO";
 import { trackEvent } from "@/lib/analytics";
 import { Globe, Linkedin, Users } from "lucide-react";
 import authorPhoto from "@/assets/lvpedrini_ai.jpg";
+import logoAzul from "@/assets/logo-azul.png";
 
 const links = [
   {
@@ -74,13 +75,13 @@ const LinkBio = () => {
           />
         </div>
 
-        {/* Nome */}
-        <h1
-          className="mt-6 font-display text-2xl font-extrabold tracking-[-0.02em] motion-reduce:animate-none"
+        {/* Marca */}
+        <img
+          src={logoAzul}
+          alt="L.V. Pedrini"
+          className="mx-auto mt-6 h-14 w-14 rounded-lg border border-papel/15 motion-reduce:animate-none"
           style={rise(1)}
-        >
-          L.V. <span className="text-cobre">Pedrini</span>
-        </h1>
+        />
         <p
           className="mt-2 max-w-xs text-center text-sm leading-relaxed text-papel/55 motion-reduce:animate-none"
           style={rise(2)}

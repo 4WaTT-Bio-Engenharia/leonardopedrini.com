@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import SEO, { type SEOProps } from "@/components/SEO";
+import logoAzul from "@/assets/logo-azul.png";
 
 interface LPLayoutProps extends SEOProps {
   children: ReactNode;
@@ -17,10 +18,8 @@ const LPLayout = ({ children, ...seo }: LPLayoutProps) => (
     <SEO {...seo} noindex />
     <header className="hairline-gold w-full border-b border-papel/10 bg-grafite-900/95 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="group flex items-center gap-2" aria-label="L.V. Pedrini — início">
-          <span className="font-display text-lg font-bold tracking-tight text-papel transition-colors">
-            L.V. <span className="text-cobre-light transition-colors group-hover:text-cobre">Pedrini</span>
-          </span>
+        <Link to="/" className="flex items-center" aria-label="L.V. Pedrini — início">
+          <img src={logoAzul} alt="L.V. Pedrini" className="h-9 w-9 rounded-[4px] border border-papel/15" />
         </Link>
         <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-papel/40">
           IA que trabalha
