@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <meta charset="UTF-8" />
+  <script>
+    /* Caminhos relativos exigem barra final: /link -> /link/ */
+    (function(){var p=location.pathname;if(p.endsWith('/link'))location.replace(p+'/'+location.search+location.hash);})();
+  </script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,14 +13,13 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TV3BG9XJ');</script>
   <!-- End Google Tag Manager -->
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Leonardo Pedrini — Links</title>
   <meta name="description" content="Fundador de ecossistema integrado de energia. Engenharia e tecnologia para geração de energia limpa e gestão de companhias otimizada com IA." />
   <meta name="theme-color" content="#000000" />
   <meta property="og:title" content="Leonardo Pedrini — Links" />
   <meta property="og:description" content="Energia limpa, engenharia e gestão otimizada com IA. Biogás, biometano, energia e conteúdo." />
-  <meta property="og:image" content="assets/avatar.jpg?v=5" />
+  <meta property="og:image" content="https://www.leonardopedrini.com/link/assets/avatar.jpg?v=5" />
   <link rel="icon" href="assets/avatar.jpg?v=5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
