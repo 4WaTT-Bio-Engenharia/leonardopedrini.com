@@ -2,6 +2,12 @@ import logo4watt from "@/assets/logos/4watt.png";
 import logo4wEnergia from "@/assets/logos/4w-energia.png";
 import logoElectrolux from "@/assets/logos/electrolux.png";
 import logoTws from "@/assets/logos/tws-logo.png";
+import logoOabGoias from "@/assets/logos/oab-goias.png";
+import logoGeolab from "@/assets/logos/geolab.png";
+import logoCachoeiraAlta from "@/assets/logos/cachoeira-alta.png";
+import logoCaixaCantada from "@/assets/logos/caixa-cantada.png";
+import logoJacoCoelho from "@/assets/logos/jaco-coelho.png";
+import logoAnaville from "@/assets/logos/anaville.png";
 import electroluxResultados from "@/assets/cases/electrolux/electrolux-economia-5m-leonardo.jpg";
 import electroluxProcesso01 from "@/assets/cases/electrolux/electrolux-processo-01.jpeg";
 import electroluxProcesso02 from "@/assets/cases/electrolux/electrolux-processo-02.jpeg";
@@ -81,6 +87,74 @@ export const cases: CaseItem[] = [
     note: NOTA_TERCEIROS,
     text: "Planejamento estratégico e comercial validados com dados, e rotina de produção de peças jurídicas mais ágil, sem perder o rigor técnico do escritório.",
     tags: ["Planejamento comercial", "Estratégia", "Setores regulados", "Skill customizada"],
+  },
+  {
+    id: "oab-goias",
+    name: "OAB Goiás",
+    short: "OAB GO",
+    sector: "Jurídico · institucional",
+    logo: logoOabGoias,
+    owned: false,
+    note: NOTA_TERCEIROS,
+    text: "Uma das maiores entidades de advocacia do país abrindo espaço para método: estruturação de processos e gestão orientada a dados na operação institucional.",
+    tags: ["Estratégia", "Gestão por dados", "Processos"],
+  },
+  {
+    id: "geolab",
+    name: "Geolab Indústria Farmacêutica",
+    short: "Geolab",
+    sector: "Indústria farmacêutica",
+    logo: logoGeolab,
+    owned: false,
+    note: NOTA_TERCEIROS,
+    text: "Indústria farmacêutica de operação complexa e alta exigência regulatória: melhoria de processos e automação da gestão para decidir com consistência.",
+    tags: ["Lean", "Automação", "Indústria"],
+  },
+  {
+    id: "cachoeira-alta",
+    name: "Prefeitura de Cachoeira Alta",
+    short: "Cachoeira Alta",
+    sector: "Gestão pública municipal",
+    logo: logoCachoeiraAlta,
+    owned: false,
+    note: NOTA_TERCEIROS,
+    text: "Administração municipal estruturando projetos e processos com o mesmo rigor que se exige do setor privado: planejamento, dados e execução.",
+    tags: ["Gestão pública", "Planejamento", "Projetos"],
+  },
+  {
+    id: "caixa-cantada",
+    name: "Caixa Cantada",
+    short: "Caixa Cantada",
+    sector: "Música · negócio criativo",
+    logo: logoCaixaCantada,
+    site: "https://www.instagram.com/caixacantadaoficial/",
+    siteLabel: "@caixacantadaoficial",
+    owned: false,
+    note: NOTA_TERCEIROS,
+    text: "Projeto criativo que vive de audiência e constância: estratégia e automação tratando o negócio da música com a mesma seriedade de qualquer operação.",
+    tags: ["Estratégia", "Automação", "Operação criativa"],
+  },
+  {
+    id: "jaco-coelho",
+    name: "Jacó Coelho Advogados",
+    short: "Jacó Coelho",
+    sector: "Jurídico",
+    logo: logoJacoCoelho,
+    owned: false,
+    note: NOTA_TERCEIROS,
+    text: "Escritório de advocacia com nome próprio: estratégia comercial estruturada e rotina jurídica mais ágil, sem perder o rigor técnico da profissão.",
+    tags: ["Estratégia comercial", "Automação jurídica", "Processos"],
+  },
+  {
+    id: "anaville",
+    name: "Condomínio Anaville",
+    short: "Anaville",
+    sector: "Gestão condominial",
+    logo: logoAnaville,
+    owned: false,
+    note: NOTA_TERCEIROS,
+    text: "Gestão condominial conduzida com dados e transparência: condôminos informados e decisões de assembleia baseadas em número, não em impressão.",
+    tags: ["Gestão", "Dados", "Transparência"],
   },
   {
     id: "electrolux",

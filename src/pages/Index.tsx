@@ -28,11 +28,11 @@ import leonardoHero from "@/assets/leonardo-terno-preto.jpg";
 import leonardoBlazer from "@/assets/leonardo-blazer.jpg";
 
 const credibilityItems = [
-  "CEO da 4WaTT Bio Engenharia",
-  "Fundador de 5 empresas",
-  "+200 projetos de engenharia",
-  "+2 GW de potência",
-  "+R$ 5 bi em CAPEX",
+  { value: "CEO", label: "da 4WaTT Bio Engenharia", accent: false },
+  { value: "Fundador", label: "de 5 empresas em operação", accent: false },
+  { value: "+200", label: "projetos de engenharia entregues", accent: true },
+  { value: "+2 GW", label: "de potência somada em projetos", accent: true },
+  { value: "+R$ 5 bi", label: "em CAPEX conduzidos", accent: true },
 ];
 
 const trajetoria = [
@@ -59,6 +59,8 @@ const numeros = [
 ];
 
 const crencas = [
+  "Ser CEO de empresa já iniciada é jogar o jogo com o manual do lado. O mínimo de um bom trabalho é manter a empresa crescendo.",
+  "Empresa sem risco não existe. A pergunta certa é se o risco está sendo medido e administrado.",
   "Estudo de viabilidade barato é o projeto mais caro que existe.",
   "O risco de um projeto é técnico antes de ser financeiro.",
   "Dizer não a um projeto ruim também é engenharia.",
@@ -109,8 +111,8 @@ const ecossistema = [
     text: "Créditos de carbono com lastro real de projeto. Onde engenharia de resíduos encontra mercado de carbono.",
   },
   {
-    name: "Camada de tecnologia",
-    text: "Software e automação próprios sustentam a operação de todas as empresas. Uso IA e programação no meu dia a dia de gestão, como ferramenta do líder. Não como promessa.",
+    name: "Traciona AI",
+    text: "Inteligência artificial, software e automação aplicados à operação real do ecossistema. Uso IA e programação no meu dia a dia de gestão como ferramenta do líder. Não como promessa.",
   },
 ];
 
@@ -195,7 +197,7 @@ const jsonLd = [
     url: SITE_URL,
     jobTitle: "Engenheiro, fundador e CEO da 4WaTT",
     description:
-      "Engenheiro, fundador e CEO da 4WaTT Bio Engenharia. Fundador de empresas de energia, resíduos e tecnologia. Atua como advisor, conselheiro e consultor de estratégia.",
+      "Engenheiro, fundador e CEO da 4WaTT Bio Engenharia. Fundador da 4W Energia, da BESS4YOU, da Carbon4you e da Traciona AI. Atua como advisor, conselheiro e consultor de estratégia.",
   },
 ];
 
@@ -285,7 +287,7 @@ function CarouselShell<T>({ items, renderItem, itemClassName, dark }: CarouselSh
 const Index = () => (
   <PageLayout
     title="Leonardo Pedrini | Estratégia, engenharia e negócio"
-    description="Engenheiro, fundador e CEO da 4WaTT. Mais de 200 projetos, 2 GW de potência e R$ 5 bilhões em CAPEX. Advisor e consultor de estratégia para empresas e fundadores."
+    description="Engenheiro, CEO da 4WaTT e fundador da 4W Energia, da BESS4YOU, da Carbon4you e da Traciona AI. Mais de 200 projetos, 2 GW de potência e R$ 5 bilhões em CAPEX. Advisor e consultor de estratégia para empresas e fundadores."
     path="/"
     jsonLd={jsonLd}
     flush
@@ -313,16 +315,18 @@ const Index = () => (
             <Reveal delay={120}>
               <h1 className="font-display text-4xl font-extrabold leading-[1.02] tracking-[-0.035em] text-papel sm:text-5xl lg:text-6xl xl:text-[4.5rem]">
                 Problema difícil vira negócio{" "}
-                <span className="text-gradient-gold">quem pensa também executa.</span>
+                <span className="text-gradient-gold">
+                  quando estratégia e execução têm o mesmo responsável.
+                </span>
               </h1>
             </Reveal>
             <Reveal delay={240}>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-papel/65 md:text-lg">
-                Sou Leonardo Pedrini. Engenheiro, fundador e CEO da 4WaTT, uma das principais
-                empresas de engenharia de resíduos, biogás e biometano do país. Já entreguei mais de
-                200 projetos, somei mais de 2 GW de potência e conduzi mais de R$ 5 bilhões em CAPEX.
-                Hoje ajudo fundadores e empresas a pensar e decidir com o mesmo rigor que uso nas
-                minhas.
+                Sou Leonardo Pedrini. Engenheiro, CEO da 4WaTT Bio Engenharia e fundador de um
+                ecossistema que inclui 4W Energia, BESS4YOU, Carbon4you e Traciona AI. Já entreguei
+                mais de 200 projetos, somei mais de 2 GW de potência e conduzi mais de R$ 5 bilhões
+                em CAPEX. Hoje ajudo fundadores e empresas a pensar e decidir com o mesmo rigor que
+                uso nas minhas.
               </p>
             </Reveal>
             <Reveal delay={360}>
@@ -370,23 +374,34 @@ const Index = () => (
 
     {/* Barra de credibilidade */}
     <div className="border-b border-border bg-papel-light">
-      <div className="container py-7">
+      <div className="container py-12 md:py-16">
         <Reveal>
-          <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-2.5 text-center">
-            {credibilityItems.map((item, i) => (
-              <li key={item} className="flex items-center gap-7">
-                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-aco-dark md:text-xs">
-                  {item}
-                </span>
-                {i < credibilityItems.length - 1 && (
-                  <span className="hidden text-cobre md:inline" aria-hidden>
-                    ·
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
+          <p className="eyebrow text-cobre-dark">
+            <span className="h-px w-10 bg-cobre-dark/50" />
+            Autoridade construída em campo
+          </p>
         </Reveal>
+        <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-0">
+          {credibilityItems.map((item, i) => (
+            <Reveal
+              key={item.label}
+              delay={i * 90}
+              className={cn("lg:px-8", i > 0 && "lg:border-l lg:border-border")}
+            >
+              <div
+                className={cn(
+                  "font-display text-4xl font-extrabold tracking-[-0.025em] md:text-5xl",
+                  item.accent ? "text-cobre-dark" : "text-foreground",
+                )}
+              >
+                {item.value}
+              </div>
+              <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-aco-dark md:text-xs">
+                {item.label}
+              </p>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </div>
 

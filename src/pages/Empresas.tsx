@@ -30,9 +30,9 @@ const empresas = [
     text: "Créditos de carbono com lastro real de projeto. Nada de papel sem operação por trás: cada crédito nasce de engenharia executada.",
   },
   {
-    name: "Camada de tecnologia",
-    papel: "Software e automação",
-    text: "Sistemas próprios sustentam a operação de todas as empresas. Uso IA e programação na minha rotina de gestão como ferramenta do líder: relatórios de comercial, marketing e financeiro toda semana, sem retrabalho.",
+    name: "Traciona AI",
+    papel: "Tecnologia e IA",
+    text: "Inteligência artificial, software e automação aplicados à operação real do ecossistema. Uso IA e programação na minha rotina de gestão como ferramenta do líder: relatórios de comercial, marketing e financeiro toda semana, sem retrabalho.",
   },
 ];
 
@@ -60,8 +60,8 @@ const numeros = [
 
 const Empresas = () => (
   <PageLayout
-    title="Ecossistema de empresas — 4WaTT, 4W Energia, BESS4YOU, Carbon4you"
-    description="Cinco empresas, uma tese: engenharia é a garantia técnica do investidor. Resíduos, biogás, biometano, energia, armazenamento e carbono."
+    title="Ecossistema de empresas — 4WaTT, 4W Energia, BESS4YOU, Carbon4you, Traciona AI"
+    description="Cinco empresas, uma tese: engenharia é a garantia técnica do investidor. Resíduos, biogás, biometano, energia, armazenamento, carbono e tecnologia."
     path="/empresas"
   >
     {/* Hero — navy imersivo */}
