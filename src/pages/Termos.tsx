@@ -22,8 +22,8 @@ const sections = [
           constituem aconselhamento jurídico, contábil ou financeiro.
         </p>
         <p className="mt-3">
-          Recomendações geradas por ferramentas automatizadas (como o AI Work Audit) são pontos de
-          partida para conversa — não compromissos de resultado.
+          Recomendações geradas por ferramentas automatizadas são pontos de partida para
+          conversa, não compromissos de resultado.
         </p>
       </>
     ),
@@ -56,10 +56,10 @@ const sections = [
     title: "5. Propriedade intelectual",
     body: (
       <p>
-        Todo o conteúdo deste site — textos, métodos (incluindo o Método CARGA), templates, marcas e
+        Todo o conteúdo deste site — textos, métodos, templates, marcas e
         materiais — é protegido por direitos autorais. É vedada a reprodução, redistribuição ou uso
-        comercial sem autorização expressa. Materiais adquiridos (templates, blueprints, formações)
-        são licenciados para uso interno do comprador, não para revenda ou redistribuição.
+        comercial sem autorização expressa. Materiais adquiridos (templates, planos e materiais de
+        consultoria) são licenciados para uso interno do comprador, não para revenda ou redistribuição.
       </p>
     ),
   },

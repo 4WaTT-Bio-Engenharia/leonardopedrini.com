@@ -9,80 +9,75 @@ import { SITE_URL } from "@/components/SEO";
 
 const clusters = [
   {
-    name: "Implementação de IA",
-    desc: "Como tirar IA do piloto e colocar em produção: mapa, blueprint, evals e governança.",
-    articles: ["Como implementar IA na empresa", "Piloto de IA: como estruturar", "Erros de implementação de IA"],
+    name: "Estratégia e método",
+    desc: "Como decidir com hipótese, dado e teste, do estudo de viabilidade ao plano de crescimento.",
+    articles: ["Como eu decido entre cinco empresas e uma agenda só", "Por que eu digo não para a maioria dos projetos", "Premissa errada mata plano bonito"],
   },
   {
-    name: "Custos de IA",
-    desc: "Faixas reais de investimento por tipo de projeto — e o custo de não implementar.",
-    articles: ["Quanto custa um agente de IA no WhatsApp", "Quanto custa consultoria de IA", "Calculadora de ROI de IA"],
+    name: "Energia e engenharia",
+    desc: "Resíduos, biogás, biometano e armazenamento: o que a engenharia resolve antes do financeiro.",
+    articles: ["O risco é técnico antes de ser financeiro", "Estudo de viabilidade barato é o projeto mais caro", "Biogás queimando em flare é dinheiro virando fumaça"],
   },
   {
-    name: "Consultoria de IA",
-    desc: "Como escolher, o que cobrar, o que exigir — e quando consultoria é o formato errado.",
-    articles: ["Consultoria de IA: como escolher", "Consultoria de IA vs. curso", "7 erros ao contratar consultoria de IA"],
+    name: "Liderança e operação",
+    desc: "Decisões reais de fundador: time, indicadores e o que ninguém conta da rotina.",
+    articles: ["O que ninguém conta sobre liderar cinco empresas", "Indicador que não é medido vira surpresa", "Como dou crédito ao time sem perder o comando"],
   },
   {
-    name: "Agentes de IA",
-    desc: "O que são, quanto custam e como sair do piloto com qualidade medida.",
-    articles: ["Agentes de IA vs. automação RPA", "Agentes de IA e LGPD", "Agentes de IA para atendimento"],
+    name: "IA como ferramenta",
+    desc: "Onde a tecnologia entra de verdade na operação: custos, retorno e o fim do piloto eterno.",
+    articles: ["Os 5 motivos pelos quais empresas testam IA e não veem retorno", "Quanto custa implementar IA em 2026, de verdade", "ROI: como calcular antes de investir"],
   },
   {
-    name: "Automação com IA",
-    desc: "Processos, integrações com ERP/CRM e legado, e automação para pequenas empresas.",
-    articles: ["Automação de processos com IA", "Integração de IA com ERP, CRM e legado", "Automação com IA para pequenas empresas"],
+    name: "Finanças e risco",
+    desc: "CAPEX, payback e gestão de risco com premissa explícita. Número sem premissa é enfeite.",
+    articles: ["Payback sem premissa não é payback", "Como eu leio um estudo de viabilidade em 20 minutos", "O downside que ninguém coloca no pitch"],
   },
   {
-    name: "IA para gestores",
-    desc: "Por onde começar, como justificar o investimento e qual modelo de gestão adotar.",
-    articles: ["IA para gestores: por onde começar", "Modelo de gestão para IA", "Como justificar IA para a diretoria"],
-  },
-  {
-    name: "IA para empresas",
-    desc: "A jornada da empresa que quer IA executando trabalho — do checklist de prontidão ao retorno.",
-    articles: ["Checklist: sua empresa está pronta para IA?", "IA para empresas com orçamento limitado", "Da experimentação à infraestrutura"],
+    name: "Negócio e crescimento",
+    desc: "Estrutura que acompanha o tamanho: processo, gente e receita recorrente.",
+    articles: ["Crescer sem processo é juntar dívida", "Receita recorrente muda a engenharia do negócio", "Quando vender mais é o problema errado"],
   },
 ];
 
 const artigos = [
   {
     id: "quanto-custa-implementar-ia-2026",
-    cluster: "Custos de IA",
+    cluster: "IA como ferramenta",
     title: "Quanto custa implementar IA em 2026: faixas reais por tipo de projeto",
     lede: "A pergunta mais feita e menos respondida do mercado. A resposta honesta depende de uma coisa: o que você chama de 'implementar'.",
     body: [
-      "A maioria dos orçamentos de IA falha antes de começar porque compara coisas diferentes. Uma automação de um processo, um piloto com integração e uma plataforma corporativa não são três preços do mesmo produto — são três produtos diferentes.",
+      "A maioria dos orçamentos de IA falha antes de começar porque compara coisas diferentes. Uma automação de um processo, um piloto com integração e uma plataforma corporativa não são três preços do mesmo produto, são três produtos diferentes.",
       "Automação pontual (um processo, sem integração profunda): R$ 5–15 mil. É o caso do atendimento de primeiro nível, da geração de propostas ou do backoffice de um departamento. Retorno típico em semanas, quando o processo foi bem escolhido.",
-      "Piloto com integração (2–3 processos, conectado ao seu CRM ou ERP): R$ 30–120 mil. Aqui entram desenho de processo, evals, LGPD e treinamento do time. É a faixa em que a maioria das PMEs deveria começar quando o objetivo é resultado na operação, não aprendizado.",
-      "Plataforma ou transformação multi-área: R$ 250 mil ou mais por ano. Faz sentido quando IA deixa de ser projeto e vira infraestrutura — com governança, comitê e relatório de ROI ao board.",
-      "O que ninguém coloca na proposta: o custo de ferramentas e licenças (estimado antes de assinar, nunca depois), o custo do tempo do seu time e o custo de não implementar — as horas que a operação continua queimando enquanto você decide. Antes de comparar preços, compare o que está incluído: processo desenhado, KPI contratado e transferência para o seu time — ou só a licença.",
+      "Piloto com integração (2–3 processos, conectado ao seu CRM ou ERP): R$ 30–120 mil. Aqui entram desenho de processo, avaliação de qualidade, LGPD e treinamento do time. É a faixa em que a maioria das PMEs deveria começar quando o objetivo é resultado na operação, não aprendizado.",
+      "Plataforma ou transformação multi-área: R$ 250 mil ou mais por ano. Faz sentido quando a tecnologia deixa de ser projeto e vira infraestrutura, com governança, comitê e relatório de retorno ao conselho.",
+      "O que ninguém coloca na proposta: o custo de ferramentas e licenças (estimado antes de assinar, nunca depois), o custo do tempo do seu time e o custo de não implementar. Antes de comparar preços, compare o que está incluído: processo desenhado, indicador contratado e transferência para o seu time, ou só a licença.",
     ],
   },
   {
     id: "roi-de-agentes-de-ia",
-    cluster: "Custos de IA",
-    title: "ROI de agentes de IA: como calcular antes de investir",
-    lede: "Agente de IA não se paga com 'ganho de produtividade'. Se paga com horas devolvidas à operação — e isso se mede antes de contratar.",
+    cluster: "IA como ferramenta",
+    title: "ROI de automação: como calcular antes de investir",
+    lede: "Automação não se paga com 'ganho de produtividade'. Se paga com horas devolvidas à operação, e isso se mede antes de contratar.",
     body: [
-      "A conta começa no processo, não na ferramenta. Primeiro, o baseline: quantas horas por semana o processo consome hoje, de quantas pessoas, a qual custo-hora. Sem esse número, qualquer ROI é ficção.",
-      "Depois, a fração automatizável: nem todo o processo é padronizado o suficiente para a IA executar com qualidade. Mapeie o que é regra e repetição (automatizável) versus julgamento e exceção (humano). O ROI real vem da fração automatizável — não do processo inteiro.",
-      "A fórmula: (horas da fração automatizável × custo-hora × 4,33 semanas) − (custo mensal de ferramentas + manutenção) = retorno mensal. Divida o investimento de implantação pelo retorno mensal e você tem o payback em meses.",
-      "Três erros que inflam o ROI no papel: contar 100% do processo como automatizável; ignorar o custo de supervisão humana (o human-in-the-loop tem custo e deve ter); e esquecer o custo de erro — em processos onde erro custa caro, a avaliação sistemática (evals) é parte do investimento, não opcional.",
-      "Se o payback calculado passa de 6 meses em uma PME, desconfie do escopo. Os melhores primeiros processos pagam a implantação em 4 a 12 semanas — e financiam os próximos.",
+      "A conta começa no processo, não na ferramenta. Primeiro, o baseline: quantas horas por semana o processo consome hoje, de quantas pessoas, a qual custo-hora. Sem esse número, qualquer retorno é ficção.",
+      "Depois, a fração automatizável: nem todo o processo é padronizado o suficiente para executar com qualidade por sistema. Mapeie o que é regra e repetição (automatizável) versus julgamento e exceção (humano). O retorno real vem da fração automatizável, não do processo inteiro.",
+      "A fórmula: (horas da fração automatizável × custo-hora × 4,33 semanas) menos (custo mensal de ferramentas + manutenção) = retorno mensal. Divida o investimento de implantação pelo retorno mensal e você tem o payback em meses.",
+      "Três erros que inflam o retorno no papel: contar 100% do processo como automatizável; ignorar o custo de supervisão humana; e esquecer o custo de erro. Em processos onde erro custa caro, a avaliação sistemática de qualidade é parte do investimento, não opcional.",
+      "Se o payback calculado passa de 6 meses em uma PME, desconfie do escopo. Os melhores primeiros processos pagam a implantação em 4 a 12 semanas, e financiam os próximos.",
     ],
   },
   {
     id: "por-que-empresas-testam-ia-e-nao-veem-retorno",
-    cluster: "Implementação de IA",
+    cluster: "IA como ferramenta",
     title: "Os 5 motivos pelos quais empresas testam IA e não veem retorno",
-    lede: "88% das empresas já usam IA em alguma função. Só 6% capturam valor de forma consistente (McKinsey, State of AI 2025). Os motivos se repetem — e nenhum deles é a ferramenta.",
+    lede: "88% das empresas já usam IA em alguma função. Só 6% capturam valor de forma consistente (McKinsey, State of AI 2025). Os motivos se repetem, e nenhum deles é a ferramenta.",
     body: [
-      "1. Começar pela ferramenta. Alguém viu uma demo, comprou licenças e rodou um piloto de apresentação. Sem mapa do processo, não existe automação — existe aposta. Processo antes de ferramenta, sempre.",
+      "1. Começar pela ferramenta. Alguém viu uma demo, comprou licenças e rodou um piloto de apresentação. Sem mapa do processo, não existe automação, existe aposta. Processo antes de ferramenta, sempre.",
       "2. Uso individual que não vira rotina. O ChatGPT aberto o dia todo na tela de uma pessoa não muda a operação. Cada uso é um evento isolado: nada fica salvo, nada vira processo, ninguém mais usa do mesmo jeito. O ganho depende de alguém lembrar de usar.",
-      "3. Piloto sem critério de aceite. 'Vamos testar' não é projeto. Sem baseline medido e KPI contratado antes do início, o piloto nunca termina — porque ninguém sabe dizer se funcionou.",
-      "4. Ignorar o humano no loop. IA imposta de fora para dentro não sobrevive ao primeiro mês. Sem dono interno treinado e sem desenho de onde o humano decide, o sistema morre na primeira exceção.",
-      "5. Piloto que nunca chega em produção. Demo impressiona; produção exige integração com legado, evals, LGPD e governança. O abismo entre os dois é onde morrem os projetos — e é exatamente o que um método de implementação existe para atravessar.",
+      "3. Piloto sem critério de aceite. 'Vamos testar' não é projeto. Sem baseline medido e indicador contratado antes do início, o piloto nunca termina, porque ninguém sabe dizer se funcionou.",
+      "4. Ignorar o humano no loop. Tecnologia imposta de fora para dentro não sobrevive ao primeiro mês. Sem dono interno treinado e sem desenho de onde o humano decide, o sistema morre na primeira exceção.",
+      "5. Piloto que nunca chega em produção. Demo impressiona; produção exige integração com legado, avaliação de qualidade, LGPD e governança. O abismo entre os dois é onde morrem os projetos.",
       "O padrão por trás dos cinco: tratar IA como enfeite em vez de infraestrutura. Quem mede o trabalho antes de automatizar, pilota com trabalho real e transfere a operação para o time está entre os 6%.",
     ],
   },
@@ -91,9 +86,9 @@ const artigos = [
 const blogJsonLd = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  name: "Insights — IA que Trabalha",
+  name: "Insights — Leonardo Pedrini",
   description:
-    "Artigos de fundo de funil sobre implementação de IA, custos e ROI — sem hype.",
+    "Artigos sobre estratégia, energia, liderança e tecnologia aplicada a negócio. Sem hype.",
   url: `${SITE_URL}/insights`,
   author: { "@type": "Person", name: "Leonardo Vieira Pedrini", url: SITE_URL },
   blogPost: artigos.map((a) => ({
@@ -107,8 +102,8 @@ const blogJsonLd = {
 
 const Insights = () => (
   <PageLayout
-    title="Insights — implementação de IA, custos e ROI, sem hype"
-    description="Artigos de fundo de funil para quem decide: quanto custa implementar IA, como sair do piloto, onde a LGPD entra e como calcular retorno antes de investir."
+    title="Insights — estratégia, energia e negócio, sem hype"
+    description="Artigos de Leonardo Pedrini sobre método, engenharia, liderança e tecnologia aplicada a negócio. Decisões reais, números reais."
     path="/insights"
     jsonLd={blogJsonLd}
   >
@@ -121,11 +116,11 @@ const Insights = () => (
             Insights
           </div>
           <h1 className="font-display text-4xl md:text-6xl font-medium leading-[1.05] text-foreground">
-            IA que trabalha: implementação, custos e ROI — sem hype
+            Estratégia, energia e negócio. Sem hype.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Artigos de fundo de funil para quem decide: quanto custa implementar, como sair do piloto,
-            onde a LGPD entra, como calcular retorno antes de investir.
+            O que eu aprendi operando cinco empresas e entregando mais de 200 projetos de
+            engenharia. Escrito para quem decide, com premissa e número na mesa.
           </p>
         </div>
       </div>
@@ -137,7 +132,7 @@ const Insights = () => (
         <SectionHeading
           eyebrow="Leituras essenciais"
           title="Comece por estes três"
-          description="Os artigos que respondem o que todo decisor pergunta antes de investir em IA."
+          description="Os artigos que respondem o que todo decisor pergunta antes de colocar tecnologia na operação."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {artigos.map((a) => (
@@ -185,19 +180,19 @@ const Insights = () => (
             </div>
             <div className="mt-10 rounded-lg border border-primary/40 bg-cobre-soft/40 p-6">
               <p className="font-display text-lg font-medium text-foreground">
-                Quer saber onde a sua empresa está nessa história?
+                Quer aplicar isso no seu negócio?
               </p>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                O AI Work Audit mede sua maturidade em 6 dimensões e devolve os 3 processos que você
-                deveria automatizar primeiro. 8 minutos, gratuito.
+                A Sessão Estratégica é onde a conversa fica específica: até 2 horas comigo, e você sai
+                com um plano objetivo para a sua realidade.
               </p>
               <CTAButton
-                to="/diagnostico"
+                to="/consultoria"
                 size="sm"
                 className="mt-5"
                 trackingParams={{ cta_position: "article_end", article: a.id }}
               >
-                Fazer o AI Work Audit
+                Agendar sessão estratégica
               </CTAButton>
             </div>
           </div>
@@ -211,7 +206,7 @@ const Insights = () => (
         <SectionHeading
           eyebrow="Temas"
           title="Aprofunde por tema"
-          description="Sete trilhas de conteúdo em produção — novos artigos toda semana."
+          description="Seis trilhas de conteúdo em produção. Novos artigos toda semana na newsletter."
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {clusters.map((c) => (
@@ -235,8 +230,8 @@ const Insights = () => (
             <div>
               <h3 className="font-display text-xl font-medium text-foreground">Receba antes de publicar</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Os artigos saem primeiro na newsletter IA que Trabalha — junto com um template e um
-                número de ROI por semana.
+                Os artigos saem primeiro na newsletter: uma decisão real de negócio por semana, com o
+                que deu certo e o que deu errado depois.
               </p>
             </div>
             <Link
@@ -257,11 +252,11 @@ const Insights = () => (
       <div className="container py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-medium leading-[1.1] text-papel">
-            O que ninguém te conta sobre implementar IA — toda semana, no seu e-mail.
+            Uma decisão real de negócio, por semana, no seu e-mail
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-papel/65">
-            Um processo real decomposto e automatizado, um template pronto e um número de ROI.
-            Sem hype, sem ferramenta da semana.
+            O que eu medi, o que eu decidi e o que aconteceu depois. Escrito por quem funda e opera,
+            não por quem só comenta.
           </p>
           <div className="mx-auto mt-10 max-w-xl rounded-lg bg-papel p-6 text-left text-foreground md:p-8">
             <NewsletterSignupForm source="insights_footer" />

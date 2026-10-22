@@ -56,7 +56,7 @@ const NewsletterSignupForm = ({
         email: parsed.data.email,
         telefone: "newsletter",
         segmento: source,
-        objetivo: "Assinatura da newsletter IA que Trabalha",
+        objetivo: "Assinatura da newsletter Leonardo Pedrini",
       });
       if (error) throw error;
       trackEvent("newsletter_signup", { source_form: source });

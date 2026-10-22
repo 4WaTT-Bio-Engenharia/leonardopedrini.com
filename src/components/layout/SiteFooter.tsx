@@ -9,35 +9,36 @@ import logoBranca from "@/assets/logo-branca.png";
 
 const columns: { title: string; links: { to: string; label: string }[] }[] = [
   {
-    title: "Soluções",
+    title: "Trabalhe comigo",
     links: [
-      { to: "/cursos", label: "Cursos" },
-      { to: "/imersao", label: "Imersão" },
-      { to: "/comunidade", label: "Comunidade" },
-      { to: "/consultoria", label: "Consultoria" },
-      { to: "/empresas", label: "Empresas" },
+      { to: "/consultoria", label: "Sessão Estratégica" },
+      { to: "/consultoria", label: "Consultoria de estratégia" },
+      { to: "/consultoria", label: "Conselho e advisory" },
+      { to: "/empresas", label: "Ecossistema de empresas" },
     ],
   },
   {
-    title: "Empresa",
+    title: "Empresas",
+    links: [
+      { to: "https://www.4watt.tech", label: "4WaTT Bio Engenharia" },
+      { to: "/empresas", label: "4W Energia" },
+      { to: "/empresas", label: "BESS4YOU e Carbon4you" },
+    ],
+  },
+  {
+    title: "Conteúdo",
     links: [
       { to: "/sobre", label: "Sobre" },
       { to: "/metodo", label: "Método" },
       { to: "/cases", label: "Cases" },
-      { to: "/contato", label: "Contato" },
-    ],
-  },
-  {
-    title: "Recursos",
-    links: [
       { to: "/insights", label: "Insights" },
       { to: "/newsletter", label: "Newsletter" },
-      { to: "/diagnostico", label: "Diagnóstico gratuito" },
     ],
   },
   {
     title: "Legal",
     links: [
+      { to: "/contato", label: "Contato" },
       { to: "/privacidade", label: "Privacidade" },
       { to: "/termos", label: "Termos de uso" },
     ],
@@ -91,7 +92,8 @@ const SiteFooter = () => {
               className="h-12 w-12"
             />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-papel/55">
-              Engenharia de crescimento para pequenas empresas de serviços: método, dados e IA aplicada.
+              Engenheiro, fundador e CEO da 4WaTT. Transformo problema difícil em negócio que dá
+              resultado, e ajudo outros líderes a fazer o mesmo.
             </p>
 
             <form onSubmit={handleNewsletter} className="mt-10">
@@ -163,13 +165,24 @@ const SiteFooter = () => {
                 <div className="eyebrow text-cobre-light/70">{col.title}</div>
                 <ul className="mt-5 space-y-3">
                   {col.links.map((l) => (
-                    <li key={l.to}>
-                      <Link
-                        to={l.to}
-                        className="text-sm text-papel/60 transition-colors duration-300 hover:text-papel"
-                      >
-                        {l.label}
-                      </Link>
+                    <li key={l.label}>
+                      {l.to.startsWith("http") ? (
+                        <a
+                          href={l.to}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-papel/60 transition-colors duration-300 hover:text-papel"
+                        >
+                          {l.label}
+                        </a>
+                      ) : (
+                        <Link
+                          to={l.to}
+                          className="text-sm text-papel/60 transition-colors duration-300 hover:text-papel"
+                        >
+                          {l.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

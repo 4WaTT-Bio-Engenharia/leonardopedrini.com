@@ -24,166 +24,168 @@ import { cn } from "@/lib/utils";
 
 import { trackEvent } from "@/lib/analytics";
 import { SITE_URL } from "@/components/SEO";
-import leonardoAbout from "@/assets/lvpedrini_ai.jpg";
+import leonardoHero from "@/assets/leonardo-terno-preto.jpg";
+import leonardoBlazer from "@/assets/leonardo-blazer.jpg";
 
 const credibilityItems = [
-  "Engenheiro",
-  "Fundador da 4WaTT Bio Engenharia",
-  "Fundador e CEO da 4W Energia",
-  "Lean/VSM/DMAIC na operação de multinacional",
-  "Conselho consultivo APEEL",
+  "CEO da 4WaTT Bio Engenharia",
+  "Fundador de 5 empresas",
+  "+200 projetos de engenharia",
+  "+2 GW de potência",
+  "+R$ 5 bi em CAPEX",
 ];
 
-const empresas = [
+const trajetoria = [
+  {
+    name: "Chão de fábrica",
+    text: "Comecei como jovem aprendiz na Ford e virei torneiro CNC. Aprendi cedo que processo se mede, ou não existe. Essa lição nunca saiu de mim.",
+  },
+  {
+    name: "Multinacional",
+    text: "Supply chain na Electrolux, com Lean, VSM e DMAIC na operação real. Duas menções honrosas internacionais. Foi lá que aprendi método antes de opinião.",
+    quote: "Processo se mede, ou não existe.",
+  },
+  {
+    name: "Fundador",
+    text: "Sai da engenharia de multinacional para construir o que eu acreditava: primeiro a 4WaTT, depois um ecossistema inteiro de empresas de energia e tecnologia.",
+  },
+];
+
+const numeros = [
+  { valor: 200, prefix: "+", suffix: "", label: "projetos de engenharia entregues" },
+  { valor: 2, prefix: "+", suffix: " GW", label: "de potência somada em projetos" },
+  { valor: 5, prefix: "+R$ ", suffix: " bi", label: "em CAPEX conduzidos" },
+  { valor: 5, prefix: "", suffix: "", label: "empresas fundadas e em operação" },
+];
+
+const crencas = [
+  "Estudo de viabilidade barato é o projeto mais caro que existe.",
+  "O risco de um projeto é técnico antes de ser financeiro.",
+  "Dizer não a um projeto ruim também é engenharia.",
+  "Não existe projeto de prateleira.",
+  "Biogás queimando em flare é dinheiro virando fumaça.",
+];
+
+const metodo = [
+  {
+    letter: "H",
+    name: "Hipótese",
+    desc: "Toda decisão começa como hipótese explícita, com premissa clara. Se a premissa está errada, o plano inteiro cai. Melhor descobrir isso no papel do que em campo.",
+  },
+  {
+    letter: "D",
+    name: "Dado",
+    desc: "Antes de decidir, eu meço. Tempo, custo, fila, retrabalho. Opinião disputa espaço em reunião. Dado não disputa, ele decide.",
+  },
+  {
+    letter: "T",
+    name: "Teste",
+    desc: "Nada escala sem prova. Piloto controlado, critério de aceite objetivo, erro classificado por causa. Escalar por entusiasmo é o jeito mais caro de errar.",
+  },
+  {
+    letter: "D",
+    name: "Decisão",
+    desc: "Com evidência na mesa, decido rápido e assumo a decisão. Incluindo decidir não avançar, quando o número não fecha.",
+  },
+];
+
+const ecossistema = [
   {
     name: "4WaTT Bio Engenharia",
-    text: "Deeptech que projeta e constrói usinas que transformam resíduos em energia, com engenharia e automação proprietárias.",
-    quote: "Engenharia de resultado. Sem atalhos, sem achismo.",
+    text: "Engenharia de resíduos, biogás e biometano. Projetos complexos de alto valor, onde o risco é técnico antes de ser financeiro. É a empresa principal do ecossistema.",
+    link: "https://www.4watt.tech",
+    linkLabel: "www.4watt.tech",
   },
   {
     name: "4W Energia",
-    text: "Cooperativa de energia 100% renovável por assinatura. Software, operação regulada e recorrência: tecnologia a serviço de resultado na fatura do cliente.",
+    text: "Energia renovável com modelo de negócio recorrente. Software, operação regulada e resultado que aparece na fatura do cliente.",
   },
   {
-    name: "Traciona AI",
-    text: "A empresa onde aplico, todos os dias, a tese que defendo: IA não é para responder. É para executar trabalho.",
-  },
-];
-
-const carga = [
-  {
-    letter: "C",
-    name: "Cartografar",
-    desc: "Mapear o trabalho como ele é: tempos, filas, retrabalho, volume. Sem mapa, automação vira aposta.",
+    name: "BESS4YOU",
+    text: "Armazenamento de energia em baterias. A resposta técnica para um problema que só vai crescer: energia limpa que precisa chegar na hora certa.",
   },
   {
-    letter: "A",
-    name: "Arquitetar",
-    desc: "Desenhar o processo futuro: o que a IA executa, onde o humano decide e qual KPI fica contratado. Escopo fechado antes de qualquer build.",
+    name: "Carbon4you",
+    text: "Créditos de carbono com lastro real de projeto. Onde engenharia de resíduos encontra mercado de carbono.",
   },
   {
-    letter: "R",
-    name: "Rodar",
-    desc: "Piloto em produção controlada, com trabalho real, nunca demo. Qualidade medida por evals desde o primeiro dia.",
-  },
-  {
-    letter: "G",
-    name: "Governar",
-    desc: "Dono interno treinado, manual de operação e de exceções, LGPD e monitoramento. A operação precisa rodar sem mim, ou o projeto falhou.",
-  },
-  {
-    letter: "A",
-    name: "Ampliar",
-    desc: "O que provou retorno vira roadmap de 12 meses. Um processo resolvido de cada vez, até virar vantagem estrutural.",
+    name: "Camada de tecnologia",
+    text: "Software e automação próprios sustentam a operação de todas as empresas. Uso IA e programação no meu dia a dia de gestão, como ferramenta do líder. Não como promessa.",
   },
 ];
 
-const solucoes = [
+const caminhos = [
   {
-    name: "AI Work Audit",
-    price: "gratuito",
-    desc: "8 minutos, 14 perguntas. Você recebe seu nível de maturidade, os 3 processos candidatos à automação e o próximo passo recomendado.",
-    cta: "Fazer o diagnóstico",
-    to: "/diagnostico",
-  },
-  {
-    name: "AI Work Starter Kit",
-    price: "R$ 197",
-    desc: "Seus primeiros 10 agentes de trabalho prontos, com guia de 15 minutos de instalação cada. Custa menos de 1 hora de consultor.",
-    cta: "Instalar meus primeiros agentes",
-    to: "/solucoes",
-  },
-  {
-    name: "Formação IA que Trabalha",
-    price: "R$ 1.997",
-    desc: "6 semanas para sair com um processo real da sua empresa rodando em produção e o método para replicar nos demais.",
-    cta: "Ver a formação",
-    to: "/cursos",
-  },
-  {
-    name: "AI Work Lab",
-    price: "R$ 297/mês",
-    desc: "O laboratório de implementação: todo mês uma automação ou agente novo em produção no seu negócio, com rituais, templates e office hours.",
-    cta: "Entrar no laboratório",
-    to: "/comunidade",
-  },
-  {
-    name: "Imersão IA que Trabalha",
-    price: "R$ 2.997",
-    desc: "2 dias hands-on. Você sai com backlog priorizado, uma automação construída ao vivo e o plano de 90 dias. Turmas de 40 vagas.",
-    cta: "Garantir minha vaga",
-    to: "/imersao",
-  },
-  {
-    name: "Mentoria AI Work",
-    price: "R$ 9.997",
-    desc: "12 semanas de implementação assistida em grupo: 3 processos em produção, com KPI contratado. 12 empresas por turma.",
-    cta: "Aplicar para a próxima turma",
+    name: "Sessão Estratégica",
+    price: "R$ 2.500",
+    desc: "Até 2 horas comigo, online ou presencial em Goiânia. Você traz o problema, eu trago o método. Sai da conversa com um plano objetivo para a sua realidade.",
+    cta: "Ver como funciona",
     to: "/consultoria",
   },
   {
-    name: "AI Implementation Sprint",
-    price: "R$ 45.000",
-    desc: "90 dias para IA rodando como infraestrutura do seu negócio: de 4 a 6 frentes implantadas, equipe treinada, KPI contratado. 4 empresas por trimestre.",
-    cta: "Aplicar para o próximo trimestre",
+    name: "Consultoria de estratégia",
+    price: "sob proposta",
+    desc: "Projetos com escopo, prazo e número. Estratégia que não para no slide: desenho, execução e medição, do estudo de viabilidade à operação.",
+    cta: "Conversar sobre o projeto",
     to: "/consultoria",
   },
   {
-    name: "Enterprise AI Transformation",
-    price: "a partir de R$ 150.000/ano",
-    desc: "Programa anual multi-área: estratégia, governança, squads e formação in-company.",
-    cta: "Solicitar proposta executiva",
-    to: "/empresas",
+    name: "Conselho e advisory",
+    price: "mensal",
+    desc: "Reuniões mensais de diretoria com alguém que funda e opera empresas de verdade. Perguntas difíceis na mesa antes que virem problema no caixa.",
+    cta: "Entender o formato",
+    to: "/consultoria",
+  },
+  {
+    name: "Engenharia 4WaTT",
+    price: "projetos",
+    desc: "Resíduos, biogás e biometano com garantia técnica. Estudo de viabilidade sério, porque estudo barato é o projeto mais caro que existe.",
+    cta: "Conhecer a 4WaTT",
+    to: "https://www.4watt.tech",
   },
 ];
 
-const icps = [
+const reconhecimentos = [
   {
-    quote: "Uso o ChatGPT todo dia e nada mudou na operação.",
-    text: "Você virou o gargalo: tudo depende da sua memória. O diagnóstico mostra a saída, que é transformar uso em processo.",
-    cta: "Fazer o AI Work Audit",
-    to: "/diagnostico",
+    quote: "Tenho um projeto grande na mesa e ninguém interno para validar se a engenharia fecha.",
+    text: "O risco é técnico antes de ser financeiro. Quem investe sem garantia técnica está apostando, não investindo.",
+    cta: "Conhecer a 4WaTT",
+    to: "https://www.4watt.tech",
   },
   {
-    quote: "A diretoria cobrou um plano de IA e eu preciso mostrar resultado.",
-    text: "Você precisa de roadmap com pilotos priorizados e ROI estimado, não de mais um curso.",
-    cta: "Ver como a mentoria funciona",
+    quote: "Minha empresa cresceu e a estrutura não acompanhou.",
+    text: "Crescer sem processo é juntar dívida que cobra juros. A consultoria desenha a estrutura que o tamanho novo exige.",
+    cta: "Ver a consultoria de estratégia",
     to: "/consultoria",
   },
   {
-    quote: "Vendo o que sei, mas só cobro pela hora.",
-    text: "Seu método pode virar sistema: agentes treinados no seu acervo, com sigilo e qualidade medida.",
-    cta: "Ver as soluções para especialistas",
+    quote: "Sinto que decido no escuro, sem dados.",
+    text: "Decisão sem dado é opinião com cargo. A Sessão Estratégica começa medindo o que hoje ninguém mede.",
+    cta: "Agendar uma sessão",
     to: "/consultoria",
   },
   {
-    quote: "Quero resultado na operação sem precisar virar expert em ferramenta.",
-    text: "Você não compra tecnologia, compra número: KPI contratado, prazo fechado e equipe treinada.",
-    cta: "Ver o Sprint de 90 dias",
+    quote: "O conselho precisa de alguém que já fundou e operou empresa de verdade.",
+    text: "Teoria de sala de aula não sobrevive ao caixa. Advisory com quem responde por resultado todo mês.",
+    cta: "Entender o advisory",
     to: "/consultoria",
-  },
-  {
-    quote: "Nossos pilotos de IA morrem no proof of concept.",
-    text: "O gap está na integração com legado, nos evals, na LGPD e na governança. Produção, não apresentação.",
-    cta: "Ver o programa enterprise",
-    to: "/empresas",
   },
 ];
 
 const insights = [
-  { tag: "Custos", title: "Quanto custa implementar IA em 2026, de verdade" },
-  { tag: "ROI", title: "ROI de agentes de IA: como calcular antes de investir" },
-  { tag: "Implementação", title: "Os 5 motivos pelos quais empresas testam IA e não veem retorno" },
-  { tag: "Gestão", title: "O que muda na rotina do gestor quando a IA passa a executar" },
-  { tag: "Receita", title: "Agentes comerciais: como recuperar lead que esfria no WhatsApp" },
-  { tag: "Estratégia", title: "Diagnóstico antes da ferramenta: o mapa que vem antes da automação" },
+  { tag: "Estratégia", title: "Por que eu digo não para a maioria dos projetos que me procuram" },
+  { tag: "Energia", title: "O risco é técnico antes de ser financeiro: o que isso muda no seu investimento" },
+  { tag: "Liderança", title: "Como eu decido entre cinco empresas e uma agenda só" },
+  { tag: "Negócio", title: "Estudo de viabilidade barato é o projeto mais caro que existe" },
+  { tag: "Energia", title: "Biogás queimando em flare é dinheiro virando fumaça" },
+  { tag: "Método", title: "Dado bom vale mais que opinião em reunião" },
 ];
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "L.V. Pedrini | IA que Trabalha",
+    name: "Leonardo Pedrini | Estratégia, engenharia e negócio",
     url: SITE_URL,
   },
   {
@@ -191,69 +193,11 @@ const jsonLd = [
     "@type": "Person",
     name: "Leonardo Vieira Pedrini",
     url: SITE_URL,
-    jobTitle: "Engenheiro e implementador de IA",
+    jobTitle: "Engenheiro, fundador e CEO da 4WaTT",
     description:
-      "Engenheiro, fundador da 4WaTT Bio Engenharia e da 4W Energia. Implanta IA como infraestrutura de trabalho em empresas reais.",
+      "Engenheiro, fundador e CEO da 4WaTT Bio Engenharia. Fundador de empresas de energia, resíduos e tecnologia. Atua como advisor, conselheiro e consultor de estratégia.",
   },
 ];
-
-/** Fluxo proprietário: Prompt → Workflow → Agente → Sistema, linha champagne animada. */
-const flowNodes = ["Prompt", "Workflow", "Agente", "Sistema"];
-
-const FlowVisual = () => (
-  <div className="relative hidden lg:block" aria-hidden>
-    <div className="absolute -inset-8 rounded-full bg-cobre/[0.06] blur-3xl" />
-    <TiltCard
-      strength={5}
-      className="relative rounded-xl border border-papel/10 bg-papel/[0.03] p-7 backdrop-blur-md"
-      style={{ boxShadow: "inset 0 1px 0 0 hsl(40 27% 96% / 0.08), var(--shadow-premium)" }}
-    >
-      <div className="eyebrow text-cobre-light/70">Do chat ao sistema</div>
-      <div className="relative mt-8">
-        <svg className="absolute left-[7px] top-2 h-[calc(100%-1rem)] w-px overflow-visible" aria-hidden>
-          <line
-            x1="0.5"
-            y1="0"
-            x2="0.5"
-            y2="100%"
-            stroke="hsl(41 49% 59% / 0.55)"
-            strokeWidth="1"
-            strokeDasharray="4 24"
-            className="animate-flow-dash"
-          />
-        </svg>
-        <ol className="space-y-7">
-          {flowNodes.map((node, i) => (
-            <Reveal
-              key={node}
-              delay={i * 100}
-              y={10}
-              as="li"
-              className="relative flex items-center gap-5 pl-0"
-            >
-              <span
-                className="animate-node-pulse relative z-10 h-[15px] w-[15px] rounded-full border border-cobre-light/70 bg-grafite-900"
-                style={{ animationDelay: `${i * 0.8}s`, boxShadow: "0 0 0 4px hsl(41 49% 59% / 0.12)" }}
-              />
-              <span className="flex items-baseline gap-3">
-                <span className="font-mono text-[11px] text-cobre-light/60">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="font-display text-xl font-bold tracking-[-0.01em] text-papel">{node}</span>
-              </span>
-            </Reveal>
-          ))}
-        </ol>
-      </div>
-      <div className="mt-8 border-t border-papel/10 pt-5">
-        <p className="text-xs leading-relaxed text-papel/45">
-          Cada degrau tira a IA da sua memória e coloca no processo. No topo, ela vira infraestrutura:
-          medida, governada, sua.
-        </p>
-      </div>
-    </TiltCard>
-  </div>
-);
 
 interface CarouselShellProps<T> {
   items: T[];
@@ -340,8 +284,8 @@ function CarouselShell<T>({ items, renderItem, itemClassName, dark }: CarouselSh
 
 const Index = () => (
   <PageLayout
-    title="Leonardo Pedrini | IA que trabalha pela sua empresa"
-    description="Pare de conversar com a IA. Implementação de IA com resultado mensurável para empresas: diagnóstico, agentes e consultoria. Faça o AI Work Audit."
+    title="Leonardo Pedrini | Estratégia, engenharia e negócio"
+    description="Engenheiro, fundador e CEO da 4WaTT. Mais de 200 projetos, 2 GW de potência e R$ 5 bilhões em CAPEX. Advisor e consultor de estratégia para empresas e fundadores."
     path="/"
     jsonLd={jsonLd}
     flush
@@ -360,7 +304,7 @@ const Index = () => (
           <div className="border-b border-papel/10 pb-6">
             <div className="eyebrow text-cobre-light">
               <span className="h-px w-10 bg-cobre-light/70" />
-              IA que trabalha
+              Engenharia · Estratégia · Execução
             </div>
           </div>
         </Reveal>
@@ -368,28 +312,27 @@ const Index = () => (
           <div className="lg:col-span-7">
             <Reveal delay={120}>
               <h1 className="font-display text-4xl font-extrabold leading-[1.02] tracking-[-0.035em] text-papel sm:text-5xl lg:text-6xl xl:text-[4.5rem]">
-                Pare de conversar com a IA.{" "}
-                <span className="text-gradient-gold">Coloque a IA para trabalhar.</span>
+                Problema difícil vira negócio{" "}
+                <span className="text-gradient-gold">quem pensa também executa.</span>
               </h1>
             </Reveal>
             <Reveal delay={240}>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-papel/65 md:text-lg">
-                Você já testou o ChatGPT, talvez tenha feito curso, e a operação segue igual. O problema
-                não é a ferramenta, é a falta de processo. Eu desenho esse processo e construo workflows
-                e agentes que executam trabalho de verdade, com retorno medido em horas e em reais. Sou
-                engenheiro, fundei a 4WaTT e a 4W Energia, e implanto IA dentro de operações reais.
-                Inclusive nas minhas.
+                Sou Leonardo Pedrini. Engenheiro, fundador e CEO da 4WaTT, uma das principais
+                empresas de engenharia de resíduos, biogás e biometano do país. Já entreguei mais de
+                200 projetos, somei mais de 2 GW de potência e conduzi mais de R$ 5 bilhões em CAPEX.
+                Hoje ajudo fundadores e empresas a pensar e decidir com o mesmo rigor que uso nas
+                minhas.
               </p>
             </Reveal>
             <Reveal delay={360}>
               <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <CTAButton
-                  to="/diagnostico"
+                  to="/consultoria"
                   size="lg"
-                  trackingEvent="diagnostic_start"
                   trackingParams={{ cta_position: "home_hero" }}
                 >
-                  Fazer o AI Work Audit gratuito
+                  Agendar sessão estratégica
                 </CTAButton>
                 <CTAButton
                   to="/metodo"
@@ -399,18 +342,26 @@ const Index = () => (
                   className="border-papel/25 text-papel hover:border-cobre-light hover:text-cobre-light"
                   trackingParams={{ cta_position: "home_hero" }}
                 >
-                  Conhecer o Método CARGA
+                  Conhecer meu método
                 </CTAButton>
               </div>
             </Reveal>
             <Reveal delay={460}>
               <p className="mt-6 text-sm text-papel/45">
-                8 minutos. Você sai sabendo seu nível de maturidade e quais processos automatizar primeiro.
+                Até 2 horas, online ou presencial. Você sai com um plano objetivo, não com uma lista de
+                ideias.
               </p>
             </Reveal>
           </div>
           <Reveal delay={500} y={36} className="lg:col-span-5">
-            <FlowVisual />
+            <div className="relative mx-auto max-w-sm lg:max-w-none">
+              <div className="absolute -inset-3 rounded-xl border border-cobre/25" aria-hidden />
+              <img
+                src={leonardoHero}
+                alt="Leonardo Vieira Pedrini, engenheiro, fundador e CEO da 4WaTT"
+                className="relative w-full rounded-lg border border-papel/15 object-cover shadow-premium"
+              />
+            </div>
           </Reveal>
         </div>
       </div>
@@ -439,20 +390,20 @@ const Index = () => (
       </div>
     </div>
 
-    {/* Faixa de logos: onde o método foi aplicado */}
+    {/* Faixa de logos: quem confia no trabalho */}
     <LogoStrip />
 
-    {/* 2. Quem assina */}
+    {/* 2. Trajetória */}
     <section className="border-b border-border">
       <div className="container py-24 md:py-32">
         <Reveal>
           <SectionHeading
             eyebrow="Quem assina"
-            title="Eu não ensino IA porque aprendi ferramentas. Uso IA porque passei 15 anos resolvendo problema real de empresa."
+            title="Eu não falo de estratégia por ter lido sobre estratégia. Falo porque respondo por resultado todo mês."
           />
         </Reveal>
         <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-3">
-          {empresas.map((e, i) => (
+          {trajetoria.map((e, i) => (
             <Reveal key={e.name} delay={i * 120} className="h-full">
               <article className="flex h-full flex-col bg-card p-9 transition-colors duration-500 ease-luxury hover:bg-papel-light md:p-11">
                 <div className="font-mono text-[11px] text-cobre-dark">{String(i + 1).padStart(2, "0")}</div>
@@ -471,8 +422,10 @@ const Index = () => (
         </div>
         <Reveal delay={200}>
           <p className="mt-10 max-w-3xl text-base leading-relaxed text-muted-foreground">
-            Antes disso: chão de fábrica na Ford, torno CNC e supply chain na Electrolux com Lean, VSM e
-            DMAIC. Foi lá que aprendi a lição que rege tudo aqui: processo se mede, ou não existe.
+            Formação dupla em engenharia mecânica e engenharia de energia, dois mestrados, MBA em
+            engenharia financeira e gestão de risco pela Columbia University, Six Sigma pela
+            University of Georgia e ciência de dados pela University of Michigan. Eu estudo muito,
+            sempre. Mas é em campo que método se prova.
           </p>
         </Reveal>
       </div>
@@ -481,95 +434,115 @@ const Index = () => (
     {/* 3. O problema */}
     <section className="border-b border-border bg-secondary/50">
       <div className="container py-24 md:py-32">
-        <div className="grid gap-14 lg:grid-cols-12 lg:items-start lg:gap-20">
-          <div className="lg:col-span-7">
-            <Reveal>
-              <SectionHeading eyebrow="O problema" title="O ChatGPT aberto o dia todo. A operação igualzinha." />
-            </Reveal>
-            <Reveal delay={140}>
-              <div className="mt-12 space-y-7 text-lg leading-relaxed text-foreground/85">
-                <p>
-                  Você provavelmente conhece essa cena: o ChatGPT aberto o dia inteiro, e a operação não
-                  muda um pixel.
-                </p>
-                <p>
-                  Cada uso é um evento isolado. Nada fica salvo, nada vira rotina, e cada pessoa da equipe
-                  usa de um jeito. O ganho depende de você lembrar de usar. E lembrar não é processo, é
-                  sorte.
-                </p>
-                <p>
-                  Enquanto isso a operação cobra sua conta: lead esfriando no WhatsApp, proposta travada
-                  há dias, financeiro refém de planilha manual. No fim do mês a assinatura de IA aparece
-                  como custo, não como investimento.
-                </p>
-                <p>
-                  Isso tem nome: <strong className="text-foreground">turismo de prompts</strong>. Curso de
-                  ferramenta sem processo, prompt solto sem dono, automação sem KPI, piloto que nunca
-                  chega em produção. Aí a diretoria pergunta de novo: “e a IA, como está?”.
-                </p>
-                <p>
-                  A saída não é conversar melhor com a IA. É tratá-la como infraestrutura: processo
-                  desenhado, gente preparada e número no relatório. É engenharia, não inspiração.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={240}>
-              <p className="mt-12 font-display text-3xl font-extrabold tracking-[-0.02em] text-cobre-dark md:text-4xl">
-                IA que não executa é enfeite.
+        <div className="max-w-3xl">
+          <Reveal>
+            <SectionHeading eyebrow="O problema" title="Sua empresa não precisa de mais uma opinião. Precisa de método." />
+          </Reveal>
+          <Reveal delay={140}>
+            <div className="mt-12 space-y-7 text-lg leading-relaxed text-foreground/85">
+              <p>
+                Reunião cheia de opinião e vazia de dado. Projeto aprovado no entusiasmo e revisado no
+                prejuízo. Crescimento que improvisa estrutura e descobre, tarde, que crescer sem
+                processo é juntar dívida.
               </p>
-            </Reveal>
-          </div>
-
-          <Reveal delay={180} className="lg:col-span-5">
-            <TiltCard strength={4} className="rounded-xl border border-cobre/25 bg-card p-9 shadow-soft md:p-11">
-              <div className="eyebrow text-cobre-dark">O paradoxo da adoção</div>
-              <div className="mt-9 grid grid-cols-2 gap-8">
-                <div>
-                  <div className="font-mono text-6xl font-bold leading-none tracking-[-0.02em] text-foreground md:text-7xl">
-                    <CountUp to={88} suffix="%" />
-                  </div>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                    das empresas já usam IA em alguma função
-                  </p>
-                </div>
-                <div className="border-l border-border pl-8">
-                  <div className="font-mono text-6xl font-bold leading-none tracking-[-0.02em] text-cobre-dark md:text-7xl">
-                    <CountUp to={6} suffix="%" />
-                  </div>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                    capturam valor de forma consistente
-                  </p>
-                </div>
-              </div>
-              <p className="mt-9 border-t border-border pt-6 text-xs text-muted-foreground/70">
-                Fonte: McKinsey, State of AI 2025.
+              <p>
+                Eu vi esse filme de perto por quinze anos, em multinacional e nas cinco empresas que
+                fundei. A saída nunca foi mais gente na sala, nem mais slide. Foi medir antes de decidir,
+                testar antes de escalar e assumir a decisão com o número na mesa.
               </p>
-            </TiltCard>
+              <p>
+                É isso que eu faço hoje com empresas e fundadores: aplico o mesmo método que uso nas
+                minhas. Engenharia, gestão e tecnologia a serviço de uma coisa só, resultado.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={240}>
+            <p className="mt-12 font-display text-3xl font-extrabold tracking-[-0.02em] text-cobre-dark md:text-4xl">
+              Opinião é barata. Método é raro.
+            </p>
           </Reveal>
         </div>
       </div>
     </section>
 
-    {/* 4. Método CARGA */}
+    {/* 4. Prova em números (navy) */}
+    <section className="relative overflow-hidden border-b border-grafite-500/30 bg-gradient-navy text-papel">
+      <div className="absolute inset-0 bg-grid-navy" aria-hidden />
+      <div className="container relative py-20 md:py-24">
+        <Reveal>
+          <div className="eyebrow text-cobre-light">
+            <span className="h-px w-10 bg-cobre-light/70" />
+            A prova, em número
+          </div>
+        </Reveal>
+        <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          {numeros.map((n, i) => (
+            <Reveal key={n.label} delay={i * 100}>
+              <div className="border-l border-papel/15 pl-6">
+                <div className="font-mono text-5xl font-bold leading-none tracking-[-0.02em] text-papel md:text-6xl">
+                  {n.prefix}
+                  <CountUp to={n.valor} suffix={n.suffix} />
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-papel/55">{n.label}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={220}>
+          <p className="mt-12 text-xs text-papel/40">
+            Acumulado da carreira de engenharia e fundação das empresas até hoje.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+
+    {/* 5. Crenças */}
+    <section className="border-b border-border">
+      <div className="container py-24 md:py-32">
+        <Reveal>
+          <SectionHeading
+            eyebrow="O que eu acredito"
+            title="Algumas pessoas discordam. Tudo bem."
+            description="Crenças que sustentam cada decisão que eu tomo como fundador e cada projeto que eu assino como engenheiro."
+          />
+        </Reveal>
+        <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-border bg-border">
+          {crencas.map((c, i) => (
+            <Reveal key={c} delay={Math.min(i * 80, 320)}>
+              <div className="flex items-start gap-6 bg-card px-8 py-7 transition-colors duration-500 ease-luxury hover:bg-papel-light md:px-10">
+                <span className="font-mono text-sm font-semibold text-cobre-dark">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="font-display text-xl font-bold leading-snug tracking-[-0.01em] text-foreground md:text-2xl">
+                  {c}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* 6. Método: pensar como cientista */}
     <section className="relative overflow-hidden border-b border-grafite-500/30 bg-gradient-navy text-papel">
       <div className="absolute inset-0 bg-grid-navy" aria-hidden />
       <span
         className="pointer-events-none absolute -bottom-16 left-1/2 -translate-x-1/2 select-none whitespace-nowrap font-mono text-[7rem] font-bold leading-none tracking-[0.05em] text-papel/[0.035] md:text-[10rem]"
         aria-hidden
       >
-        C A R G A
+        MÉTODO
       </span>
       <div className="container relative py-24 md:py-32">
         <Reveal>
           <SectionHeading
-            eyebrow="O método"
+            eyebrow="Como eu penso"
             tone="dark"
-            title="O Método CARGA"
-            description="O ciclo de engenharia que tira o trabalho do colo das pessoas e entrega para a IA executar, com retorno medido em cada etapa."
+            title="Pensar como cientista, decidir como empresário"
+            description="O elo entre engenharia, gestão e tecnologia nas minhas empresas é um só: hipótese, dado, teste, decisão."
           />
         </Reveal>
-        <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-papel/15 bg-papel/15 md:grid-cols-5">
-          {carga.map((s, i) => (
+        <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-papel/15 bg-papel/15 md:grid-cols-4">
+          {metodo.map((s, i) => (
             <Reveal key={s.name} delay={i * 110} className="h-full">
               <article className="h-full bg-grafite p-8 transition-colors duration-500 ease-luxury hover:bg-grafite-700">
                 <div className="font-display text-5xl font-extrabold tracking-[-0.02em] text-cobre">
@@ -596,14 +569,144 @@ const Index = () => (
       </div>
     </section>
 
-    {/* 5. Carrossel 1: cases */}
+    {/* 7. Ecossistema de empresas */}
+    <section className="border-b border-border">
+      <div className="container py-24 md:py-32">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Ecossistema"
+            title="Cinco empresas, uma tese: engenharia é a garantia do investidor"
+            description="Cada empresa nasceu de um problema real que eu vi de perto. Nenhuma nasceu de planilha de pitch."
+          />
+        </Reveal>
+        <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+          {ecossistema.map((e, i) => (
+            <Reveal key={e.name} delay={Math.min(i * 90, 360)} className="h-full">
+              <article className="flex h-full flex-col bg-card p-9 transition-colors duration-500 ease-luxury hover:bg-papel-light">
+                <h3 className="font-display text-2xl font-bold tracking-[-0.015em] text-foreground">
+                  {e.name}
+                </h3>
+                <p className="mt-4 flex-1 text-base leading-relaxed text-muted-foreground">{e.text}</p>
+                {e.link && (
+                  <a
+                    href={e.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() =>
+                      trackEvent("cta_click", {
+                        cta_label: e.linkLabel,
+                        cta_position: "home_ecossistema",
+                        cta_destination: e.link,
+                      })
+                    }
+                    className="mt-6 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cobre-dark transition-colors duration-300 hover:text-foreground"
+                  >
+                    {e.linkLabel}
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                )}
+              </article>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal delay={200}>
+          <p className="mt-10 max-w-3xl text-base leading-relaxed text-muted-foreground">
+            Eu não lidero essas empresas de camarote. Estou na operação, na decisão e no resultado.
+            É esse padrão que levo para a mesa de quem trabalha comigo.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+
+    {/* 8. Caminhos para trabalhar comigo (navy) */}
+    <section className="relative overflow-hidden border-b border-grafite-500/30 bg-gradient-navy text-papel">
+      <div className="absolute inset-0 bg-grid-navy" aria-hidden />
+      <div className="container relative py-24 md:py-32">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Trabalhe comigo"
+            tone="dark"
+            title="Quatro formas de colocar esse método no seu negócio"
+            description="Do encontro pontual à engenharia completa do seu projeto. Você entra pelo caminho que faz sentido hoje."
+          />
+        </Reveal>
+        <Reveal delay={160}>
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {caminhos.map((s, i) => {
+              const inner = (
+                <>
+                  <div className="flex items-baseline justify-between gap-3">
+                    <span className="font-mono text-xs text-cobre-light/60">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="font-mono text-sm text-cobre-light">{s.price}</span>
+                  </div>
+                  <h3 className="mt-5 font-display text-2xl font-bold tracking-[-0.015em] text-papel transition-colors duration-300 group-hover:text-cobre-light">
+                    {s.name}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-papel/55">{s.desc}</p>
+                  <span className="mt-7 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cobre-light">
+                    {s.cta}
+                    <ArrowUpRight
+                      className="h-4 w-4 transition-transform duration-300 ease-luxury group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      aria-hidden
+                    />
+                  </span>
+                </>
+              );
+              const cls =
+                "group flex h-full flex-col rounded-lg border border-papel/12 bg-papel/[0.03] p-8 backdrop-blur-sm transition-all duration-500 ease-luxury hover:-translate-y-1 hover:border-cobre/50 hover:bg-papel/[0.05]";
+              return s.to.startsWith("http") ? (
+                <a
+                  key={s.name}
+                  href={s.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackEvent("product_view", { product_name: s.name, caminho: i })
+                  }
+                  className={cls}
+                >
+                  {inner}
+                </a>
+              ) : (
+                <Link
+                  key={s.name}
+                  to={s.to}
+                  onClick={() =>
+                    trackEvent("product_view", { product_name: s.name, caminho: i })
+                  }
+                  className={cls}
+                >
+                  {inner}
+                </Link>
+              );
+            })}
+          </div>
+        </Reveal>
+        <Reveal delay={220}>
+          <p className="mt-12 max-w-2xl text-base leading-relaxed text-papel/55">
+            Não sabe qual caminho é o seu? É exatamente para isso que a Sessão Estratégica existe.{" "}
+            <Link
+              to="/consultoria"
+              onClick={() => trackEvent("cta_click", { cta_label: "sessao_via_caminhos", cta_position: "home_caminhos_footer" })}
+              className="font-semibold text-cobre-light underline-offset-4 transition-colors hover:underline"
+            >
+              Começar por ela →
+            </Link>
+          </p>
+        </Reveal>
+      </div>
+    </section>
+
+    {/* 9. Carrossel: cases */}
     <section className="border-b border-border">
       <div className="container py-24 md:py-32">
         <Reveal>
           <SectionHeading
             eyebrow="Cases"
             title="Resultado em campo, não em slide de apresentação"
-            description="Planejamento estratégico, RAG, data science e automação dentro de operações reais, nas minhas empresas e em clientes."
+            description="Projetos de engenharia, estratégia e tecnologia entregues. Nas minhas empresas e em clientes."
           />
         </Reveal>
         <Reveal delay={160}>
@@ -625,103 +728,67 @@ const Index = () => (
       </div>
     </section>
 
-    {/* 6. Carrossel 2: soluções (navy) */}
-    <section className="relative overflow-hidden border-b border-grafite-500/30 bg-gradient-navy text-papel">
-      <div className="absolute inset-0 bg-grid-navy" aria-hidden />
-      <div className="container relative py-24 md:py-32">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Soluções"
-            tone="dark"
-            title="Um caminho para cada momento"
-            description="Do diagnóstico gratuito ao programa anual de transformação. Você entra no degrau que faz sentido hoje e sobe no seu ritmo."
-          />
-        </Reveal>
-        <Reveal delay={160}>
-          <div className="mt-14">
-            <CarouselShell
-              dark
-              items={solucoes}
-              itemClassName="md:basis-1/2 xl:basis-1/3"
-              renderItem={(s, i) => (
-                <Link
-                  to={s.to}
-                  onClick={() => trackEvent("product_view", { product_name: s.name, ladder_step: i })}
-                  className="group flex h-full flex-col rounded-lg border border-papel/12 bg-papel/[0.03] p-8 backdrop-blur-sm transition-all duration-500 ease-luxury hover:-translate-y-1 hover:border-cobre/50 hover:bg-papel/[0.05]"
-                >
-                  <div className="flex items-baseline justify-between gap-3">
-                    <span className="font-mono text-xs text-cobre-light/60">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="font-mono text-sm text-cobre-light">{s.price}</span>
-                  </div>
-                  <h3 className="mt-5 font-display text-2xl font-bold tracking-[-0.015em] text-papel transition-colors duration-300 group-hover:text-cobre-light">
-                    {s.name}
-                  </h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-papel/55">{s.desc}</p>
-                  <span className="mt-7 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cobre-light">
-                    {s.cta}
-                    <ArrowUpRight
-                      className="h-4 w-4 transition-transform duration-300 ease-luxury group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      aria-hidden
-                    />
-                  </span>
-                </Link>
-              )}
-            />
-          </div>
-        </Reveal>
-        <Reveal delay={220}>
-          <p className="mt-12 max-w-2xl text-base leading-relaxed text-papel/55">
-            Não sabe qual é o seu degrau? O AI Work Audit responde com um score, não com uma opinião.{" "}
-            <Link
-              to="/diagnostico"
-              onClick={() => trackEvent("diagnostic_start", { cta_position: "home_ladder_footer" })}
-              className="font-semibold text-cobre-light underline-offset-4 transition-colors hover:underline"
-            >
-              Fazer o diagnóstico →
-            </Link>
-          </p>
-        </Reveal>
-      </div>
-    </section>
-
-    {/* 7. Para quem é */}
+    {/* 10. Reconhecimentos */}
     <section className="border-b border-border">
       <div className="container py-24 md:py-32">
         <Reveal>
-          <SectionHeading eyebrow="Para quem é" title="Se você se reconhece em alguma dessas frases" />
+          <SectionHeading eyebrow="Se você se reconhece" title="Essas frases costumam chegar até mim" />
         </Reveal>
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {icps.map((icp, i) => (
-            <Reveal key={icp.quote} delay={i * 90} className="h-full">
-              <article className="card-lux flex h-full flex-col p-9">
-                <blockquote className="font-display text-lg font-bold leading-snug tracking-[-0.01em] text-foreground">
-                  “{icp.quote}”
-                </blockquote>
-                <p className="mt-5 flex-1 text-sm leading-relaxed text-muted-foreground">{icp.text}</p>
-                <Link
-                  to={icp.to}
-                  onClick={() =>
-                    trackEvent("cta_click", {
-                      cta_label: icp.cta,
-                      cta_position: "home_icp",
-                      cta_destination: icp.to,
-                    })
-                  }
-                  className="pressable mt-7 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cobre-dark transition-colors duration-300 hover:text-foreground"
-                >
-                  {icp.cta}{" "}
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 ease-luxury group-hover:translate-x-1" />
-                </Link>
-              </article>
-            </Reveal>
-          ))}
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
+          {reconhecimentos.map((icp, i) => {
+            const cta = (
+              <>
+                {icp.cta}{" "}
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 ease-luxury group-hover:translate-x-1" />
+              </>
+            );
+            return (
+              <Reveal key={icp.quote} delay={i * 90} className="h-full">
+                <article className="card-lux flex h-full flex-col p-9">
+                  <blockquote className="font-display text-lg font-bold leading-snug tracking-[-0.01em] text-foreground">
+                    “{icp.quote}”
+                  </blockquote>
+                  <p className="mt-5 flex-1 text-sm leading-relaxed text-muted-foreground">{icp.text}</p>
+                  {icp.to.startsWith("http") ? (
+                    <a
+                      href={icp.to}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() =>
+                        trackEvent("cta_click", {
+                          cta_label: icp.cta,
+                          cta_position: "home_reconhecimentos",
+                          cta_destination: icp.to,
+                        })
+                      }
+                      className="pressable group mt-7 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cobre-dark transition-colors duration-300 hover:text-foreground"
+                    >
+                      {cta}
+                    </a>
+                  ) : (
+                    <Link
+                      to={icp.to}
+                      onClick={() =>
+                        trackEvent("cta_click", {
+                          cta_label: icp.cta,
+                          cta_position: "home_reconhecimentos",
+                          cta_destination: icp.to,
+                        })
+                      }
+                      className="pressable group mt-7 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-cobre-dark transition-colors duration-300 hover:text-foreground"
+                    >
+                      {cta}
+                    </Link>
+                  )}
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
 
-    {/* 8. Leonardo */}
+    {/* 11. Leonardo */}
     <section className="border-b border-border bg-secondary/50">
       <div className="container py-24 md:py-32">
         <div className="grid items-center gap-14 lg:grid-cols-5">
@@ -729,8 +796,8 @@ const Index = () => (
             <div className="relative">
               <div className="absolute -inset-3 rounded-xl border border-cobre/30" aria-hidden />
               <img
-                src={leonardoAbout}
-                alt="Leonardo Vieira Pedrini, engenheiro e fundador da 4WaTT Bio Engenharia e da 4W Energia"
+                src={leonardoBlazer}
+                alt="Leonardo Vieira Pedrini, engenheiro e CEO da 4WaTT"
                 className="relative w-full rounded-lg border border-border object-cover shadow-soft"
                 loading="lazy"
               />
@@ -738,28 +805,27 @@ const Index = () => (
           </Reveal>
           <div className="lg:col-span-3">
             <Reveal>
-              <SectionHeading eyebrow="Quem coloca a IA para trabalhar" title="Leonardo Vieira Pedrini" />
+              <SectionHeading eyebrow="Quem pensa e executa" title="Leonardo Vieira Pedrini" />
             </Reveal>
             <Reveal delay={140}>
               <div className="mt-9 space-y-6 text-lg leading-relaxed text-foreground/85">
                 <p>
-                  Sou engenheiro. Comecei no chão de fábrica, de jovem aprendiz na Ford a torneiro CNC, e
-                  aprendi processo onde erro custa caro: supply chain na Electrolux, com Lean, VSM e
-                  DMAIC.
+                  Meu dia começa com oração, leitura e academia. Depois, operação: cinco empresas, um
+                  time de gente acima da média e decisões que não esperam segunda-feira.
                 </p>
                 <p>
-                  Virei fundador porque queria construir, não só aconselhar: co-fundei a 4WaTT Bio
-                  Engenharia em 2015 e fundei a 4W Energia em 2020. Hoje também integro o conselho
-                  consultivo da APEEL.
+                  Sou autista nível 1. Penso melhor quando a informação é visual, literal e
+                  estruturada. Talvez por isso o método tenha virado minha assinatura: tudo o que eu
+                  decido passa por hipótese, dado e teste.
                 </p>
                 <p>
-                  A IA generativa chegou para mim como resposta a um problema que venho perseguindo a
-                  carreira inteira:{" "}
+                  Não resolvo tudo sozinho e não finjo que resolvo.{" "}
                   <strong className="text-foreground">
-                    como escalar trabalho qualificado sem escalar custo.
+                    Monto a estratégia com as pessoas certas e dou crédito ao time quando o trabalho é
+                    dele.
                   </strong>
                 </p>
-                <p>Hoje implanto nas empresas dos outros o que implanto nas minhas.</p>
+                <p>Se a sua empresa precisa de pensamento assim na mesa, é isso que eu vendo.</p>
               </div>
             </Reveal>
             <Reveal delay={240}>
@@ -774,14 +840,14 @@ const Index = () => (
       </div>
     </section>
 
-    {/* 9. Carrossel 3: insights para acompanhar */}
+    {/* 12. Carrossel: insights */}
     <section className="border-b border-border">
       <div className="container py-24 md:py-32">
         <Reveal>
           <SectionHeading
             eyebrow="Para acompanhar"
-            title="Conteúdo de quem implementa, não de quem só opina"
-            description="Toda semana, um processo real decomposto na newsletter IA que Trabalha. Aqui, uma amostra do que você encontra no Insights."
+            title="Conteúdo de quem opera, não de quem só opina"
+            description="Decisões reais, números reais, erros reais. Aqui, uma amostra do que você encontra no Insights."
           />
         </Reveal>
         <Reveal delay={160}>
@@ -804,7 +870,7 @@ const Index = () => (
                   <div className="flex items-center justify-between">
                     <span className="eyebrow text-cobre-dark">{post.tag}</span>
                     <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground/70">
-                      Newsletter
+                      Insights
                     </span>
                   </div>
                   <h3 className="mt-5 flex-1 font-display text-2xl font-bold leading-snug tracking-[-0.015em] text-foreground transition-colors duration-300 group-hover:text-cobre-dark">
@@ -829,18 +895,20 @@ const Index = () => (
       </div>
     </section>
 
-    {/* 10. Newsletter */}
+    {/* 13. Newsletter */}
     <NewsletterSection />
 
-    {/* 11. CTA final */}
+    {/* 14. CTA final */}
     <CTASection
-      title="Pronto para parar de conversar com a IA?"
-      description="São 8 minutos para descobrir. O AI Work Audit mede sua maturidade em 6 dimensões e devolve um relatório com os 3 processos que vale a pena automatizar primeiro. Sem compromisso e sem enrolação."
-      ctaTo="/diagnostico"
-      ctaLabel="Fazer o AI Work Audit gratuito"
+      title="Três meses na mesma dúvida custam mais que duas horas de método."
+      description="A Sessão Estratégica é o ponto de entrada: até 2 horas comigo, online ou presencial em Goiânia. Você traz o problema, eu trago o método. Sai com um plano objetivo para a sua realidade."
+      ctaTo="/consultoria"
+      ctaLabel="Agendar sessão estratégica"
+      secondaryTo="/contato"
+      secondaryLabel="Prefiro escrever primeiro"
     />
     <div className="bg-grafite-900 pb-12 pt-2 text-center">
-      <p className="font-display text-lg font-semibold italic text-papel/40">IA que não executa é enfeite.</p>
+      <p className="font-display text-lg font-semibold italic text-papel/40">Opinião é barata. Método é raro.</p>
     </div>
   </PageLayout>
 );

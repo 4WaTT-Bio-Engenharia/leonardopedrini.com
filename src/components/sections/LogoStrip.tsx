@@ -9,7 +9,7 @@ type LogoStripProps = {
 /** Duas cópias da lista para o loop do marquee ficar contínuo (sem salto). */
 const track = [...cases, ...cases];
 
-const LogoStrip = ({ label = "Onde o método foi aplicado" }: LogoStripProps) => (
+const LogoStrip = ({ label = "Quem confia no meu trabalho" }: LogoStripProps) => (
   <div className="relative overflow-hidden border-b border-grafite-500/30 bg-gradient-navy py-16 md:py-20">
     <div className="absolute inset-0 bg-grid-navy" aria-hidden />
     <div

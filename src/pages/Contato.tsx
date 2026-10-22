@@ -12,11 +12,12 @@ const schema = z.object({
   nome: z.string().trim().min(1, "Nome é obrigatório").max(100),
   email: z.string().trim().email("E-mail inválido").max(255),
   empresa: z.string().trim().max(120).optional().or(z.literal("")),
-  motivo: z.enum(["comercial", "palestra", "parceria", "imprensa"]),
+  motivo: z.enum(["estrategia", "comercial", "palestra", "parceria", "imprensa"]),
   mensagem: z.string().trim().min(10, "Escreva um pouco de contexto (mín. 10 caracteres)").max(2000),
 });
 
 const motivoLabels: Record<string, string> = {
+  estrategia: "Sessão estratégica / advisory",
   comercial: "Comercial",
   palestra: "Palestra",
   parceria: "Parceria",
@@ -29,7 +30,7 @@ const inputCls =
 const labelCls = "mb-2 block font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground";
 
 const Contato = () => {
-  const [f, setF] = useState({ nome: "", email: "", empresa: "", motivo: "comercial", mensagem: "" });
+  const [f, setF] = useState({ nome: "", email: "", empresa: "", motivo: "estrategia", mensagem: "" });
   const [loading, setLoading] = useState(false);
   const started = useRef(false);
   const navigate = useNavigate();
@@ -95,7 +96,7 @@ const Contato = () => {
   return (
     <PageLayout
       title="Contato — Leonardo Vieira Pedrini"
-      description="Fale com Leonardo: consultoria, palestras, parcerias e imprensa. Resposta em até 48h úteis."
+      description="Fale com Leonardo: sessão estratégica, consultoria, advisory, palestras, parcerias e imprensa. Resposta em até 48h úteis."
       path="/contato"
       flush
     >
@@ -112,8 +113,8 @@ const Contato = () => {
                 Fale comigo
               </h1>
               <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
-                Comercial, palestras, parcerias ou imprensa — escolha o motivo e escreva com
-                contexto. Resposta em até 48h úteis.
+                Sessão estratégica, consultoria, advisory, palestra, parceria ou imprensa. Escolha o
+                motivo e escreva com contexto. Resposta em até 48h úteis.
               </p>
 
               <div className="mt-12 space-y-4">
@@ -122,7 +123,7 @@ const Contato = () => {
                   <div>
                     <div className="text-sm font-semibold text-foreground">WhatsApp</div>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Prefere direto? Canal de WhatsApp em configuração — por ora, o formulário ao
+                      Prefere direto? Canal de WhatsApp em configuração. Por ora, o formulário ao
                       lado é o caminho mais rápido.
                     </p>
                   </div>

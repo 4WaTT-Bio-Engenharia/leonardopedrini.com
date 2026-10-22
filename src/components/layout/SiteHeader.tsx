@@ -4,15 +4,12 @@ import {
   ArrowRight,
   ArrowUpRight,
   Building2,
+  CalendarClock,
   ChevronDown,
-  ClipboardCheck,
   Compass,
-  GraduationCap,
+  Landmark,
   Menu,
-  Package,
-  Rocket,
-  Users,
-  Zap,
+  Network,
   type LucideIcon,
 } from "lucide-react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -20,64 +17,47 @@ import CTAButton from "@/components/conversion/CTAButton";
 import { cn } from "@/lib/utils";
 import logoBranca from "@/assets/logo-branca.png";
 
-type Solucao = { to: string; label: string; desc: string; icon: LucideIcon };
-type Grupo = { title: string; items: Solucao[] };
+type Item = { to: string; label: string; desc: string; icon: LucideIcon };
+type Grupo = { title: string; items: Item[] };
 
 const grupos: Grupo[] = [
   {
-    title: "Comece aqui",
-    items: [
-      {
-        to: "/solucoes",
-        label: "AI Work Starter Kit",
-        desc: "Seus primeiros 10 agentes de trabalho, pré-configurados",
-        icon: Package,
-      },
-    ],
-  },
-  {
-    title: "Aprender e aplicar",
-    items: [
-      {
-        to: "/cursos",
-        label: "Formação IA que Trabalha",
-        desc: "6 semanas até um processo real em produção",
-        icon: GraduationCap,
-      },
-      {
-        to: "/imersao",
-        label: "Imersão IA que Trabalha",
-        desc: "2 dias hands-on: backlog priorizado e automação ao vivo",
-        icon: Zap,
-      },
-      {
-        to: "/comunidade",
-        label: "AI Work Lab",
-        desc: "Laboratório mensal de implementação, com rituais e templates",
-        icon: Users,
-      },
-    ],
-  },
-  {
-    title: "Implementar comigo",
+    title: "Decidir com método",
     items: [
       {
         to: "/consultoria",
-        label: "Mentoria AI Work",
-        desc: "12 semanas, 3 processos em produção, KPI contratado",
+        label: "Sessão Estratégica",
+        desc: "Até 2 horas comigo. Você sai com um plano objetivo para o seu negócio",
+        icon: CalendarClock,
+      },
+      {
+        to: "/consultoria",
+        label: "Consultoria de estratégia",
+        desc: "Projetos com escopo, prazo e número. Estratégia que vira execução",
         icon: Compass,
       },
       {
         to: "/consultoria",
-        label: "AI Implementation Sprint",
-        desc: "90 dias: IA como infraestrutura do seu negócio",
-        icon: Rocket,
+        label: "Conselho e advisory",
+        desc: "Reuniões mensais de diretoria com quem funda e opera empresas de verdade",
+        icon: Landmark,
+      },
+    ],
+  },
+  {
+    title: "Construir",
+    items: [
+      {
+        to: "https://www.4watt.tech",
+        label: "4WaTT Bio Engenharia",
+        desc: "Engenharia de resíduos, biogás e biometano. CEO e fundador",
+        icon: Building2,
       },
       {
         to: "/empresas",
-        label: "Enterprise AI Transformation",
-        desc: "Programa anual multi-área: estratégia, governança e squads",
-        icon: Building2,
+        label: "Ecossistema de empresas",
+        desc: "Energia, armazenamento em baterias, carbono e tecnologia",
+        icon: Network,
       },
     ],
   },
@@ -91,7 +71,7 @@ const navLinks = [
 ];
 
 /** Rotas cujo topo é navy escuro — header pode nascer transparente sobre o hero. */
-const DARK_HERO_ROUTES = ["/", "/metodo", "/cases"];
+const DARK_HERO_ROUTES = ["/", "/metodo", "/cases", "/consultoria", "/empresas"];
 
 const SiteHeader = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -133,8 +113,8 @@ const SiteHeader = () => {
     closeTimer.current = setTimeout(() => setMegaOpen(false), 140);
   };
 
-  const solucoesActive = ["/solucoes", "/cursos", "/imersao", "/comunidade", "/consultoria", "/empresas", "/diagnostico"].some(
-    (p) => location.pathname.startsWith(p),
+  const solucoesActive = ["/consultoria", "/empresas"].some((p) =>
+    location.pathname.startsWith(p),
   );
 
   const linkCls = (isActive: boolean) =>
@@ -153,8 +133,8 @@ const SiteHeader = () => {
       )}
     >
       <div className="container flex h-20 items-center justify-between gap-8">
-        <Link to="/" className="flex shrink-0 items-center" aria-label="L.V. Pedrini — início">
-          <img src={logoBranca} alt="L.V. Pedrini" className="h-10 w-10" />
+        <Link to="/" className="flex shrink-0 items-center" aria-label="Leonardo Pedrini — início">
+          <img src={logoBranca} alt="Leonardo Pedrini" className="h-10 w-10" />
         </Link>
 
         {/* Desktop */}
@@ -170,7 +150,7 @@ const SiteHeader = () => {
                 solucoesActive || megaOpen ? "text-cobre-light" : "text-papel/70 hover:text-papel",
               )}
             >
-              Soluções
+              Como posso ajudar
               <ChevronDown
                 className={cn("h-3.5 w-3.5 transition-transform duration-300 ease-luxury", megaOpen && "rotate-180")}
               />
@@ -185,8 +165,8 @@ const SiteHeader = () => {
         </nav>
 
         <div className="hidden shrink-0 lg:block">
-          <CTAButton to="/diagnostico" size="sm" trackingParams={{ cta_position: "header" }}>
-            Diagnóstico gratuito
+          <CTAButton to="/consultoria" size="sm" trackingParams={{ cta_position: "header" }}>
+            Agendar sessão estratégica
           </CTAButton>
         </div>
 
@@ -202,20 +182,20 @@ const SiteHeader = () => {
             className="w-full max-w-sm overflow-y-auto border-papel/10 bg-grafite-900 text-papel"
           >
             <SheetTitle className="flex items-center text-left">
-              <img src={logoBranca} alt="L.V. Pedrini" className="h-8 w-8" />
+              <img src={logoBranca} alt="Leonardo Pedrini" className="h-8 w-8" />
             </SheetTitle>
 
-            {/* Destaque: AI Work Audit */}
+            {/* Destaque: Sessão Estratégica */}
             <Link
-              to="/diagnostico"
+              to="/consultoria"
               onClick={() => setMobileOpen(false)}
               className="mt-8 flex items-start gap-4 rounded-lg border border-cobre/40 bg-cobre/10 p-5 transition-colors duration-300 hover:bg-cobre/15"
             >
-              <ClipboardCheck className="mt-0.5 h-5 w-5 shrink-0 text-cobre-light" />
+              <CalendarClock className="mt-0.5 h-5 w-5 shrink-0 text-cobre-light" />
               <span>
-                <span className="block font-display text-base font-bold text-papel">AI Work Audit</span>
+                <span className="block font-display text-base font-bold text-papel">Sessão Estratégica</span>
                 <span className="mt-1 block text-xs leading-relaxed text-papel/60">
-                  Diagnóstico gratuito — seu nível de maturidade em 8 minutos
+                  Até 2 horas comigo. Você sai com um plano objetivo para o seu negócio
                 </span>
               </span>
             </Link>
@@ -225,17 +205,31 @@ const SiteHeader = () => {
                 <div key={g.title} className="mb-7">
                   <div className="eyebrow px-1 text-cobre-light/80">{g.title}</div>
                   <div className="mt-3 flex flex-col gap-1">
-                    {g.items.map((s) => (
-                      <Link
-                        key={s.label}
-                        to={s.to}
-                        onClick={() => setMobileOpen(false)}
-                        className="flex items-center justify-between rounded-md px-1 py-2.5 text-lg font-semibold text-papel transition-colors duration-300 hover:text-cobre-light"
-                      >
-                        {s.label}
-                        <ArrowUpRight className="h-4 w-4 text-papel/30" />
-                      </Link>
-                    ))}
+                    {g.items.map((s) =>
+                      s.to.startsWith("http") ? (
+                        <a
+                          key={s.label}
+                          href={s.to}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMobileOpen(false)}
+                          className="flex items-center justify-between rounded-md px-1 py-2.5 text-lg font-semibold text-papel transition-colors duration-300 hover:text-cobre-light"
+                        >
+                          {s.label}
+                          <ArrowUpRight className="h-4 w-4 text-papel/30" />
+                        </a>
+                      ) : (
+                        <Link
+                          key={s.label}
+                          to={s.to}
+                          onClick={() => setMobileOpen(false)}
+                          className="flex items-center justify-between rounded-md px-1 py-2.5 text-lg font-semibold text-papel transition-colors duration-300 hover:text-cobre-light"
+                        >
+                          {s.label}
+                          <ArrowUpRight className="h-4 w-4 text-papel/30" />
+                        </Link>
+                      ),
+                    )}
                   </div>
                 </div>
               ))}
@@ -256,8 +250,8 @@ const SiteHeader = () => {
               </div>
 
               <div className="mt-9">
-                <CTAButton to="/diagnostico" className="w-full" trackingParams={{ cta_position: "mobile_menu" }}>
-                  Diagnóstico gratuito
+                <CTAButton to="/consultoria" className="w-full" trackingParams={{ cta_position: "mobile_menu" }}>
+                  Agendar sessão estratégica
                 </CTAButton>
               </div>
             </nav>
@@ -266,11 +260,7 @@ const SiteHeader = () => {
       </div>
 
       {/* Mega menu — painel amplo navy com grupos + coluna de destaque.
-          Sempre montado (não unmount condicional) para poder animar a saída:
-          transições CSS são interrompíveis, keyframes reiniciam do zero.
-          `visibility` só troca para hidden ao final da transição de saída
-          (transitionDelay condicional), o que também tira o painel da ordem
-          de tab quando fechado — sem isso, links ficariam focáveis invisíveis. */}
+          Sempre montado (não unmount condicional) para poder animar a saída. */}
       <div
         className={cn(
           "absolute inset-x-0 top-full hidden lg:block transition-[opacity,transform,visibility] ease-luxury motion-reduce:transition-none",
@@ -288,12 +278,31 @@ const SiteHeader = () => {
       >
         <div className="border-b border-papel/10 bg-grafite-900/[0.98] shadow-[0_40px_80px_-30px_rgba(4,12,22,0.8)] backdrop-blur-xl">
           <div className="hairline-gold" />
-          <div className="container grid grid-cols-4 gap-10 py-10">
-              {grupos.map((g) => (
-                <div key={g.title}>
-                  <div className="eyebrow text-cobre-light/80">{g.title}</div>
-                  <ul className="mt-5 space-y-1.5">
-                    {g.items.map((s) => (
+          <div className="container grid grid-cols-3 gap-10 py-10">
+            {grupos.map((g) => (
+              <div key={g.title}>
+                <div className="eyebrow text-cobre-light/80">{g.title}</div>
+                <ul className="mt-5 space-y-1.5">
+                  {g.items.map((s) =>
+                    s.to.startsWith("http") ? (
+                      <li key={s.label}>
+                        <a
+                          href={s.to}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group -mx-3 flex items-start gap-3.5 rounded-lg px-3 py-3 transition-colors duration-300 hover:bg-papel/[0.05]"
+                        >
+                          <s.icon className="mt-0.5 h-[18px] w-[18px] shrink-0 text-cobre-light/70 transition-colors duration-300 group-hover:text-cobre-light" />
+                          <span>
+                            <span className="flex items-center gap-1.5 text-sm font-semibold text-papel transition-colors duration-300 group-hover:text-cobre-light">
+                              {s.label}
+                              <ArrowUpRight className="h-3.5 w-3.5 opacity-0 transition-all duration-300 group-hover:opacity-100" />
+                            </span>
+                            <span className="mt-1 block text-xs leading-relaxed text-papel/50">{s.desc}</span>
+                          </span>
+                        </a>
+                      </li>
+                    ) : (
                       <li key={s.label}>
                         <Link
                           to={s.to}
@@ -309,33 +318,34 @@ const SiteHeader = () => {
                           </span>
                         </Link>
                       </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-
-              {/* Coluna de destaque — AI Work Audit */}
-              <div className="rounded-lg border border-cobre/35 bg-gradient-to-b from-cobre/[0.12] to-transparent p-6">
-                <div className="eyebrow text-cobre-light">Gratuito</div>
-                <ClipboardCheck className="mt-5 h-7 w-7 text-cobre-light" />
-                <div className="mt-4 font-display text-lg font-bold leading-snug text-papel">
-                  AI Work Audit
-                </div>
-                <p className="mt-2 text-xs leading-relaxed text-papel/55">
-                  8 minutos, 14 perguntas. Seu nível de maturidade e os 3 processos candidatos à
-                  automação.
-                </p>
-                <Link
-                  to="/diagnostico"
-                  className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-cobre-light transition-colors duration-300 hover:text-papel"
-                >
-                  Fazer o diagnóstico
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
+                    ),
+                  )}
+                </ul>
               </div>
+            ))}
+
+            {/* Coluna de destaque — Sessão Estratégica */}
+            <div className="rounded-lg border border-cobre/35 bg-gradient-to-b from-cobre/[0.12] to-transparent p-6">
+              <div className="eyebrow text-cobre-light">Ponto de partida</div>
+              <CalendarClock className="mt-5 h-7 w-7 text-cobre-light" />
+              <div className="mt-4 font-display text-lg font-bold leading-snug text-papel">
+                Sessão Estratégica
+              </div>
+              <p className="mt-2 text-xs leading-relaxed text-papel/55">
+                Até 2 horas, online ou presencial em Goiânia. Você traz o problema, eu trago o
+                método. Sai da conversa com um plano objetivo.
+              </p>
+              <Link
+                to="/consultoria"
+                className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-cobre-light transition-colors duration-300 hover:text-papel"
+              >
+                Ver como funciona
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
           </div>
         </div>
+      </div>
     </header>
   );
 };

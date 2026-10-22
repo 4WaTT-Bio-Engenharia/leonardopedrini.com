@@ -9,13 +9,13 @@ import { cases } from "@/data/cases";
 const casesProprios = cases.filter((c) => c.owned);
 const casesClientes = cases.filter((c) => !c.owned);
 
-const estruturaCase = ["Contexto", "Mapa do processo", "Blueprint", "Piloto", "Governança", "Resultado medido"];
+const estruturaCase = ["Contexto", "Diagnóstico", "Desenho", "Execução", "Medição", "Resultado"];
 
 
 const Cases = () => (
   <PageLayout
-    title="Cases de implementação de IA — resultados em R$"
-    description="Implementações reais de IA com antes/depois e números auditáveis. Veja o que funciona em empresas brasileiras."
+    title="Cases — projetos com resultado em número"
+    description="Projetos de engenharia, estratégia e tecnologia nas empresas de Leonardo Pedrini e em clientes. Antes, depois e número."
     path="/cases"
     flush
   >
@@ -38,7 +38,7 @@ const Cases = () => (
           <Reveal delay={240}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-papel/65">
               Todo case aqui segue a mesma estrutura: o mapa do processo, o blueprint, o piloto, a
-              governança e o resultado medido. Publicamos apenas o que podemos provar — por isso esta
+              governança e o resultado medido. Publicamos apenas o que podemos provar. Por isso esta
               página cresce devagar e vale muito.
             </p>
           </Reveal>
@@ -53,7 +53,7 @@ const Cases = () => (
         <Reveal>
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <p className="eyebrow max-w-md text-aco-dark">
-              Todo case publicado segue a estrutura C-A-R-G-A
+              Todo case publicado segue o mesmo funil: do contexto ao resultado medido
             </p>
             <ol className="flex flex-wrap items-center gap-x-4 gap-y-2">
               {estruturaCase.map((s, i) => (
@@ -78,7 +78,7 @@ const Cases = () => (
           <SectionHeading
             eyebrow="Onde o método nasceu"
             title="O que está rodando nas minhas próprias empresas"
-            description="Aplico na 4WaTT, na 4W Energia e na Traciona AI o mesmo padrão que implanto em clientes: processo desenhado, sistema em produção, operação medida."
+            description="Aplico na 4WaTT e na 4W Energia o mesmo padrão que levo para clientes: problema mapeado, decisão com dado, execução medida."
           />
         </Reveal>
         <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -126,7 +126,7 @@ const Cases = () => (
             <p className="mt-7 text-lg leading-relaxed text-foreground/85">
               Porque depoimento sem número é decoração, e número sem evidência é ficção. Cada case
               entra quando tem baseline, resultado e autorização. Se o seu projeto for o próximo, ele
-              entra aqui — com os seus números auditados.
+              entra aqui, com os seus números auditados.
             </p>
           </div>
         </Reveal>
@@ -135,12 +135,12 @@ const Cases = () => (
 
     {/* CTA */}
     <CTASection
-      title="Quero um diagnóstico como o destes cases"
-      description="O AI Work Audit mede a maturidade da sua empresa em 6 dimensões e devolve os 3 processos que você deveria automatizar primeiro."
-      ctaTo="/diagnostico"
-      ctaLabel="Quero um diagnóstico como o destes cases"
-      secondaryTo="/consultoria"
-      secondaryLabel="Aplicar para consultoria"
+      title="Quero esse padrão no meu projeto"
+      description="Conte o contexto. Se for engenharia de energia, a conversa vai para a 4WaTT. Se for estratégia, a gente começa pela Sessão Estratégica."
+      ctaTo="/consultoria"
+      ctaLabel="Agendar sessão estratégica"
+      secondaryTo="/empresas"
+      secondaryLabel="Conhecer o ecossistema"
     />
   </PageLayout>
 );

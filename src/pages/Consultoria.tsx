@@ -8,94 +8,114 @@ import LeadCaptureForm from "@/components/conversion/LeadCaptureForm";
 import Reveal from "@/components/motion/Reveal";
 import { trackEvent } from "@/lib/analytics";
 
-const comparativo = [
-  { label: "Formato", mentoria: "Grupo de até 12 empresas, 12 semanas", sprint: "Projeto com squad, 90 dias" },
-  { label: "Resultado", mentoria: "3 processos em produção", sprint: "4–6 frentes implantadas, equipe treinada" },
-  { label: "Encontros", mentoria: "Semanal, ao vivo, 2h + canal direto", sprint: "Sprints semanais + canal direto com o squad" },
-  { label: "Investimento", mentoria: "R$ 9.997 (12x R$ 997)", sprint: "R$ 45.000 (3x R$ 15.000)" },
-  { label: "Vagas", mentoria: "12 por turma", sprint: "4 empresas por trimestre" },
-  { label: "Indicado para", mentoria: "Dono/gestor que executa com o time", sprint: "Empresa que quer a transformação entregue" },
+const formatos = [
+  {
+    nome: "Sessão Estratégica",
+    investimento: "R$ 2.500",
+    ritmo: "Encontro único, até 2 horas",
+    entrega: "Você sai com um plano objetivo para a sua realidade",
+    detalhes: [
+      "Online ou presencial em Goiânia",
+      "10 vagas por mês, porque atenção não escala",
+      "6 meses de acompanhamento na minha comunidade",
+    ],
+  },
+  {
+    nome: "Consultoria de estratégia",
+    investimento: "Sob proposta",
+    ritmo: "Projeto com escopo e prazo",
+    entrega: "Estratégia desenhada, executada e medida ao seu lado",
+    detalhes: [
+      "Estudo de viabilidade, reposicionamento, plano de crescimento",
+      "Escopo fechado antes de começar, número definido antes de escalar",
+      "Para empresas e fundadores com decisão real na mesa",
+    ],
+  },
+  {
+    nome: "Conselho e advisory",
+    investimento: "Mensal",
+    ritmo: "Reuniões mensais de diretoria",
+    entrega: "Perguntas difíceis na mesa antes que virem problema no caixa",
+    detalhes: [
+      "Para empresas que querem alguém que já fundou e operou",
+      "Análise de números, decisões e riscos, todo mês",
+      "Formato contínuo, sem depender de consultor para sempre",
+    ],
+  },
 ];
 
-const fases = [
+const comoFunciona = [
   {
-    id: "F1",
-    periodo: "Semanas 1–2",
-    name: "Diagnóstico e Desenho",
-    desc: "Cartografia dos processos, baseline e escolha das frentes.",
+    step: "01",
+    name: "Antes",
+    desc: "Você responde uma aplicação curta. Eu leio com atenção e só aceito se houver problema real na mesa. Se não for para eu agregar, eu digo e indico o caminho certo.",
   },
   {
-    id: "F2",
-    periodo: "Semanas 3–5",
-    name: "Fundação",
-    desc: "Dados, integrações, governança e LGPD.",
+    step: "02",
+    name: "Durante",
+    desc: "Até 2 horas de conversa dura e boa. Eu pergunto muito, porque a premissa errada mata plano bonito. No fim, você tem um plano objetivo: o que fazer, em que ordem e o que medir.",
   },
   {
-    id: "F3",
-    periodo: "Semanas 6–10",
-    name: "Implementação",
-    desc: "Agentes e automações em produção, sprint a sprint.",
-  },
-  {
-    id: "F4",
-    periodo: "Semanas 11–12",
-    name: "Transferência",
-    desc: "Treinamento da equipe, documentação, rituais de operação, handover.",
+    step: "03",
+    name: "Depois",
+    desc: "Você executa com o plano na mão e 6 meses de comunidade comigo: atualização de ferramentas, dicas e acessos exclusivos. Quem quiser ir além, a consultoria e o advisory existem para isso.",
   },
 ];
 
-const frentes = [
-  "Atendimento com agente",
-  "Funil e CRM com IA",
-  "Cockpit de indicadores",
-  "Automação financeira",
-  "Base de conhecimento respondendo com seus documentos",
-  "Geração de propostas",
-  "Backoffice automatizado",
-  "Política de IA e LGPD",
+const paraQuem = [
+  "Fundador que sente que decidiu no escuro por tempo demais",
+  "Empresa que cresceu e precisa de estrutura para o tamanho novo",
+  "Investidor ou sócio que quer uma leitura técnica antes de aportar",
+  "Diretoria que precisa de alguém que já fundou e operou, não só estudou",
+];
+
+const naoParaQuem = [
+  "Quem procura motivação em vez de método",
+  "Quem quer terceirizar a decisão que é sua",
+  "Quem busca fórmula pronta, sem contexto do próprio negócio",
 ];
 
 const faq = [
   {
-    question: "Quem opera isso depois que você sair?",
+    question: "Dois mil e quinhentos reais por duas horas. Por que esse valor?",
     answer:
-      "A fase de Transferência existe para isso: dono interno treinado, documentação e rituais. Dependência eterna de consultor é falha de projeto, não modelo de receita.",
+      "Você não está pagando por duas horas. Está pagando por quinze anos de engenharia, processo e operação de cinco empresas comprimidos num plano que serve para a sua realidade. E comparando: uma decisão errada de CAPEX custa muito mais que isso.",
   },
   {
-    question: "Quanto custa no total, com tudo?",
+    question: "E se o meu problema não for energia?",
     answer:
-      "O preço é fechado e público. Custos de ferramentas e licenças são estimados no blueprint, antes de você assinar.",
+      "A maioria dos problemas de empresa não é de setor, é de método. Premissa, dado, decisão. Eu opero no setor de energia, mas o funil que eu uso serve para qualquer negócio com número na mesa.",
   },
   {
-    question: "Meu time vai resistir.",
+    question: "A sessão é gravada?",
     answer:
-      "Por isso o método inclui dono interno e treinamento — IA imposta de fora para dentro não sobrevive ao primeiro mês.",
+      "Sim, você recebe o registro da conversa junto com o plano. Anotação boa é a que você revisita.",
   },
   {
-    question: "E a LGPD?",
+    question: "Como funcionam os 6 meses de comunidade?",
     answer:
-      "Dossiê de dados por processo, política de uso e human-in-the-loop onde erro custa caro. Incluído, não opcional.",
+      "Acesso a um grupo comigo e com quem também passou pela sessão: atualização de ferramentas que eu uso na gestão, dicas de operação e acessos exclusivos. É acompanhamento, não é dependência.",
+  },
+  {
+    question: "E se eu quiser continuar depois?",
+    answer:
+      "Aí conversamos sobre consultoria de estratégia ou advisory, conforme o tamanho do desafio. Mas a sessão não é isca: muita gente executa bem só com o plano.",
   },
 ];
 
 const Consultoria = () => {
   useEffect(() => {
     trackEvent("product_view", {
-      product_id: "mentoria-ai-work",
-      product_name: "Mentoria AI Work",
-      price_range: "9997",
-    });
-    trackEvent("product_view", {
-      product_id: "ai-implementation-sprint",
-      product_name: "AI Implementation Sprint",
-      price_range: "45000",
+      product_id: "sessao-estrategica",
+      product_name: "Sessão Estratégica",
+      price_range: "2500",
     });
   }, []);
 
   return (
     <PageLayout
-      title="Consultoria — Mentoria AI Work e AI Implementation Sprint"
-      description="Implementação assistida com KPI contratado: Mentoria AI Work (12 semanas, 3 processos em produção, R$ 9.997) ou AI Implementation Sprint (90 dias, 4–6 frentes implantadas, R$ 45.000). Aplicação com retorno em 48h."
+      title="Sessão Estratégica, consultoria e advisory — Leonardo Pedrini"
+      description="Até 2 horas com Leonardo Pedrini, online ou presencial em Goiânia. Você traz o problema, ele traz o método. Sai com um plano objetivo para o seu negócio."
       path="/consultoria"
     >
       {/* Hero — navy imersivo */}
@@ -106,20 +126,20 @@ const Consultoria = () => {
             <Reveal>
               <div className="eyebrow text-cobre-light">
                 <span className="h-px w-10 bg-cobre-light/70" />
-                Implementação assistida
+                Trabalhe comigo
               </div>
             </Reveal>
             <Reveal delay={120}>
               <h1 className="mt-7 font-display text-4xl font-extrabold leading-[1.04] tracking-[-0.02em] md:text-6xl">
-                Implementação assistida,{" "}
-                <span className="text-gradient-gold">com KPI contratado</span>
+                Você traz o problema.{" "}
+                <span className="text-gradient-gold">Eu trago o método.</span>
               </h1>
             </Reveal>
             <Reveal delay={240}>
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-papel/65">
-                Você já passou da fase do curso. O que falta não é conhecimento — é execução com alguém
-                que já construiu empresas. Duas modalidades, um mesmo padrão: processo desenhado, sistema
-                em produção, número no relatório.
+                Três formas de colocar quinze anos de engenharia e cinco empresas na mesa do seu
+                negócio. Começando pela Sessão Estratégica: até 2 horas, e você sai com um plano
+                objetivo, não com uma lista de ideias.
               </p>
             </Reveal>
             <Reveal delay={360}>
@@ -129,10 +149,10 @@ const Consultoria = () => {
                   size="lg"
                   trackingParams={{ cta_position: "hero", page: "/consultoria" }}
                 >
-                  Aplicar para a próxima turma
+                  Aplicar para a Sessão Estratégica
                 </CTAButton>
                 <p className="text-sm text-papel/50">
-                  Aplicação não é compromisso de compra. Respondemos em até 48h.
+                  10 vagas por mês. Aplicação não é compra, e respondemos em até 48h.
                 </p>
               </div>
             </Reveal>
@@ -141,68 +161,76 @@ const Consultoria = () => {
         <div className="hairline-gold absolute inset-x-0 bottom-0" aria-hidden />
       </section>
 
-      {/* As duas modalidades */}
+      {/* Os três formatos */}
       <section className="border-b border-border bg-papel-light">
         <div className="container py-24 md:py-32">
           <Reveal>
             <SectionHeading
-              eyebrow="As duas modalidades"
-              title="Você executa com o time — ou a gente entrega com o squad"
+              eyebrow="Os formatos"
+              title="Do encontro pontual ao conselho permanente"
             />
           </Reveal>
-          <Reveal delay={140}>
-            <div className="mt-12 overflow-x-auto rounded-lg border border-border bg-card shadow-soft">
-              <table className="w-full min-w-[720px] text-left text-sm">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="px-5 py-4"> </th>
-                    <th className="px-5 py-4 font-display text-lg font-bold text-foreground">Mentoria AI Work</th>
-                    <th className="px-5 py-4 font-display text-lg font-bold text-foreground">AI Implementation Sprint</th>
-                  </tr>
-                </thead>
-                <tbody className="text-muted-foreground">
-                  {comparativo.map((row) => (
-                    <tr key={row.label} className="border-b border-border transition-colors duration-300 last:border-0 hover:bg-secondary/40">
-                      <td className="px-5 py-4 text-[11px] font-semibold uppercase tracking-[0.15em]">{row.label}</td>
-                      <td className="px-5 py-4">{row.mentoria}</td>
-                      <td className="px-5 py-4">{row.sprint}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </Reveal>
-          <Reveal delay={220}>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <CTAButton href="#aplicacao" trackingParams={{ cta_position: "comparison", offer: "mentoria" }}>
-                Aplicar para a Mentoria
-              </CTAButton>
-              <CTAButton href="#aplicacao" variant="outline" trackingParams={{ cta_position: "comparison", offer: "sprint" }}>
-                Aplicar para o Sprint
-              </CTAButton>
-            </div>
-          </Reveal>
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            {formatos.map((f, i) => (
+              <Reveal key={f.nome} delay={i * 110} className="h-full">
+                <article
+                  className={
+                    i === 0
+                      ? "card-lux flex h-full flex-col border-cobre/50 p-9"
+                      : "card-lux flex h-full flex-col p-9"
+                  }
+                >
+                  {i === 0 && (
+                    <div className="eyebrow mb-4 text-cobre-dark">Ponto de partida</div>
+                  )}
+                  <h3 className="font-display text-2xl font-bold tracking-[-0.015em] text-foreground">
+                    {f.nome}
+                  </h3>
+                  <div className="mt-3 font-mono text-sm font-semibold text-cobre-dark">
+                    {f.investimento}
+                  </div>
+                  <p className="mt-3 text-sm font-medium text-foreground/70">{f.ritmo}</p>
+                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">{f.entrega}</p>
+                  <ul className="mt-6 space-y-2.5 border-t border-border pt-6">
+                    {f.detalhes.map((d) => (
+                      <li key={d} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-cobre-dark" />
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8">
+                    <CTAButton
+                      href="#aplicacao"
+                      variant={i === 0 ? "primary" : "outline"}
+                      trackingParams={{ cta_position: "formatos", formato: f.nome }}
+                    >
+                      {i === 0 ? "Aplicar agora" : "Conversar sobre esse formato"}
+                    </CTAButton>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Como funciona — CARGA em 4 fases */}
+      {/* Como funciona a sessão */}
       <section className="border-b border-border">
         <div className="container py-24 md:py-32">
           <Reveal>
             <SectionHeading
-              eyebrow="Como funciona"
-              title="O Método CARGA em 4 fases de Sprint"
+              eyebrow="A Sessão Estratégica"
+              title="Como funcionam as duas horas"
+              description="Estrutura simples, conversa dura. Eu pergunto até entender o problema de verdade, porque plano bonito sobre premissa errada é dinheiro jogado fora."
             />
           </Reveal>
-          <ol className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {fases.map((f, i) => (
-              <li key={f.id} className="h-full">
+          <ol className="mt-14 grid gap-6 md:grid-cols-3">
+            {comoFunciona.map((f, i) => (
+              <li key={f.step} className="h-full">
                 <Reveal delay={i * 100} className="h-full">
-                  <div className="card-lux h-full p-7">
-                    <div className="flex items-baseline justify-between">
-                      <span className="font-mono text-2xl font-semibold text-cobre-dark">{f.id}</span>
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">{f.periodo}</span>
-                    </div>
+                  <div className="card-lux h-full p-8">
+                    <div className="font-mono text-3xl font-semibold text-cobre-dark">{f.step}</div>
                     <h3 className="mt-4 font-display text-xl font-bold tracking-[-0.01em] text-foreground">{f.name}</h3>
                     <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{f.desc}</p>
                   </div>
@@ -213,70 +241,37 @@ const Consultoria = () => {
         </div>
       </section>
 
-      {/* 8 frentes */}
+      {/* Para quem é / não é */}
       <section className="border-b border-border bg-secondary/50">
-        <div className="container py-24 md:py-32">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Escopo"
-              title="O que sai funcionando — 8 frentes, escolhemos 4–6 por projeto"
-            />
-          </Reveal>
-          <ul className="mt-12 grid gap-3 sm:grid-cols-2">
-            {frentes.map((f, i) => (
-              <li key={f}>
-                <Reveal delay={Math.min(i * 60, 300)}>
-                  <div className="flex items-start gap-3 rounded-md border border-border bg-card px-5 py-4 text-base text-foreground/85 transition-colors duration-300 hover:border-cobre/50">
-                    <Check className="mt-1 h-4 w-4 shrink-0 text-cobre-dark" />
-                    {f}
-                  </div>
-                </Reveal>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Investimento e garantias */}
-      <section className="border-b border-border">
         <div className="container py-24 md:py-32">
           <div className="grid gap-12 lg:grid-cols-2">
             <Reveal>
               <div>
-                <SectionHeading eyebrow="Investimento" title="Preços públicos porque você merece comparar" />
-                <p className="mt-8 text-base leading-relaxed text-muted-foreground">
-                  Como referência típica observada em propostas que avaliamos, diagnósticos custam
-                  R$ 15–60 mil e pilotos, R$ 30–120 mil. O Sprint entrega
-                  implantação completa a preço de piloto — e a Mentoria entrega 3 processos em produção
-                  por menos que um único diagnóstico tradicional.
-                </p>
-                <ul className="mt-8 space-y-3">
-                  <li className="flex items-start gap-3 text-base text-foreground/85">
-                    <Check className="mt-1 h-4 w-4 shrink-0 text-cobre-dark" />
-                    <span><strong>Mentoria AI Work — R$ 9.997</strong> (12x R$ 997) · 12 vagas por turma</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-base text-foreground/85">
-                    <Check className="mt-1 h-4 w-4 shrink-0 text-cobre-dark" />
-                    <span><strong>AI Implementation Sprint — R$ 45.000</strong> (3x R$ 15.000) · 4 empresas por trimestre</span>
-                  </li>
+                <SectionHeading eyebrow="É para você se" title="Essas frases soam familiares" />
+                <ul className="mt-9 space-y-3.5">
+                  {paraQuem.map((p) => (
+                    <li key={p} className="flex items-start gap-3 text-base leading-relaxed text-foreground/85">
+                      <Check className="mt-1 h-4 w-4 shrink-0 text-cobre-dark" />
+                      {p}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Reveal>
-            <Reveal delay={160}>
-              <div className="h-full rounded-lg border border-cobre/40 bg-cobre-soft/40 p-8 md:p-11">
-                <div className="eyebrow text-cobre-dark">Garantias</div>
-                <ul className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
-                  <li>
-                    <strong className="text-foreground">Da aplicação:</strong> aplicar não é comprar ·
-                    retorno em até 48h · seus dados protegidos.
-                  </li>
-                  <li>
-                    <strong className="text-foreground">Do Sprint:</strong> se ao fim de 90 dias os KPIs
-                    contratados não forem atingidos por falha de execução nossa, estendemos o trabalho
-                    sem custo até atingir — conforme termo contratual assinado, que define KPIs e o que
-                    caracteriza falha de execução nossa.
-                  </li>
+            <Reveal delay={140}>
+              <div>
+                <SectionHeading eyebrow="Não é para você se" title="Também digo não, e rápido" />
+                <ul className="mt-9 space-y-3.5">
+                  {naoParaQuem.map((p) => (
+                    <li key={p} className="flex items-start gap-3 text-base leading-relaxed text-muted-foreground">
+                      <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-aco" aria-hidden />
+                      {p}
+                    </li>
+                  ))}
                 </ul>
+                <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
+                  Dizer não a projeto ruim também é engenharia. E também é gestão.
+                </p>
               </div>
             </Reveal>
           </div>
@@ -287,7 +282,7 @@ const Consultoria = () => {
       <section className="border-b border-border bg-papel-light">
         <div className="container py-24 md:py-32">
           <Reveal>
-            <SectionHeading eyebrow="FAQ" title="Objeções honestas, respostas diretas" />
+            <SectionHeading eyebrow="FAQ" title="Perguntas diretas, respostas diretas" />
           </Reveal>
           <Reveal delay={140}>
             <div className="mt-12 max-w-3xl">
@@ -311,11 +306,11 @@ const Consultoria = () => {
                   <span className="h-px w-10 bg-cobre-light/70" />
                 </div>
                 <h2 className="mt-6 font-display text-3xl font-extrabold leading-[1.08] tracking-[-0.02em] text-papel md:text-5xl">
-                  O custo de mais 3 meses sem decidir é maior que o da aplicação. E a aplicação não custa nada.
+                  Três meses na mesma dúvida custam mais que duas horas de método
                 </h2>
                 <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-papel/65">
-                  Conte sobre a empresa e o processo que mais dói. Respondemos em até 48h úteis com o
-                  encaixe — Mentoria, Sprint ou outro degrau da escada.
+                  Conte sobre o seu negócio e o momento que você está vivendo. Se a sessão fizer
+                  sentido, a gente marca. Se não fizer, eu digo o que eu faria no seu lugar.
                 </p>
               </div>
             </Reveal>

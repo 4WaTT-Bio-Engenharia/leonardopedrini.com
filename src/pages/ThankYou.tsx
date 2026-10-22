@@ -27,16 +27,15 @@ const ThankYou = () => {
         </h1>
 
         <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-          Vamos avaliar aderência ao perfil da Sprint Traciona 90 Dias e, se
-          fizer sentido, entramos em contato em até 48h úteis pelo WhatsApp
-          para agendar o diagnóstico com o Leonardo.
+          Vou ler com atenção o contexto que você enviou e, se fizer sentido, retorno em até
+          48h úteis para alinharmos o formato: Sessão Estratégica, consultoria ou advisory.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 max-w-lg mx-auto text-left">
           {[
-            { n: "01", t: "Análise de aderência", d: "Perfil, momento e escopo" },
-            { n: "02", t: "Contato pelo WhatsApp", d: "Até 48h úteis" },
-            { n: "03", t: "Diagnóstico executivo", d: "60 min com o Leonardo" },
+            { n: "01", t: "Leitura do contexto", d: "Momento, problema e escopo" },
+            { n: "02", t: "Retorno em até 48h", d: "Direto, sem enrolação" },
+            { n: "03", t: "Conversa de alinhamento", d: "O formato certo para você" },
           ].map((s) => (
             <div key={s.n} className="p-4 rounded-md bg-card border border-border">
               <div className="font-display text-2xl text-primary/60 mb-1">{s.n}</div>

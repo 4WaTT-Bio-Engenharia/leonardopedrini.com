@@ -1,13 +1,29 @@
 import SEO from "@/components/SEO";
 import { trackEvent } from "@/lib/analytics";
-import { Globe, Linkedin, Users } from "lucide-react";
-import authorPhoto from "@/assets/lvpedrini_ai.jpg";
+import { Building2, CalendarClock, Globe, Instagram, Linkedin } from "lucide-react";
+import authorPhoto from "@/assets/leonardo-blazer.jpg";
 import logoAzul from "@/assets/logo-azul.png";
 
 const links = [
   {
+    label: "Agendar Sessão Estratégica",
+    sub: "Até 2 horas comigo. Você sai com um plano",
+    href: "/consultoria",
+    icon: CalendarClock,
+    internal: true,
+    trackingParams: { destination: "sessao" },
+  },
+  {
+    label: "4WaTT Bio Engenharia",
+    sub: "Resíduos, biogás e biometano · www.4watt.tech",
+    href: "https://www.4watt.tech",
+    icon: Building2,
+    internal: false,
+    trackingParams: { destination: "4watt" },
+  },
+  {
     label: "Site oficial",
-    sub: "leonardopedrini.com",
+    sub: "Estratégia, engenharia e negócio",
     href: "/",
     icon: Globe,
     internal: true,
@@ -22,12 +38,12 @@ const links = [
     trackingParams: { destination: "linkedin" },
   },
   {
-    label: "Comunidade",
-    sub: "Ferramentas e conteúdo exclusivo que geram valor na vida real",
-    href: "https://www.leonardopedrini.com/comunidade",
-    icon: Users,
+    label: "Instagram",
+    sub: "@lvpedrini",
+    href: "https://instagram.com/lvpedrini",
+    icon: Instagram,
     internal: false,
-    trackingParams: { destination: "comunidade" },
+    trackingParams: { destination: "instagram" },
   },
 ];
 
@@ -44,7 +60,7 @@ const LinkBio = () => {
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-navy px-6 py-16 text-papel">
       <SEO
         title="Leonardo Pedrini — Links"
-        description="Acesse o site oficial, LinkedIn e a comunidade de Leonardo Pedrini: engenharia de crescimento, método, dados e IA aplicada para pequenas empresas."
+        description="Engenheiro, fundador e CEO da 4WaTT. Sessão Estratégica, ecossistema de empresas e redes oficiais de Leonardo Pedrini."
         path="/link-bio"
         noindex
       />
@@ -86,7 +102,8 @@ const LinkBio = () => {
           className="mt-2 max-w-xs text-center text-sm leading-relaxed text-papel/55 motion-reduce:animate-none"
           style={rise(2)}
         >
-          Engenharia de crescimento para pequenas empresas: método, dados e IA aplicada.
+          Engenheiro, fundador e CEO da 4WaTT. Transformo problema difícil em negócio que dá
+          resultado.
         </p>
 
         <div className="hairline-gold mt-7 w-24 motion-reduce:animate-none" aria-hidden style={rise(3)} />

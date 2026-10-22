@@ -6,7 +6,7 @@ import useUTM from "@/hooks/useUTM";
 import { trackEvent } from "@/lib/analytics";
 
 /**
- * Seção de captura da newsletter "IA que Trabalha" — usada na Home.
+ * Seção de captura da newsletter — usada na Home.
  * Submete para a tabela `leads` (mesmo padrão do SiteFooter) e dispara
  * newsletter_submit / lead_start.
  */
@@ -66,11 +66,12 @@ const NewsletterSection = () => {
             <span className="h-px w-8 bg-primary" />
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-medium leading-[1.1] text-foreground">
-            IA que Trabalha: 1 implementação real por semana
+            Uma decisão real de negócio, por semana, na sua caixa de entrada
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Toda semana na sua caixa de entrada: um processo real decomposto e automatizado, um
-            template pronto para usar e um número de ROI. Sem hype, sem ferramenta da semana.
+            Toda semana: um problema real de empresa decomposto com método. O que eu medi, o que eu
+            decidi e o que deu certo (ou errado) depois. Escrito por quem funda e opera, não por
+            quem só comenta.
           </p>
 
           {done ? (

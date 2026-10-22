@@ -4,41 +4,41 @@ import NewsletterSignupForm from "@/components/sections/NewsletterSignupForm";
 
 const recebe = [
   {
-    title: "Um processo real, decomposto e automatizado",
-    desc: "O mapa do processo, o desenho da automação e o que mudou na operação — passo a passo.",
+    title: "Uma decisão real, decomposta",
+    desc: "O contexto, a premissa, o que eu medi e o que eu decidi. O raciocínio inteiro, não só a conclusão.",
   },
   {
-    title: "Um template pronto para usar",
-    desc: "Blueprint, prompt de sistema, planilha de ROI ou política de IA — algo que você aplica na mesma semana.",
+    title: "Um método aplicável",
+    desc: "O funil que uso nas minhas empresas (hipótese, dado, teste, decisão) traduzido para o seu negócio.",
   },
   {
-    title: "Um número de ROI",
-    desc: "Horas economizadas, reais recuperados ou custo evitado — com a conta aberta.",
+    title: "Um número com a conta aberta",
+    desc: "CAPEX, payback, custo evitado ou hora devolvida. Sempre com premissa, porque número sem premissa é enfeite.",
   },
 ];
 
 const amostras = [
   {
     edicao: "Edição #001",
-    titulo: "O processo de propostas que levava 2 dias — e passou a levar 40 minutos",
-    tag: "Automação comercial",
+    titulo: "Por que eu digo não para a maioria dos projetos que chegam à 4WaTT",
+    tag: "Estratégia",
   },
   {
     edicao: "Edição #002",
-    titulo: "Como medir o retorno de um agente de atendimento antes de assinar qualquer contrato",
-    tag: "ROI de agentes",
+    titulo: "O risco é técnico antes de ser financeiro: o que isso muda no seu investimento",
+    tag: "Energia",
   },
   {
     edicao: "Edição #003",
-    titulo: "LGPD para quem implementa: o dossiê mínimo por processo",
-    tag: "Governança",
+    titulo: "Como decidir entre cinco empresas e uma agenda só",
+    tag: "Liderança",
   },
 ];
 
 const Newsletter = () => (
   <PageLayout
-    title="Newsletter IA que Trabalha — 1 implementação real por semana"
-    description="Toda semana na sua caixa de entrada: um processo real decomposto e automatizado, um template pronto para usar e um número de ROI. Sem hype, sem ferramenta da semana."
+    title="Newsletter — uma decisão real de negócio por semana"
+    description="Toda semana na sua caixa de entrada: o que Leonardo Pedrini medi, decidiu e o que aconteceu depois. Método, energia e liderança sem hype."
     path="/newsletter"
   >
     {/* Hero + captura */}
@@ -50,18 +50,18 @@ const Newsletter = () => (
             Newsletter · Gratuita
           </div>
           <h1 className="font-display text-4xl md:text-6xl font-medium leading-[1.05] text-foreground">
-            Toda semana: um processo real decomposto e automatizado, um template prático e um número de ROI
+            Uma decisão real de negócio, por semana, na sua caixa de entrada
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Nada de "ferramenta da semana" nem thread motivacional. É a newsletter de quem implanta:
-            o que funcionou, o que falhou e quanto valeu.
+            O que eu medi, o que eu decidi e o que aconteceu depois. Incluindo o que deu errado,
+            porque aprendizado só com vitoriosa é propaganda.
           </p>
           <div className="mx-auto mt-10 max-w-xl">
             <NewsletterSignupForm source="newsletter_page" />
           </div>
           <p className="mt-8 text-sm italic text-muted-foreground">
-            Escrita por Leonardo Pedrini — engenheiro, fundador da 4WaTT e da 4W Energia.
-            IA que não executa é enfeite.
+            Escrita por Leonardo Pedrini, engenheiro, fundador e CEO da 4WaTT. Opinião é barata.
+            Método é raro.
           </p>
         </div>
       </div>
@@ -93,7 +93,7 @@ const Newsletter = () => (
         <SectionHeading
           eyebrow="Amostra"
           title="As primeiras edições"
-          description="Um recorte do formato: sempre um processo real, um template e um número."
+          description="Um recorte do formato: sempre contexto, método e número."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {amostras.map((a) => (
@@ -121,10 +121,10 @@ const Newsletter = () => (
       <div className="container py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-medium leading-[1.1] text-papel">
-            1 implementação real por semana. Gratuito.
+            Uma decisão real por semana. Gratuito.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-papel/65">
-            Sem hype, sem ferramenta da semana. O que funcionou, o que falhou e quanto valeu.
+            Sem hype e sem ferramenta da semana. O que funcionou, o que falhou e quanto valeu.
           </p>
           <div className="mx-auto mt-10 max-w-xl rounded-lg bg-papel p-6 text-left text-foreground md:p-8">
             <NewsletterSignupForm source="newsletter_footer" />

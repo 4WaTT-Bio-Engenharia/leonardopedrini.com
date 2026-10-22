@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 interface CTASectionProps {
   title: ReactNode;
   description?: ReactNode;
-  /** Rota do CTA principal — default "/diagnostico". */
+  /** Rota do CTA principal — default "/consultoria". */
   ctaTo?: string;
   ctaLabel?: string;
   /** CTA secundário opcional (outline). */
@@ -24,8 +24,8 @@ interface CTASectionProps {
 const CTASection = ({
   title,
   description,
-  ctaTo = "/diagnostico",
-  ctaLabel = "Solicitar diagnóstico gratuito",
+  ctaTo = "/consultoria",
+  ctaLabel = "Agendar sessão estratégica",
   secondaryTo,
   secondaryLabel,
   tone = "dark",

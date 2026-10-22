@@ -3,44 +3,44 @@ import SectionHeading from "@/components/conversion/SectionHeading";
 import CTAButton from "@/components/conversion/CTAButton";
 import Reveal from "@/components/motion/Reveal";
 import { SITE_URL } from "@/components/SEO";
-import leonardoAbout from "@/assets/leonardo-about.jpg";
-import leonardoSentado from "@/assets/leonardo-sentado.png";
+import leonardoHero from "@/assets/leonardo-terno-preto.jpg";
+import leonardoLivro from "@/assets/leonardo-livro.jpg";
 
 const timeline = [
   {
     period: "2011–2014",
     title: "Chão de fábrica",
-    text: "Jovem aprendiz na Ford, torneiro CNC. Aprendizado: o trabalho real tem física, fila, retrabalho e custo — e se mede.",
+    text: "Jovem aprendiz na Ford, torneiro CNC. A lição que ficou para sempre: processo se mede, ou não existe.",
   },
   {
-    period: "2015–2019",
-    title: "Engenharia e processos",
-    text: "Formação em Engenharia (Universidade Positivo), mestrados UTFPR e IFG. Trainee de supply chain na Electrolux, aplicando Lean, VSM e DMAIC. Aprendizado: método antes de opinião; processo antes de ferramenta.",
+    period: "2014–2019",
+    title: "Multinacional e formação",
+    text: "Engenharia mecânica e engenharia de energia, mestrados pela UTFPR e pelo IFG. Supply chain na Electrolux, com Lean, VSM e DMAIC na operação real, e duas menções honrosas internacionais. MBA em engenharia financeira e gestão de risco pela Columbia University.",
   },
   {
     period: "2015",
     title: "4WaTT Bio Engenharia",
-    text: "Co-fundei uma deeptech que projeta e constrói usinas que transformam resíduos em energia — engenharia, automação e tecnologia proprietárias. Aprendizado: sistema antes de esforço.",
+    text: "Co-fundei a empresa que virou minha principal operação: engenharia de resíduos, biogás e biometano, com projetos complexos de alto valor. Hoje sou CEO. Aprendizado: o risco é técnico antes de ser financeiro.",
   },
   {
     period: "2020",
     title: "4W Energia",
-    text: "Fundei uma cooperativa de energia renovável por assinatura: software, operação regulada (Lei 14.300/22), resultado na fatura do cliente. Aprendizado: quem assina o cheque não compra tecnologia — compra resultado.",
+    text: "Fundei uma empresa de energia renovável com modelo recorrente: software, operação regulada e resultado na fatura do cliente. Aprendizado: quem assina o cheque não compra tecnologia. Compra resultado.",
   },
   {
     period: "Hoje",
-    title: "Traciona AI + consultoria",
-    text: "Levo para dentro das empresas dos clientes o padrão que uso nas minhas: processo desenhado, sistema implantado, operação medida.",
+    title: "Ecossistema e advisory",
+    text: "Cinco empresas em operação, um time de gente acima da média e, cada vez mais, uma mesa de decisão que não é só a minha: fundadores e empresas que me chamam para pensar junto.",
   },
 ];
 
 const credenciais = [
-  "Chão de fábrica na Ford — jovem aprendiz e torneiro CNC",
-  "Supply chain na Electrolux — Lean, VSM e DMAIC aplicados na operação de multinacional",
-  "Co-fundador da 4WaTT Bio Engenharia",
-  "Fundador e CEO da 4W Energia — operação regulada (Lei 14.300/22)",
-  "Fundador da Traciona AI",
-  "Conselho consultivo APEEL (desde 2020)",
+  "Dupla titulação: engenharia mecânica e engenharia de energia",
+  "Mestrado em engenharia elétrica (UTFPR) e em engenharia, gestão e tecnologia (IFG)",
+  "MBA em engenharia financeira e gestão de risco, Columbia University",
+  "Direito regulatório do setor elétrico (CEDIN), Six Sigma (University of Georgia), ciência de dados (University of Michigan), arquitetura de redes (Cisco Academy)",
+  "+200 projetos de engenharia, +2 GW de potência, +R$ 5 bi em CAPEX",
+  "Conselho consultivo APEEL",
 ];
 
 const personJsonLd = {
@@ -48,15 +48,15 @@ const personJsonLd = {
   "@type": "Person",
   name: "Leonardo Vieira Pedrini",
   url: `${SITE_URL}/sobre`,
-  jobTitle: "Engenheiro e implementador de IA",
+  jobTitle: "Engenheiro, fundador e CEO da 4WaTT",
   description:
-    "Engenheiro, co-fundador da 4WaTT Bio Engenharia, fundador e CEO da 4W Energia. Implanta IA como infraestrutura de trabalho em empresas reais.",
+    "Engenheiro, fundador e CEO da 4WaTT Bio Engenharia. Fundador de empresas de energia, resíduos e tecnologia. Atua como advisor, conselheiro e consultor de estratégia.",
 };
 
 const Sobre = () => (
   <PageLayout
     title="Sobre Leonardo Vieira Pedrini"
-    description="Engenheiro e fundador da 4WaTT e da 4W Energia. Implanto IA como infraestrutura de trabalho em empresas reais — inclusive as minhas."
+    description="Engenheiro, fundador e CEO da 4WaTT. Da fábrica à operação de cinco empresas: a trajetória de quem transforma problema difícil em negócio que dá resultado."
     path="/sobre"
     jsonLd={personJsonLd}
     flush
@@ -74,14 +74,14 @@ const Sobre = () => (
             </Reveal>
             <Reveal delay={120}>
               <h1 className="mt-7 font-display text-4xl font-extrabold leading-[1.06] tracking-[-0.02em] text-foreground md:text-6xl">
-                Eu resolvia problemas antes da IA. Agora a IA tornou possível resolver o que era
-                inviável de automatizar.
+                Engenheiro por formação. Fundador por vocação. Estrategista por necessidade.
               </h1>
             </Reveal>
             <Reveal delay={240}>
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Engenheiro, fundador de três empresas, implementador de IA. Esta é a trajetória — e por
-                que ela importa para a sua.
+                Eu não escolhi empreender porque era fácil. Escolhi porque queria construir o que eu
+                acreditava, e ninguém ia construir por mim. Esta é a trajetória, e o que ela pode
+                acrescentar na sua mesa.
               </p>
             </Reveal>
           </div>
@@ -89,8 +89,8 @@ const Sobre = () => (
             <div className="relative">
               <div className="absolute -inset-3 rounded-xl border border-cobre/30" aria-hidden />
               <img
-                src={leonardoAbout}
-                alt="Retrato de Leonardo Vieira Pedrini, engenheiro e implementador de IA"
+                src={leonardoHero}
+                alt="Retrato de Leonardo Vieira Pedrini, engenheiro e CEO da 4WaTT"
                 className="relative w-full rounded-lg border border-border object-cover shadow-soft"
               />
             </div>
@@ -103,7 +103,7 @@ const Sobre = () => (
     <section className="border-b border-border bg-secondary/50">
       <div className="container py-28 md:py-36">
         <Reveal>
-          <SectionHeading eyebrow="Trajetória" title="Do torno CNC à IA em produção" />
+          <SectionHeading eyebrow="Trajetória" title="Do torno CNC à mesa de cinco empresas" />
         </Reveal>
         <ol className="mt-16 space-y-0">
           {timeline.map((t, i) => (
@@ -127,30 +127,35 @@ const Sobre = () => (
       </div>
     </section>
 
-    {/* O que eu acredito — navy */}
+    {/* Como eu penso — navy */}
     <section className="relative overflow-hidden border-b border-grafite-500/30 bg-gradient-navy text-papel">
       <div className="absolute inset-0 bg-grid-navy" aria-hidden />
       <div className="container relative py-28 md:py-36">
         <div className="grid items-center gap-14 lg:grid-cols-5">
           <div className="lg:col-span-3">
             <Reveal>
-              <SectionHeading eyebrow="O que eu acredito" tone="dark" title="IA não é para responder. É para executar trabalho." />
+              <SectionHeading
+                eyebrow="Como eu penso"
+                tone="dark"
+                title="Um cientista de negócios, com a mão na operação"
+              />
             </Reveal>
             <Reveal delay={140}>
               <div className="mt-9 space-y-7 text-lg leading-relaxed text-papel/70">
                 <p>
-                  A inteligência artificial não é nova. Nova é a ilusão de que conversar com ela resolve
-                  alguma coisa.
+                  Sou autista nível 1. Penso melhor quando a informação é visual, literal e
+                  estruturada. Talvez por isso o método tenha virado minha assinatura: hipótese,
+                  dado, teste, decisão. Tudo o que entra na minha mesa passa por esse funil.
                 </p>
                 <p>
-                  O Brasil não precisa de mais um curso de prompt. Precisa de empresas onde a IA executa
-                  trabalho de verdade: responde o cliente, processa o pedido, monta a proposta — com
-                  processo desenhado, gente preparada e número no relatório.
+                  Lidero cinco empresas ao mesmo tempo, em setores que a maioria considera difíceis:
+                  resíduos, biogás, biometano, energia, armazenamento em baterias e carbono. Difícil
+                  é o ponto. Se fosse fácil, qualquer um fazia.
                 </p>
                 <p>
-                  Durante quinze anos eu automatizei o que dava para automatizar com engenharia
-                  clássica. O que sobrava era inviável de automatizar. A IA generativa removeu o
-                  “inviável” — mas só para quem trata IA como infraestrutura, não como enfeite.
+                  Não resolvo tudo sozinho. Monto a estratégia com as pessoas certas e dou crédito ao
+                  time quando o trabalho é dele. Minha ambição convive com o lado humano, nunca no
+                  lugar dele.
                 </p>
               </div>
             </Reveal>
@@ -159,8 +164,8 @@ const Sobre = () => (
             <div className="relative">
               <div className="absolute -inset-3 rounded-xl border border-cobre/25" aria-hidden />
               <img
-                src={leonardoSentado}
-                alt="Leonardo Pedrini em ambiente de trabalho, sentado"
+                src={leonardoLivro}
+                alt="Leonardo Pedrini de terno, segurando um livro"
                 className="relative w-full rounded-lg border border-papel/15 object-cover"
                 loading="lazy"
               />
@@ -170,17 +175,17 @@ const Sobre = () => (
       </div>
     </section>
 
-    {/* Formação e credenciais */}
+    {/* Credenciais */}
     <section className="border-b border-border">
       <div className="container py-28 md:py-36">
         <Reveal>
-          <SectionHeading eyebrow="Trajetória" title="Marcos da trajetória" />
+          <SectionHeading eyebrow="Formação e marcos" title="Estudo sério, resultado sério" />
         </Reveal>
         <ul className="mt-14 grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2">
           {credenciais.map((c, i) => (
             <li key={c}>
               <Reveal delay={Math.min(i * 70, 350)}>
-                <div className="h-full bg-card px-7 py-6 text-base text-foreground/85 transition-colors duration-500 ease-luxury hover:bg-papel-light">
+                <div className="h-full bg-card px-7 py-6 text-base leading-relaxed text-foreground/85 transition-colors duration-500 ease-luxury hover:bg-papel-light">
                   {c}
                 </div>
               </Reveal>
@@ -201,16 +206,19 @@ const Sobre = () => (
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-display text-3xl font-extrabold leading-[1.08] tracking-[-0.02em] text-foreground md:text-5xl">
-              Se faz sentido para você, o próximo passo é objetivo
+              Trajetória boa é a que vira método na mesa dos outros
             </h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Se algo do que você leu aqui conversa com o momento da sua empresa, o próximo passo é
+              simples.
+            </p>
             <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <CTAButton
-                to="/diagnostico"
+                to="/consultoria"
                 size="lg"
-                trackingEvent="diagnostic_start"
                 trackingParams={{ cta_position: "sobre_cta" }}
               >
-                Fazer o AI Work Audit
+                Agendar sessão estratégica
               </CTAButton>
               <CTAButton
                 to="/contato"

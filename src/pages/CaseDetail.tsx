@@ -21,7 +21,7 @@ const CaseDetail = () => {
 
   return (
     <PageLayout
-      title={`${item.name} — case de implementação de IA`}
+      title={`${item.name} — case de projeto`}
       description={item.text}
       path={`/cases/${item.id}`}
       flush
@@ -131,9 +131,9 @@ const CaseDetail = () => {
       {/* CTA */}
       <CTASection
         title="Quero um resultado como esse"
-        description="O AI Work Audit mede a maturidade da sua empresa em 6 dimensões e devolve os 3 processos que você deveria automatizar primeiro."
-        ctaTo="/diagnostico"
-        ctaLabel="Quero um diagnóstico gratuito"
+        description="Conte o contexto do seu projeto. A gente começa pela Sessão Estratégica ou, se for engenharia de energia, direto pela 4WaTT."
+        ctaTo="/consultoria"
+        ctaLabel="Agendar sessão estratégica"
         secondaryTo="/cases"
         secondaryLabel="Ver todos os cases"
       />

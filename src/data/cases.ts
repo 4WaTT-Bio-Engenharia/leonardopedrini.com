@@ -1,6 +1,5 @@
 import logo4watt from "@/assets/logos/4watt.png";
 import logo4wEnergia from "@/assets/logos/4w-energia.png";
-import logoTraciona from "@/assets/logos/traciona-ai.png";
 import logoElectrolux from "@/assets/logos/electrolux.png";
 import logoTws from "@/assets/logos/tws-logo.png";
 import electroluxResultados from "@/assets/cases/electrolux/electrolux-economia-5m-leonardo.jpg";
@@ -38,13 +37,13 @@ export const cases: CaseItem[] = [
     id: "4watt",
     name: "4WaTT Bio Engenharia",
     short: "4WaTT",
-    sector: "Deeptech · bioenergia",
+    sector: "Engenharia · bioenergia",
     logo: logo4watt,
     site: "https://www.4watt.tech",
     siteLabel: "4watt.tech",
     owned: true,
-    text: "Planejamento estratégico, desenvolvimento de soluções físicas (deeptech) e soluções em IA: sistemas RAG, automação de processos e agentes virtuais para gestão, implantação de soluções de negócio e controladoria interna do andamento de projetos.",
-    tags: ["Planejamento estratégico", "RAG", "Agentes", "Automação", "Controladoria"],
+    text: "Da estratégia à operação: planejamento e condução de projetos de resíduos, biogás e biometano, com automação própria na gestão e na controladoria do andamento de cada projeto.",
+    tags: ["Planejamento estratégico", "Projetos de engenharia", "Automação", "Controladoria"],
   },
   {
     id: "4w-energia",
@@ -52,11 +51,11 @@ export const cases: CaseItem[] = [
     short: "4W Energia",
     sector: "Energia por assinatura",
     logo: logo4wEnergia,
-    site: "https://www.4wenergia.com.br",
-    siteLabel: "4wenergia.com.br",
+    site: "https://www.4wenergia.com",
+    siteLabel: "4wenergia.com",
     owned: true,
-    text: "Soluções em IA para leitura de dados e aplicação de data science no setor de energia. Sistemas RAG para evitar alucinações, com analisador automático de faturas e de dados de consumo.",
-    tags: ["Data Science", "RAG", "Análise de faturas", "Automação"],
+    text: "Modelo de negócio recorrente no setor de energia: leitura de dados e análise de consumo automatizadas para entregar resultado visível na fatura do cliente, mês após mês.",
+    tags: ["Modelo de negócio", "Data Science", "Análise de faturas", "Operação regulada"],
   },
   {
     id: "tws",
@@ -68,20 +67,8 @@ export const cases: CaseItem[] = [
     siteLabel: "twsadv.com.br",
     owned: false,
     note: NOTA_TERCEIROS,
-    text: "Automações personalizadas para o setor jurídico. IA generativa e RAG aplicados à validação do planejamento estratégico, além de skill customizada para o trabalho diário na construção de peças jurídicas nichadas em setores regulados.",
-    tags: ["Automação jurídica", "RAG", "IA generativa", "Skill customizada"],
-  },
-  {
-    id: "traciona-ai",
-    name: "Traciona AI",
-    short: "Traciona AI",
-    sector: "Inteligência de negócio",
-    logo: logoTraciona,
-    site: "https://www.tracionaai.com.br",
-    siteLabel: "tracionaai.com.br",
-    owned: true,
-    text: "IA generativa e data science aplicados a grandes volumes de dados para análise de mercado, estruturação do plano de negócio, modelo financeiro e automação dos processos gerenciais da companhia.",
-    tags: ["Data Science", "IA generativa", "Modelo financeiro", "Automação gerencial"],
+    text: "Validação do planejamento estratégico e automação do trabalho jurídico diário em setores regulados, com qualidade medida e fluxo de peças mais rápido.",
+    tags: ["Estratégia", "Automação jurídica", "Setores regulados", "Skill customizada"],
   },
   {
     id: "cmpg",
@@ -92,8 +79,8 @@ export const cases: CaseItem[] = [
     siteLabel: "@cmpg.advocacia",
     owned: false,
     note: NOTA_TERCEIROS,
-    text: "Soluções personalizadas para o setor jurídico. IA generativa e RAG para validação do planejamento estratégico e desenvolvimento do planejamento comercial, com skill customizada para construção diária de peças jurídicas em setores regulados.",
-    tags: ["Planejamento comercial", "RAG", "IA generativa", "Skill customizada"],
+    text: "Planejamento estratégico e comercial validados com dados, e rotina de produção de peças jurídicas mais ágil, sem perder o rigor técnico do escritório.",
+    tags: ["Planejamento comercial", "Estratégia", "Setores regulados", "Skill customizada"],
   },
   {
     id: "electrolux",
@@ -111,7 +98,7 @@ export const cases: CaseItem[] = [
       {
         src: electroluxResultados,
         alt: "Leonardo Pedrini apresentando o resultado financeiro do projeto na Electrolux, com impacto de R$ 5,6 milhões",
-        caption: "Apresentação dos resultados do workshop de melhoria contínua com IA: R$ 5,6 milhões em impacto financeiro.",
+        caption: "Apresentação dos resultados do workshop de melhoria contínua: R$ 5,6 milhões em impacto financeiro.",
       },
       {
         src: electroluxProcesso01,
