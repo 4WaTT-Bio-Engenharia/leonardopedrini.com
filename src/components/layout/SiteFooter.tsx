@@ -30,7 +30,7 @@ const columns: { title: string; links: { to: string; label: string }[] }[] = [
     links: [
       { to: "/sobre", label: "Sobre" },
       { to: "/metodo", label: "Método" },
-      { to: "/cases", label: "Cases" },
+      { to: "/empresas", label: "Empresas" },
       { to: "/insights", label: "Insights" },
       { to: "/newsletter", label: "Newsletter" },
     ],

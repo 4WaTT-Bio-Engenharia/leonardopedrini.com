@@ -214,8 +214,8 @@ const Metodo = () => (
       description="A Sessão Estratégica é onde o funil começa a rodar com o seu problema: até 2 horas, online ou presencial, e você sai com um plano objetivo."
       ctaTo="/consultoria"
       ctaLabel="Agendar sessão estratégica"
-      secondaryTo="/cases"
-      secondaryLabel="Ver os cases primeiro"
+      secondaryTo="/sobre"
+      secondaryLabel="Conhecer minha trajetória primeiro"
     />
   </PageLayout>
 );

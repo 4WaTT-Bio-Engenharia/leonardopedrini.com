@@ -8,16 +8,6 @@ import logoCachoeiraAlta from "@/assets/logos/cachoeira-alta.png";
 import logoCaixaCantada from "@/assets/logos/caixa-cantada.png";
 import logoJacoCoelho from "@/assets/logos/jaco-coelho.png";
 import logoAnaville from "@/assets/logos/anaville.png";
-import electroluxResultados from "@/assets/cases/electrolux/electrolux-economia-5m-leonardo.jpg";
-import electroluxProcesso01 from "@/assets/cases/electrolux/electrolux-processo-01.jpeg";
-import electroluxProcesso02 from "@/assets/cases/electrolux/electrolux-processo-02.jpeg";
-import electroluxProcesso03 from "@/assets/cases/electrolux/electrolux-processo-03.jpeg";
-
-export type CasePhoto = {
-  src: string;
-  alt: string;
-  caption?: string;
-};
 
 export type CaseItem = {
   id: string;
@@ -31,8 +21,6 @@ export type CaseItem = {
   tags: string[];
   owned: boolean;
   note?: string;
-  /** Fotos do projeto — quando presentes, o case ganha uma página de detalhe em /cases/:id. */
-  photos?: CasePhoto[];
 };
 
 export const NOTA_TERCEIROS =
@@ -92,69 +80,69 @@ export const cases: CaseItem[] = [
     id: "oab-goias",
     name: "OAB Goiás",
     short: "OAB GO",
-    sector: "Jurídico · institucional",
+    sector: "Engenharia · institucional",
     logo: logoOabGoias,
     owned: false,
     note: NOTA_TERCEIROS,
-    text: "Uma das maiores entidades de advocacia do país abrindo espaço para método: estruturação de processos e gestão orientada a dados na operação institucional.",
-    tags: ["Estratégia", "Gestão por dados", "Processos"],
+    text: "Cliente da 4WaTT em projeto de engenharia. A maior entidade de advocacia do estado confiando em engenharia séria para projeto sério.",
+    tags: ["Engenharia", "Projeto", "4WaTT"],
   },
   {
     id: "geolab",
     name: "Geolab Indústria Farmacêutica",
     short: "Geolab",
-    sector: "Indústria farmacêutica",
+    sector: "Indústria farmacêutica · energia",
     logo: logoGeolab,
     owned: false,
     note: NOTA_TERCEIROS,
-    text: "Indústria farmacêutica de operação complexa e alta exigência regulatória: melhoria de processos e automação da gestão para decidir com consistência.",
-    tags: ["Lean", "Automação", "Indústria"],
+    text: "Cliente de consultoria de energia. Indústria farmacêutica de alta exigência regulatória decidindo sobre energia com dados e método.",
+    tags: ["Consultoria de energia", "Indústria"],
   },
   {
     id: "cachoeira-alta",
     name: "Prefeitura de Cachoeira Alta",
     short: "Cachoeira Alta",
-    sector: "Gestão pública municipal",
+    sector: "Gestão pública · energia solar",
     logo: logoCachoeiraAlta,
     owned: false,
     note: NOTA_TERCEIROS,
-    text: "Administração municipal estruturando projetos e processos com o mesmo rigor que se exige do setor privado: planejamento, dados e execução.",
-    tags: ["Gestão pública", "Planejamento", "Projetos"],
+    text: "Cliente de estudo de viabilidade e estruturação de projeto de engenharia de usina solar. Gestão pública decidindo com número.",
+    tags: ["Estudo de viabilidade", "Usina solar", "Gestão pública"],
   },
   {
     id: "caixa-cantada",
     name: "Caixa Cantada",
     short: "Caixa Cantada",
-    sector: "Música · negócio criativo",
+    sector: "Estratégia · planejamento comercial",
     logo: logoCaixaCantada,
     site: "https://www.instagram.com/caixacantadaoficial/",
     siteLabel: "@caixacantadaoficial",
     owned: false,
     note: NOTA_TERCEIROS,
-    text: "Projeto criativo que vive de audiência e constância: estratégia e automação tratando o negócio da música com a mesma seriedade de qualquer operação.",
-    tags: ["Estratégia", "Automação", "Operação criativa"],
+    text: "Planejamento estratégico e comercial elaborado em 2022. A execução seguiu o plano e os resultados vieram conforme o previsto.",
+    tags: ["Planejamento estratégico", "Comercial", "Execução"],
   },
   {
     id: "jaco-coelho",
     name: "Jacó Coelho Advogados",
     short: "Jacó Coelho",
-    sector: "Jurídico",
+    sector: "Energia solar · jurídico",
     logo: logoJacoCoelho,
     owned: false,
     note: NOTA_TERCEIROS,
-    text: "Escritório de advocacia com nome próprio: estratégia comercial estruturada e rotina jurídica mais ágil, sem perder o rigor técnico da profissão.",
-    tags: ["Estratégia comercial", "Automação jurídica", "Processos"],
+    text: "A usina solar do escritório projetada e estruturada com a 4WaTT. Energia limpa gerando resultado real para a operação.",
+    tags: ["Energia solar", "Engenharia", "4WaTT"],
   },
   {
     id: "anaville",
     name: "Condomínio Anaville",
     short: "Anaville",
-    sector: "Gestão condominial",
+    sector: "Gestão condominial · engenharia",
     logo: logoAnaville,
     owned: false,
     note: NOTA_TERCEIROS,
-    text: "Gestão condominial conduzida com dados e transparência: condôminos informados e decisões de assembleia baseadas em número, não em impressão.",
-    tags: ["Gestão", "Dados", "Transparência"],
+    text: "Cliente de consultoria de engenharia na estruturação do projeto, realizado pela 4WaTT. Condomínio decidindo com técnica, não com impressão.",
+    tags: ["Consultoria de engenharia", "Estruturação de projeto", "4WaTT"],
   },
   {
     id: "electrolux",
@@ -166,29 +154,7 @@ export const cases: CaseItem[] = [
     siteLabel: "electrolux.com.br",
     owned: false,
     note: NOTA_TERCEIROS,
-    text: "Mapeamento de processos com Lean Manufacturing avançado (Value Stream Mapping), projetos de engenharia para desenvolvimento de ligas metálicas especiais aplicadas a máquinas de processo, desenvolvimento de máquina especial para fabricação de mangueiras hidráulicas e uso de data science e automação digital para redução de custos — redução superior a R$ 5 milhões em projetos de engenharia e supply chain.",
+    text: "Mapeamento de processos com Lean Manufacturing avançado (Value Stream Mapping), projetos de engenharia para desenvolvimento de ligas metálicas especiais aplicadas a máquinas de processo, desenvolvimento de máquina especial para fabricação de mangueiras hidráulicas e uso de data science e automação digital para redução de custos: redução superior a R$ 5 milhões em projetos de engenharia e supply chain.",
     tags: ["Lean / VSM", "Engenharia de materiais", "Máquina especial", "Data Science"],
-    photos: [
-      {
-        src: electroluxResultados,
-        alt: "Leonardo Pedrini apresentando o resultado financeiro do projeto na Electrolux, com impacto de R$ 5,6 milhões",
-        caption: "Apresentação dos resultados do workshop de melhoria contínua: R$ 5,6 milhões em impacto financeiro.",
-      },
-      {
-        src: electroluxProcesso01,
-        alt: "Mapa de fluxo de valor (VSM) da linha de produção, com os fluxos de laterais, caixa interna, contra portas e corpo de porta",
-        caption: "VSM da linha: fluxos de material mapeados com tempo de ciclo, distância percorrida e restrições por operação.",
-      },
-      {
-        src: electroluxProcesso02,
-        alt: "Detalhe do VSM mostrando as etapas de pré-montagem e espumação de gabinetes, com problemas identificados em post-its",
-        caption: "Problemas de processo identificados etapa a etapa — da pré-montagem à espumação dos gabinetes.",
-      },
-      {
-        src: electroluxProcesso03,
-        alt: "VSM da planta de Curitiba com o planejamento semanal congelado, reuniões de PCP e indicadores de tempo de ciclo",
-        caption: "VSM Curitiba: planejamento semanal, reuniões de PCP e indicadores de ciclo por operação (corte, laterais, portas).",
-      },
-    ],
   },
 ];

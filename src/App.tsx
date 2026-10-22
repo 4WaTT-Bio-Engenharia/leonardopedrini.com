@@ -10,8 +10,6 @@ import ScrollTracker from "@/components/ScrollTracker";
 const Index = lazy(() => import("./pages/Index"));
 const Sobre = lazy(() => import("./pages/Sobre"));
 const Metodo = lazy(() => import("./pages/Metodo"));
-const Cases = lazy(() => import("./pages/Cases"));
-const CaseDetail = lazy(() => import("./pages/CaseDetail"));
 const Consultoria = lazy(() => import("./pages/Consultoria"));
 const Empresas = lazy(() => import("./pages/Empresas"));
 const Insights = lazy(() => import("./pages/Insights"));
@@ -52,8 +50,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/metodo" element={<Metodo />} />
-            <Route path="/cases" element={<Cases />} />
-            <Route path="/cases/:id" element={<CaseDetail />} />
             <Route path="/consultoria" element={<Consultoria />} />
             <Route path="/empresas" element={<Empresas />} />
             <Route path="/insights" element={<Insights />} />

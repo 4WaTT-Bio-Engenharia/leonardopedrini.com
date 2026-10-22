@@ -31,7 +31,8 @@ const LogoStrip = ({ label = "Quem confia no meu trabalho" }: LogoStripProps) =>
       </Reveal>
       <Reveal delay={200}>
         <p className="mx-auto mt-5 max-w-xl text-center text-base leading-relaxed text-papel/55">
-          Indústria, advocacia, gestão pública, música e condomínios. O método é o mesmo em qualquer operação.
+          Indústria, advocacia, gestão pública e condomínios. Engenharia, energia e estratégia. O
+          método é o mesmo em qualquer operação.
         </p>
       </Reveal>
 

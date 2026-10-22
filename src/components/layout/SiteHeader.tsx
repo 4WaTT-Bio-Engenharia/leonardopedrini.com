@@ -65,13 +65,13 @@ const grupos: Grupo[] = [
 
 const navLinks = [
   { to: "/metodo", label: "Método" },
-  { to: "/cases", label: "Cases" },
+  { to: "/empresas", label: "Empresas" },
   { to: "/insights", label: "Insights" },
   { to: "/sobre", label: "Sobre" },
 ];
 
 /** Rotas cujo topo é navy escuro — header pode nascer transparente sobre o hero. */
-const DARK_HERO_ROUTES = ["/", "/metodo", "/cases", "/consultoria", "/empresas"];
+const DARK_HERO_ROUTES = ["/", "/metodo", "/consultoria", "/empresas"];
 
 const SiteHeader = () => {
   const [scrolled, setScrolled] = useState(false);

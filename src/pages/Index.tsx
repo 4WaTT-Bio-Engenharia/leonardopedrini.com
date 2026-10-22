@@ -7,8 +7,6 @@ import CTAButton from "@/components/conversion/CTAButton";
 import CTASection from "@/components/conversion/CTASection";
 import NewsletterSection from "@/components/sections/NewsletterSection";
 import LogoStrip from "@/components/sections/LogoStrip";
-import CaseCard from "@/components/sections/CaseCard";
-import { cases } from "@/data/cases";
 import Reveal from "@/components/motion/Reveal";
 import CountUp from "@/components/motion/CountUp";
 import TiltCard from "@/components/motion/TiltCard";
@@ -714,36 +712,7 @@ const Index = () => (
       </div>
     </section>
 
-    {/* 9. Carrossel: cases */}
-    <section className="border-b border-border">
-      <div className="container py-24 md:py-32">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Cases"
-            title="Resultado em campo, não em slide de apresentação"
-            description="Projetos de engenharia, estratégia e tecnologia entregues. Nas minhas empresas e em clientes."
-          />
-        </Reveal>
-        <Reveal delay={160}>
-          <div className="mt-14">
-            <CarouselShell
-              items={cases}
-              itemClassName="md:basis-1/2 xl:basis-1/3"
-              renderItem={(c) => <CaseCard item={c} />}
-            />
-          </div>
-        </Reveal>
-        <Reveal delay={220}>
-          <div className="mt-12">
-            <CTAButton to="/cases" variant="outline" trackingParams={{ cta_position: "home_cases" }}>
-              Ver todos os cases
-            </CTAButton>
-          </div>
-        </Reveal>
-      </div>
-    </section>
-
-    {/* 10. Reconhecimentos */}
+    {/* 9. Reconhecimentos */}
     <section className="border-b border-border">
       <div className="container py-24 md:py-32">
         <Reveal>
