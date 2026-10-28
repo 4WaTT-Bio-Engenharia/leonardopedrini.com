@@ -22,10 +22,12 @@ const inputCls =
 interface LeadCaptureFormProps {
   /** Identificador da origem do lead (ex.: "lp_curso", "footer_diagnostico"). */
   source: string;
-  /** Rota de sucesso — default "/obrigado". */
+  /** Rota de sucesso : default "/obrigado". */
   successRedirect?: string;
   /** Texto do botão. */
   submitLabel?: string;
+  /** Objetivo registrado junto ao lead. */
+  objective?: string;
   /** Mostrar campo cargo (default true). */
   showCargo?: boolean;
   /** Mostrar campo empresa (default true). */
@@ -34,7 +36,7 @@ interface LeadCaptureFormProps {
 }
 
 /**
- * Formulário genérico de captura — submete para a mesma tabela `leads`
+ * Formulário genérico de captura : submete para a mesma tabela `leads`
  * usada pelo LeadForm da home. Carrega UTMs (first/last touch) e dispara
  * lead_start (primeiro foco) e lead_submit (envio bem-sucedido).
  */
@@ -42,6 +44,7 @@ const LeadCaptureForm = ({
   source,
   successRedirect = "/obrigado",
   submitLabel = "Quero o diagnóstico gratuito",
+  objective = "Diagnóstico gratuito",
   showCargo = true,
   showEmpresa = true,
   className,
@@ -88,7 +91,7 @@ const LeadCaptureForm = ({
         empresa: parsed.data.empresa || null,
         site: [parsed.data.cargo, utmNote].filter(Boolean).join(" · ") || null,
         segmento: source,
-        objetivo: "Diagnóstico gratuito",
+        objetivo: objective,
       });
       if (error) throw error;
 

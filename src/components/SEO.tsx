@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 
 /**
- * SEO por página via document.head — sem dependências externas.
+ * SEO por página via document.head : sem dependências externas.
  * Gerencia title, meta description, canonical, OpenGraph, Twitter Card
  * e JSON-LD (Schema.org: Person / Organization / Course / FAQ etc.).
  */
 
-export const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined) || "https://www.lvpedrini.com.br";
-export const SITE_NAME = "L.V. Pedrini";
+export const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined) || "https://www.leonardopedrini.com";
+export const SITE_NAME = "Leonardo Pedrini";
 
 export interface SEOProps {
   title: string;
@@ -16,7 +16,7 @@ export interface SEOProps {
   path?: string;
   /** Imagem OG absoluta ou relativa ao domínio. */
   image?: string;
-  /** og:type — default "website". */
+  /** og:type : default "website". */
   type?: string;
   /** Um ou mais objetos JSON-LD (Schema.org). */
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
@@ -58,7 +58,8 @@ export const injectJsonLd = (schemas: Record<string, unknown>[]): (() => void) =
 
 const SEO = ({ title, description, path = "/", image, type = "website", jsonLd, noindex }: SEOProps) => {
   useEffect(() => {
-    const fullTitle = title.includes(SITE_NAME) ? title : `${title} · ${SITE_NAME}`;
+    const hasSiteName = title.includes("Leonardo") && title.includes("Pedrini");
+    const fullTitle = hasSiteName ? title : `${title} · ${SITE_NAME}`;
     const url = `${SITE_URL}${path}`;
     const ogImage = image ? (image.startsWith("http") ? image : `${SITE_URL}${image}`) : `${SITE_URL}/og-image.png`;
 

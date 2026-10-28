@@ -1,0 +1,732 @@
+# REFORMULAÇÃO DA HOMEPAGE PESSOAL DE LEONARDO PEDRINI
+
+## 1. PAPEL DA IA
+
+Atue como uma equipe sênior de estratégia de marca pessoal, UX/UI Design, desenvolvimento React/TypeScript, SEO e comunicação B2B.
+
+Sua missão é reformular a homepage de Leonardo Pedrini, preservando a identidade visual e a base técnica existentes, mas tornando o website um portfólio pessoal que transmita experiência, confiança e capacidade de execução.
+
+O site deve parecer uma apresentação autêntica de um profissional experiente, não uma página institucional genérica nem uma landing page publicitária.
+
+A prioridade é comunicar com clareza quem é Leonardo, como ele trabalha, quais problemas ajuda a resolver, o que já realizou e quais empresas fundou.
+
+## 2. OBJETIVO
+
+**Domínio oficial e definitivo:** https://www.leonardopedrini.com/
+
+Transformar a homepage em um portfólio pessoal com capacidade de atrair clientes interessados em:
+
+- Consultoria em energia.
+- Planejamento, desenvolvimento e implantação de usinas.
+- Energia solar.
+- Armazenamento de energia com BESS.
+- Projetos de biogás, biometano e aproveitamento de resíduos.
+- Otimização de processos.
+- Gestão de projetos e operações.
+- Avaliação de viabilidade de investimentos.
+- Melhorias técnicas, operacionais e financeiras.
+
+A experiência de navegação deve gerar confiança por meio de informações reais, exemplos práticos, uma trajetória profissional bem apresentada e conteúdo técnico compreensível.
+
+Não utilizar frases de efeito para substituir evidências.
+
+### Mensagem central
+
+**A engenharia é um instrumento para tomar decisões mais seguras, reduzir riscos, melhorar a gestão e buscar redução de custos.**
+
+Leonardo trabalha na conexão entre conhecimento técnico, gestão e visão de negócios.
+
+Não apresentar a engenharia como finalidade isolada ou como garantia absoluta de resultados.
+
+O visitante deve entender que o valor está na capacidade de analisar problemas, avaliar alternativas e conduzir projetos com responsabilidade.
+
+---
+
+## 3. IDENTIDADE E POSICIONAMENTO
+
+### Nome profissional
+
+**Leonardo Pedrini**
+
+Nunca utilizar o prefixo "Eng." na apresentação profissional, navbar, hero, assinatura, títulos de páginas ou metadados.
+
+A formação em engenharia poderá ser mencionada naturalmente na biografia, no histórico profissional e nas qualificações.
+
+### Perfil
+
+Leonardo Pedrini é engenheiro de formação, empreendedor e executivo com experiência em projetos de energia, engenharia, gestão e desenvolvimento de negócios.
+
+É fundador e CEO da 4WaTT e participa de empresas ligadas a energia, tecnologia e soluções empresariais.
+
+Combina conhecimento técnico com visão econômica e gestão para avaliar empreendimentos, coordenar equipes e melhorar processos.
+
+### Experiência informada
+
+Os seguintes indicadores foram fornecidos como base de trabalho:
+
+- Mais de 200 projetos de engenharia.
+- Mais de 2 GW de potência somada em projetos.
+- Mais de R$ 5 bilhões em investimentos associados ao histórico de projetos.
+
+Validar o escopo e a atribuição de cada indicador antes de publicar.
+
+Deixar claro quando os resultados decorrerem de equipes ou empresas das quais Leonardo participou.
+
+### Posicionamento desejado
+
+O leitor deve perceber alguém que:
+
+1. Conhece os desafios reais de projetos e operações.
+2. Entende que decisões técnicas afetam diretamente o dinheiro investido.
+3. Sabe avaliar riscos, custos e alternativas.
+4. Tem experiência com projetos complexos e equipes multidisciplinares.
+5. Não promete resultados sem conhecer o problema.
+6. Consegue explicar assuntos complexos de forma simples.
+
+Não construir a autoridade por meio de adjetivos como extraordinário, visionário, revolucionário ou referência incontestável.
+
+A experiência deve falar por si.
+
+---
+
+## 4. PÚBLICO-ALVO
+
+A comunicação deve atender prioritariamente aos seguintes perfis.
+
+### 4.1. Produtores rurais
+
+Este é um público prioritário, não secundário.
+
+Considerar produtores rurais, proprietários de fazendas, pecuaristas, cooperativas e empreendedores do agronegócio.
+
+Possíveis necessidades:
+
+- Reduzir despesas com energia.
+- Avaliar a geração própria de eletricidade.
+- Aproveitar dejetos e resíduos para produzir energia.
+- Estudar oportunidades com biogás e biometano.
+- Avaliar o uso de energia solar e armazenamento em baterias.
+- Entender se determinado investimento realmente compensa.
+- Planejar e acompanhar a implantação de um empreendimento.
+
+A linguagem destinada ao produtor rural deve ser especialmente objetiva.
+
+O visitante não precisa conhecer termos de engenharia para compreender o que está sendo oferecido.
+
+Exemplo de abordagem:
+
+"Antes de investir em uma usina ou em um sistema de energia, é importante entender quanto custa, como funciona e se faz sentido para sua propriedade."
+
+### 4.2. Empresários e indústrias
+
+Pessoas interessadas em eficiência, melhoria de processos, redução de desperdícios, investimentos em energia e gestão operacional.
+
+### 4.3. Investidores e desenvolvedores de projetos
+
+Profissionais que precisam avaliar viabilidade, riscos, investimentos, implantação e desempenho de empreendimentos.
+
+### 4.4. Empresas de energia e engenharia
+
+Organizações que buscam apoio técnico, gestão, estudos especializados e parceiros para projetos.
+
+### 4.5. Empreendedores
+
+Profissionais que precisam estruturar negócios, melhorar processos ou tomar decisões relevantes de gestão.
+
+Não transformar todas as áreas de atuação em ofertas comerciais iguais. Adequar a mensagem ao problema de cada perfil.
+
+---
+
+## 5. DIRETRIZES OBRIGATÓRIAS DE COMUNICAÇÃO
+
+### 5.1. Linguagem humanizada
+
+Escrever como Leonardo falaria com um empresário ou produtor rural durante uma conversa profissional.
+
+Características obrigatórias:
+
+- Linguagem natural.
+- Frases curtas ou de tamanho moderado.
+- Clareza acima de sofisticação.
+- Tom pessoal e profissional.
+- Explicações práticas.
+- Confiança sem arrogância.
+- Poucos adjetivos.
+- Uso da primeira pessoa quando apropriado.
+- Conclusão ou ideia principal apresentada logo no início.
+- Exemplos concretos sempre que disponíveis.
+
+O leitor deve sentir que está conhecendo uma pessoa real.
+
+Não apresentar Leonardo como alguém que resolve tudo sozinho. Reconhecer equipes e parceiros quando houver participação coletiva.
+
+### 5.2. Proibição de travessões
+
+**Não utilizar travessões nos textos visíveis do website.**
+
+Isso inclui:
+
+- Headline.
+- Subtítulos.
+- Biografia.
+- Cards.
+- Estudos de caso.
+- Chamadas para ação.
+- Textos do blog.
+- Descrições de empresas.
+- Metadados públicos.
+
+Utilizar pontos, vírgulas, dois-pontos ou reescrever a frase para manter uma construção natural.
+
+Também evitar construções artificiais baseadas em oposições repetitivas, como "não é apenas X, é Y".
+
+### 5.3. Proibição de linguagem artificial
+
+Não usar frases vazias, genéricas ou logicamente inconsistentes.
+
+Exemplos do que evitar:
+
+"Transformando desafios em oportunidades."
+
+"Revolucionando o futuro da energia."
+
+"Unindo inovação e excelência para entregar resultados extraordinários."
+
+"Cada projeto é uma jornada de transformação."
+
+"Soluções completas para qualquer desafio."
+
+"Garantindo retorno sobre o investimento."
+
+"Eliminando todos os riscos do empreendimento."
+
+"Construindo um amanhã mais sustentável."
+
+Não afirmar que determinada tecnologia será economicamente vantajosa sem analisar o contexto.
+
+Não afirmar que um projeto de energia reduz custos automaticamente.
+
+Não prometer segurança absoluta, economia garantida, resultados financeiros certos ou ausência de riscos.
+
+### 5.4. Vocabulário simples
+
+Substituir expressões muito técnicas quando houver uma alternativa compreensível.
+
+Exemplos:
+
+- Usar "investimento" em vez de "CAPEX" nos textos públicos.
+- Usar "tempo de retorno do investimento" quando o leitor não precisar conhecer o termo "payback".
+- Preferir "redução de custos" a expressões como "otimização econômico-financeira".
+- Explicar BESS como "armazenamento de energia em baterias" na primeira menção.
+- Explicar soluções de biogás de modo que um produtor rural consiga compreender sua aplicação.
+
+Termos técnicos podem ser utilizados quando forem necessários, mas nunca para criar aparência de sofisticação.
+
+### 5.5. Teste de autenticidade
+
+Antes de aprovar qualquer texto, realizar quatro verificações:
+
+1. Leonardo falaria essa frase naturalmente?
+2. A afirmação tem significado concreto?
+3. Existe uma base verificável para o que está sendo afirmado?
+4. O cliente entenderia por que aquela informação é relevante?
+
+Se uma resposta for negativa, reescrever ou remover a frase.
+
+---
+
+## 6. ARQUITETURA DA HOMEPAGE
+
+### SEÇÃO 1. HERO
+
+Apresentar Leonardo Pedrini com uma fotografia profissional real.
+
+O hero deve destacar:
+
+- Nome.
+- Proposta de valor.
+- Principais áreas de atuação.
+- Dois CTAs.
+- Um design simples e premium.
+
+#### Direção de copy recomendada
+
+**Nome:**
+Leonardo Pedrini
+
+**Headline:**
+"Engenharia e gestão para decisões mais seguras em projetos de energia."
+
+**Subtítulo:**
+"Ajudo empresas, investidores e produtores rurais a avaliar, planejar e conduzir projetos de energia, com atenção aos riscos, aos custos e aos resultados."
+
+O texto é uma proposta inicial. Refinar conforme a experiência comprovada e os serviços efetivamente disponíveis.
+
+**CTA principal:**
+"Conversar sobre um projeto"
+
+**CTA secundário:**
+"Conhecer minhas empresas"
+
+O CTA secundário deve levar diretamente à seção de empresas na própria homepage, utilizando uma âncora funcional.
+
+Não substituir o CTA secundário por "Conhecer minha experiência".
+
+O portfólio de projetos continuará acessível pela navbar e durante a navegação.
+
+### SEÇÃO 2. EXPERIÊNCIA EM NÚMEROS
+
+Apresentar os indicadores profissionais de maneira discreta.
+
+Usar, após validação:
+
+- 200+ projetos de engenharia.
+- 2 GW+ de potência somada.
+- R$ 5 bi+ em investimentos relacionados a projetos.
+
+Usar a fonte IBM Plex Mono nos indicadores numéricos.
+
+Explicar as métricas quando necessário para evitar que o visitante interprete projetos coletivos como realizações exclusivamente pessoais.
+
+### SEÇÃO 3. COMO POSSO AJUDAR
+
+Título sugerido:
+
+"Onde posso ajudar no seu projeto"
+
+Apresentar seis áreas:
+
+**1. Energia e investimentos**
+
+Avaliação de alternativas, estudos de viabilidade, planejamento e decisões técnicas relacionadas a projetos de energia.
+
+**2. Construção e implantação de usinas**
+
+Planejamento, engenharia, coordenação e gestão de empreendimentos, dentro do escopo de atuação comprovado.
+
+**3. Energia solar e baterias**
+
+Avaliação de projetos solares, oportunidades de armazenamento e aplicações de sistemas BESS.
+
+**4. Biogás, biometano e resíduos**
+
+Estudos e projetos de aproveitamento energético de resíduos, incluindo aplicações rurais, agroindustriais e industriais.
+
+**5. Otimização de processos**
+
+Identificação de gargalos, redução de desperdícios, organização de atividades e melhoria operacional.
+
+**6. Gestão de projetos**
+
+Planejamento, controle de custos, acompanhamento de prazos, gestão de riscos e coordenação técnica.
+
+Cada card deve explicar primeiro o problema que o cliente enfrenta e depois a contribuição possível.
+
+Evitar usar a tecnologia como argumento de venda por si só.
+
+### SEÇÃO 4. PORTFÓLIO DE PROJETOS
+
+Título sugerido:
+
+"Projetos e experiências"
+
+Criar cards para apresentar projetos reais e relevantes.
+
+Cada estudo de caso deve abordar:
+
+- Qual era o problema.
+- O que precisava ser decidido ou executado.
+- Qual foi a participação de Leonardo.
+- Como o trabalho foi conduzido.
+- Quais resultados podem ser comprovados.
+
+Priorizar projetos com aplicação concreta em energia, biogás, biometano, usinas, processos e gestão.
+
+Utilizar fotografias e informações autorizadas.
+
+Não criar estudos de caso fictícios.
+
+Se os projetos ainda não estiverem disponíveis para publicação, preparar a estrutura, mas não exibir conteúdo simulado.
+
+### SEÇÃO 5. MINHA FORMA DE TRABALHAR
+
+Título sugerido:
+
+"Como trabalho"
+
+Explicar o método de forma simples e realista.
+
+Usar como referência:
+
+1. Entender o problema.
+2. Analisar os dados e as condições reais.
+3. Avaliar alternativas e riscos.
+4. Planejar o trabalho e acompanhar a execução.
+5. Verificar os resultados.
+
+Explicar que as etapas dependem do tipo de projeto contratado.
+
+Não transformar a metodologia em uma promessa de resultados garantidos.
+
+### SEÇÃO 6. SOBRE MIM
+
+Criar uma apresentação profissional e pessoal de Leonardo Pedrini.
+
+Priorizar a trajetória e as experiências, não a quantidade de títulos acadêmicos.
+
+Direção inicial de copy:
+
+"Minha formação é em engenharia mecânica e engenharia de energia. Ao longo da minha trajetória, trabalhei com projetos industriais, energia e gestão, experiências que me fizeram olhar para a engenharia também pelo lado do negócio.
+
+Hoje, além de atuar tecnicamente, participo da gestão de empresas e de projetos que exigem planejamento, boas decisões e trabalho em equipe.
+
+Gosto de entender o problema antes de propor uma solução. É dessa forma que procuro conduzir meu trabalho."
+
+Tratar o texto como rascunho editorial, sujeito a conferência e aprovação de Leonardo.
+
+A apresentação deve ser humana, sem parecer um currículo acadêmico ou um discurso institucional.
+
+### SEÇÃO 7. MINHAS EMPRESAS
+
+**Esta seção é obrigatória e deve receber o CTA secundário do hero.**
+
+Título sugerido:
+
+"Empresas que fundei e negócios dos quais participo"
+
+A seção deve mostrar a atuação empreendedora de Leonardo de forma objetiva.
+
+Incluir as empresas e iniciativas confirmadas, com seus vínculos corretos.
+
+#### 4WaTT
+
+Engenharia e projetos relacionados a resíduos, biogás, biometano e energia.
+
+#### 4W Energia
+
+Atuação empresarial no setor de energia, conforme escopo confirmado.
+
+#### BESS4YOU
+
+Iniciativa relacionada ao armazenamento de energia em baterias.
+
+#### Carbon4you
+
+Iniciativa relacionada ao mercado de carbono, conforme escopo e vínculo confirmados.
+
+#### Traciona AI
+
+**Website oficial:**
+https://www.tracionaai.com.br/
+
+Empresa de tecnologia e software voltada à gestão de negócios.
+
+Consultar seu website para confirmar as soluções atuais antes de redigir a descrição final.
+
+Apresentar a Traciona AI como parte da trajetória empreendedora de Leonardo, sem tratá-la como uma empresa de engenharia ou energia.
+
+A presença da Traciona AI nesta seção é obrigatória.
+
+### Organização visual das empresas
+
+Criar cards com:
+
+- Logotipo oficial.
+- Nome.
+- Breve explicação do que faz.
+- Papel de Leonardo, quando confirmado.
+- Link oficial.
+
+Não atribuir a Leonardo funções societárias ou executivas que não tenham sido verificadas.
+
+Não apresentar todas as empresas como se oferecessem serviços de engenharia.
+
+### SEÇÃO 8. BLOG
+
+**Título no menu de navegação: "Blog"**
+
+A navbar deve ter acesso explícito ao blog pessoal de Leonardo.
+
+O blog deve funcionar como espaço para compartilhar experiências, decisões, aprendizados e análises sobre:
+
+- Energia.
+- Biogás e biometano.
+- Energia solar.
+- BESS.
+- Projetos e investimentos.
+- Aplicações de energia no agronegócio.
+- Gestão de projetos.
+- Otimização de processos.
+- Empreendedorismo.
+
+Na homepage, apresentar três artigos recentes ou selecionados, quando existirem.
+
+Os títulos devem ser claros, específicos e compatíveis com buscas reais.
+
+Não criar publicações fictícias.
+
+### Requisitos técnicos do blog
+
+1. Inspecionar se já existe uma rota ou aplicação de blog.
+2. Reutilizar a estrutura existente quando estiver adequada.
+3. Caso o blog ainda não exista, criar ou especificar uma rota funcional, preferencialmente `/blog`, respeitando a arquitetura do projeto.
+4. Adicionar "Blog" na navbar desktop e mobile.
+5. Preservar URLs de artigos publicados.
+6. Prever página de listagem, páginas individuais e metadados adequados.
+7. Não adicionar links que direcionem a páginas inexistentes.
+8. Manter consistência visual com a homepage.
+
+O blog deve reforçar a experiência profissional, sem se transformar em um canal de publicidade genérica.
+
+### SEÇÃO 9. CONTATO
+
+Título sugerido:
+
+"Vamos conversar sobre seu projeto?"
+
+Texto:
+
+"Se você está pensando em investir em energia, construir uma usina ou melhorar um processo, pode me contar um pouco sobre o que precisa. Assim, conseguimos entender se posso ajudar e qual seria o melhor caminho."
+
+Disponibilizar os canais profissionais confirmados.
+
+Priorizar uma experiência simples, sem formulários extensos.
+
+---
+
+## 7. NAVBAR OBRIGATÓRIA
+
+Organizar o menu desktop seguindo esta estrutura:
+
+**Leonardo Pedrini | Início | Atuação | Projetos | Sobre mim | Empresas | Blog | Contato**
+
+O nome profissional deve funcionar como link para a homepage.
+
+Requisitos:
+
+- "Início" retorna ao topo.
+- "Atuação" direciona às especialidades.
+- "Projetos" direciona ao portfólio.
+- "Sobre mim" direciona à apresentação pessoal.
+- "Empresas" direciona à seção de empresas.
+- "Blog" abre a página do blog.
+- "Contato" direciona à área de contato.
+
+Em dispositivos móveis, adaptar a navegação para preservar legibilidade e acessibilidade.
+
+Não omitir o blog.
+
+Não utilizar o prefixo "Eng." na marca ou no menu.
+
+---
+
+## 8. IDENTIDADE VISUAL
+
+A base existente utiliza o conceito visual Navy & Champagne.
+
+Preservar essa direção, desde que a auditoria confirme sua aplicação no projeto.
+
+Fontes existentes:
+
+- Montserrat.
+- IBM Plex Mono.
+
+Recomendações:
+
+- Visual limpo e profissional.
+- Navegação simples.
+- Espaçamento equilibrado.
+- Conteúdo fácil de ler.
+- Fotografias reais.
+- Números destacados com discrição.
+- Cards consistentes.
+- Animações moderadas.
+- Excelente experiência mobile.
+
+Não criar uma estética artificial de luxo.
+
+A identidade visual deve apoiar a confiança, não competir com o conteúdo.
+
+---
+
+## 9. REQUISITOS TÉCNICOS
+
+### 9.1. Arquitetura
+
+O `index.html` fornecido indica uma aplicação com ponto de entrada em `/src/main.tsx`.
+
+Antes de implementar:
+
+1. Inspecionar o projeto completo.
+2. Identificar os componentes atuais.
+3. Verificar estilos e dependências.
+4. Localizar navbar, homepage, blog e rodapé.
+5. Determinar o que pode ser reutilizado.
+6. Criar a implementação com alterações controladas.
+
+Não recriar o site do zero sem necessidade.
+
+### 9.2. Domínio oficial
+
+Utilizar exclusivamente como domínio principal:
+
+**https://www.leonardopedrini.com/**
+
+O domínio anterior `www.lvpedrini.com.br` não deve permanecer como URL canônica.
+
+Atualizar, conforme a estrutura efetiva do projeto:
+
+- Canonical.
+- Open Graph URL.
+- Open Graph Image.
+- Twitter Cards.
+- Schema.org.
+- Sitemap.
+- Links absolutos internos.
+- Metadados de SEO.
+
+Se outros domínios estiverem ativos, recomendar redirecionamento permanente para o domínio oficial.
+
+Não presumir que o redirecionamento já existe.
+
+### 9.3. SEO
+
+Priorizar buscas alinhadas à atividade profissional:
+
+- Leonardo Pedrini.
+- Consultoria em energia.
+- Projetos de biogás.
+- Projetos de biometano.
+- Engenharia de usinas.
+- Consultoria em energia solar.
+- Armazenamento de energia BESS.
+- Energia para produtores rurais.
+- Gestão de projetos de energia.
+- Otimização de processos.
+
+Elaborar metadados claros e naturais.
+
+Não inserir listas artificiais de palavras-chave em textos destinados aos usuários.
+
+### 9.4. Acessibilidade e desempenho
+
+Verificar:
+
+- Layout responsivo.
+- Contraste.
+- Navegação por teclado.
+- Semântica HTML.
+- Hierarquia de títulos.
+- Imagens otimizadas.
+- Funcionamento de formulários.
+- Links internos e externos.
+- Experiência mobile.
+- Carregamento de fontes.
+- SEO e indexabilidade da aplicação React.
+
+Preservar os recursos existentes que estejam funcionando corretamente.
+
+---
+
+## 10. REGRAS DE INTEGRIDADE
+
+É proibido:
+
+- Inventar clientes.
+- Inventar projetos.
+- Inventar depoimentos.
+- Inventar resultados de economia.
+- Criar indicadores não comprovados.
+- Apresentar fotografias genéricas como obras executadas.
+- Afirmar que investimentos são seguros ou lucrativos sem análise.
+- Prometer retorno financeiro.
+- Usar expressões genéricas para ocultar falta de informação.
+- Confundir os serviços pessoais de Leonardo com os serviços de suas empresas.
+- Alterar o domínio oficial definido.
+- Excluir o blog da navegação.
+- Omitir a Traciona AI da seção de empresas.
+- Usar travessões nos conteúdos do site.
+
+Se uma informação não estiver disponível, informar a pendência em vez de inventá-la.
+
+As informações do arquivo "Quem Sou.md" devem servir como referência de trajetória e posicionamento. As decisões explícitas deste prompt prevalecem quando houver divergência, sobretudo no nome profissional, público-alvo, domínio e empresas que devem aparecer.
+
+---
+
+## 11. PROCESSO DE EXECUÇÃO
+
+### Etapa 1. Diagnóstico
+
+Auditar a aplicação e identificar o que precisa mudar.
+
+### Etapa 2. Posicionamento
+
+Refinar a mensagem central para comunicar segurança técnica, qualidade da gestão, controle de investimentos e oportunidades de redução de custos.
+
+### Etapa 3. Arquitetura de conteúdo
+
+Reorganizar as seções, a navegação e os CTAs conforme os requisitos.
+
+### Etapa 4. Redação
+
+Escrever todos os textos da homepage em português brasileiro, seguindo as regras de naturalidade e precisão.
+
+Não entregar apenas títulos ou exemplos genéricos.
+
+### Etapa 5. Design
+
+Atualizar o layout, preservar o conceito visual e melhorar a apresentação dos projetos, empresas e informações profissionais.
+
+### Etapa 6. Desenvolvimento
+
+Implementar as alterações no código disponível, sem publicar diretamente em produção.
+
+### Etapa 7. Validação
+
+Testar a aplicação e revisar o conteúdo.
+
+Realizar uma última leitura específica para eliminar:
+
+- Travessões.
+- Linguagem artificial.
+- Exageros comerciais.
+- Termos técnicos desnecessários.
+- Afirmações sem fundamento.
+- Promessas de resultados.
+- Repetições.
+- Frases que não seriam usadas em uma conversa profissional real.
+
+---
+
+## 12. ENTREGÁVEIS
+
+Apresentar:
+
+1. Diagnóstico técnico e de conteúdo da homepage atual.
+2. Nova proposta de posicionamento pessoal.
+3. Três opções de headline principal.
+4. Arquitetura completa da homepage.
+5. Textos finais de todas as seções.
+6. Nova estrutura da navbar, incluindo Blog.
+7. Componente de empresas, incluindo Traciona AI.
+8. Direção visual e componentes de interface.
+9. Implementação no código existente, quando houver acesso.
+10. Checklist de testes e pendências para publicação.
+
+### Critério final de aprovação
+
+Ao terminar de navegar, um potencial cliente deverá compreender:
+
+- Quem é Leonardo Pedrini.
+- Onde sua experiência pode ajudar.
+- Como ele pensa e trabalha.
+- Que tipos de projetos e negócios fazem parte de sua trajetória.
+- Quais empresas estão ligadas a ele.
+- Onde encontrar seus conteúdos técnicos.
+- Como entrar em contato.
+
+A página deve transmitir confiança sem precisar dizer que Leonardo é confiável.
+
+A comunicação deve ser simples o suficiente para um produtor rural compreender e consistente o suficiente para que um investidor ou executivo queira conhecer melhor seu trabalho.
+
+**Princípio final: mostrar experiência, explicar com simplicidade e deixar que os fatos sustentem a credibilidade.**

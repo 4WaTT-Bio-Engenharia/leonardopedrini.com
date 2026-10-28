@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.lvpedrini.com.br/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.lvpedrini.com.br/sobre</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.lvpedrini.com.br/metodo</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.lvpedrini.com.br/consultoria</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.lvpedrini.com.br/empresas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.lvpedrini.com.br/insights</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.lvpedrini.com.br/newsletter</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.lvpedrini.com.br/contato</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.lvpedrini.com.br/privacidade</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
-  <url><loc>https://www.lvpedrini.com.br/termos</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://www.leonardopedrini.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.leonardopedrini.com/sobre</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.leonardopedrini.com/metodo</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.leonardopedrini.com/consultoria</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.leonardopedrini.com/empresas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.leonardopedrini.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.leonardopedrini.com/insights</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.leonardopedrini.com/newsletter</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.leonardopedrini.com/contato</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.leonardopedrini.com/privacidade</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://www.leonardopedrini.com/termos</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>

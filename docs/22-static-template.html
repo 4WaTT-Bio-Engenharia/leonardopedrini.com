@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <!-- TEMPLATE: substituir title, description, canonical, OG, Twitter e JSON-LD em cada página. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Título único da página | Leonardo Pedrini</title>
+  <meta name="description" content="Descrição natural e específica da página, com aproximadamente 150 caracteres.">
+  <meta name="author" content="Leonardo Pedrini">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0E233A">
+  <link rel="canonical" href="https://www.leonardopedrini.com/caminho/">
+
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Leonardo Pedrini">
+  <meta property="og:url" content="https://www.leonardopedrini.com/caminho/">
+  <meta property="og:title" content="Título único da página | Leonardo Pedrini">
+  <meta property="og:description" content="Descrição natural e específica da página, com aproximadamente 150 caracteres.">
+  <meta property="og:image" content="https://www.leonardopedrini.com/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Leonardo Pedrini, engenharia e projetos de energia">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Título único da página | Leonardo Pedrini">
+  <meta name="twitter:description" content="Descrição natural e específica da página, com aproximadamente 150 caracteres.">
+  <meta name="twitter:image" content="https://www.leonardopedrini.com/img/og-image.png">
+
+  <link rel="icon" href="/img/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js" defer></script>
+
+  <!-- Usar @graph para reunir WebPage, BreadcrumbList e schemas específicos da página. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.leonardopedrini.com/caminho/#pagina",
+        "url": "https://www.leonardopedrini.com/caminho/",
+        "name": "Título único da página | Leonardo Pedrini",
+        "description": "Descrição natural e específica da página.",
+        "inLanguage": "pt-BR",
+        "isPartOf": { "@id": "https://www.leonardopedrini.com/#site" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.leonardopedrini.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Nome da página", "item": "https://www.leonardopedrini.com/caminho/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- HEADER PADRÃO: marcar a página atual com aria-current="page". -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Leonardo Pedrini, início">
+        <span class="brand-mark" aria-hidden="true">LP</span>
+        <span>Leonardo Pedrini</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <a href="/">Início</a>
+        <a href="/atuacao/">Atuação</a>
+        <a href="/projetos/">Projetos</a>
+        <a href="/sobre/">Sobre mim</a>
+        <a href="/empresas/">Empresas</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contato/">Contato</a>
+      </nav>
+      <details class="nav-mobile">
+        <summary aria-label="Abrir ou fechar menu"><span class="menu-icon" aria-hidden="true"></span></summary>
+        <nav class="mobile-panel" aria-label="Navegação móvel">
+          <a href="/">Início</a>
+          <a href="/atuacao/">Atuação</a>
+          <a href="/projetos/">Projetos</a>
+          <a href="/sobre/">Sobre mim</a>
+          <a href="/empresas/">Empresas</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contato/">Contato</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Breadcrumbs visíveis devem repetir a ordem do BreadcrumbList. -->
+    <nav class="breadcrumbs" aria-label="Navegação estrutural">
+      <div class="container">
+        <ol>
+          <li><a href="/">Início</a></li>
+          <li aria-current="page">Nome da página</li>
+        </ol>
+      </div>
+    </nav>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Seção</p>
+        <h1>Título principal da página</h1>
+        <p class="lead">Introdução direta, factual e escrita em linguagem simples.</p>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="secao-exemplo">
+      <div class="container">
+        <h2 id="secao-exemplo">Primeira seção</h2>
+        <p class="section-description">Conteúdo principal presente no HTML, sem depender de JavaScript.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PADRÃO: não adicionar CNPJ, e-mail, telefone ou URLs não confirmados. -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">LP</span><span>Leonardo Pedrini</span></a>
+          <p>Engenharia e gestão para avaliar, planejar e conduzir projetos de energia, com atenção aos riscos, aos custos e aos resultados.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/leonardo-vieira-pedrini-712b0b105/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> em nova aba</span></a>
+            <a href="https://instagram.com/lvpedrini" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> em nova aba</span></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-title">Navegação</p>
+          <ul class="footer-links">
+            <li><a href="/">Início</a></li>
+            <li><a href="/sobre/">Sobre mim</a></li>
+            <li><a href="/projetos/">Projetos</a></li>
+            <li><a href="/empresas/">Empresas</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Atuação</p>
+          <ul class="footer-links">
+            <li><a href="/atuacao/consultoria-energia/">Energia e investimentos</a></li>
+            <li><a href="/atuacao/usinas/">Implantação de usinas</a></li>
+            <li><a href="/atuacao/energia-solar-bess/">Solar e baterias</a></li>
+            <li><a href="/atuacao/biogas-biometano/">Biogás e biometano</a></li>
+            <li><a href="/atuacao/otimizacao-processos/">Otimização de processos</a></li>
+            <li><a href="/atuacao/gestao-projetos/">Gestão de projetos</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Informações</p>
+          <ul class="footer-links">
+            <li><a href="/contato/">Contato</a></li>
+            <li><a href="/privacidade/">Privacidade</a></li>
+            <li><a href="/termos/">Termos de uso</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© Leonardo Pedrini. Todos os direitos reservados.</span>
+        <span>Engenharia, energia e gestão.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

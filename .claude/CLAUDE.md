@@ -40,7 +40,7 @@ implementação com processo, KPI e resultado medido.
 
 **Live app:** https://lvpedrini-mentor-boost.lovable.app (build via Lovable,
 sincroniza com este repo/branch `main`).
-**Domínio público alvo:** https://www.lvpedrini.com.br (`VITE_SITE_URL`).
+**Domínio público alvo:** https://www.leonardopedrini.com (`VITE_SITE_URL`).
 
 ## Posicionamento e tagline
 

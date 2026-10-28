@@ -9,7 +9,7 @@ const sections = [
           O controlador dos dados pessoais coletados neste site é Leonardo Vieira Pedrini
           (pessoa jurídica em regularização — razão social e CNPJ serão publicados nesta página).
           Para exercer qualquer direito ou tirar dúvidas sobre tratamento de dados, escreva para o
-          encarregado pelo canal: <strong>privacidade@lvpedrini.com.br</strong> (endereço em
+          encarregado pelo canal: <strong>privacidade@leonardopedrini.com</strong> (endereço em
           configuração — até sua ativação, use o formulário de <a href="/contato" className="text-primary underline underline-offset-2">contato</a>).
         </p>
       </>

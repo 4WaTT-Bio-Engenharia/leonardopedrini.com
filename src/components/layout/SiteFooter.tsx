@@ -31,6 +31,7 @@ const columns: { title: string; links: { to: string; label: string }[] }[] = [
       { to: "/sobre", label: "Sobre" },
       { to: "/metodo", label: "Método" },
       { to: "/empresas", label: "Empresas" },
+      { to: "/blog", label: "Blog" },
       { to: "/insights", label: "Insights" },
       { to: "/newsletter", label: "Newsletter" },
     ],
@@ -88,12 +89,12 @@ const SiteFooter = () => {
           <div className="lg:col-span-4">
             <img
               src={logoBranca}
-              alt="L.V. Pedrini"
+              alt="Leonardo Pedrini"
               className="h-12 w-12"
             />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-papel/55">
-              Engenheiro, fundador e CEO da 4WaTT. Transformo problema difícil em negócio que dá
-              resultado, e ajudo outros líderes a fazer o mesmo.
+              Engenharia e gestão para avaliar, planejar e conduzir projetos de energia, com atenção
+              aos riscos, aos custos e aos resultados.
             </p>
 
             <form onSubmit={handleNewsletter} className="mt-10">
@@ -146,7 +147,7 @@ const SiteFooter = () => {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="https://linkedin.com/in/lvpedrini"
+                href="https://www.linkedin.com/in/leonardo-vieira-pedrini-712b0b105/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -193,7 +194,7 @@ const SiteFooter = () => {
 
         <div className="mt-16 flex flex-col gap-3 border-t border-papel/10 pt-7 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-papel/35">
-            © {new Date().getFullYear()} L.V. Pedrini — Todos os direitos reservados.
+            © {new Date().getFullYear()} Leonardo Pedrini | Todos os direitos reservados.
           </p>
           <p className="font-mono text-xs text-papel/35">CNPJ 00.000.000/0001-00 {/* placeholder */}</p>
         </div>
