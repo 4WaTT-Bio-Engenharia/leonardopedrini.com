@@ -72,7 +72,11 @@
 
       dots.forEach(function (dot) {
         dot.addEventListener("click", function () {
-          showSlide(Number(dot.getAttribute("data-slide")));
+          var requestedSlide = Number(dot.getAttribute("data-slide"));
+          if (requestedSlide >= 0 && requestedSlide < slides.length) {
+            showSlide(requestedSlide);
+            startRotation();
+          }
         });
       });
 
