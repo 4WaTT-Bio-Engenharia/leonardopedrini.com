@@ -4,7 +4,7 @@
 
 ## Perfil
 
-Leonardo Pedrini tem formação em engenharia mecânica e engenharia de energia. Sua trajetória reúne experiência na indústria, projetos de energia, avaliação de investimentos, coordenação de equipes e gestão de empresas. É fundador e CEO da 4WaTT e fundador da 4W Energia e da Traciona AI. Também participa das iniciativas BESS4YOU e Carbon4you.
+Leonardo Pedrini tem formação em engenharia mecânica e engenharia de energia. Sua trajetória reúne experiência na indústria, projetos de energia, avaliação de investimentos, coordenação de equipes e gestão de empresas. É fundador e CEO da 4WaTT e fundador da 4W Energia e da Traciona AI. Também participa da iniciativa BESS4YOU.
 
 ## Áreas de atuação
 
@@ -36,13 +36,14 @@ Leonardo Pedrini tem formação em engenharia mecânica e engenharia de energia.
 - [Biogás na propriedade rural: o que avaliar antes de investir](https://www.leonardopedrini.com/blog/biogas-produtor-rural/): resíduos, dejetos, uso do gás, operação e investimento.
 - [Armazenamento de energia em baterias: o que é BESS e quando faz sentido](https://www.leonardopedrini.com/blog/bess-armazenamento-energia/): conceito, aplicações e critérios de avaliação.
 - [Como avaliar a viabilidade de um projeto de energia](https://www.leonardopedrini.com/blog/viabilidade-projeto-energia/): premissas, custos, riscos e informações técnicas.
+- [Será que vamos parar de ver o lixo como problema e passar a vê-lo como oportunidade?](https://www.leonardopedrini.com/blog/lixo-problema-ou-oportunidade/): aproveitamento de resíduos, biometano, gaseificação e execução de projetos.
+- [Transformando resíduos em energia: o poder do biogás](https://www.leonardopedrini.com/blog/transformando-residuos-em-energia/): digestão anaeróbia, aproveitamento do biogás e destinação do digestato.
 
 ## Empresas e iniciativas
 
 - [4WaTT](https://www.4watt.tech): engenharia e projetos relacionados a resíduos, biogás, biometano e energia. Leonardo é fundador e CEO.
 - [4W Energia](https://www.4wenergia.com.br): atuação empresarial no setor de energia. Leonardo é fundador.
 - BESS4YOU: iniciativa relacionada ao armazenamento de energia em baterias. Nenhuma URL oficial foi confirmada para publicação.
-- Carbon4you: iniciativa relacionada ao mercado de carbono. Nenhuma URL oficial foi confirmada para publicação.
 - [Traciona AI](https://www.tracionaai.com.br): SaaS de gestão para pequenos negócios, com CRM, financeiro e marketing com IA integrada. Leonardo é fundador.
 
 ## Perfis profissionais
