@@ -67,6 +67,33 @@ O `robots.txt` permite rastreamento geral e declara explicitamente GPTBot, OAI-S
 6. Configure o certificado e o domínio `www.leonardopedrini.com`. Envie o sitemap ao Google Search Console e ao Bing Webmaster Tools.
 7. Após o deploy, teste canonical, status HTTP, Open Graph, JSON-LD, menu por teclado, formulário, sitemap, robots e layout móvel.
 
+## Correção de 404 em subdiretórios na Vercel
+
+O arquivo `vercel.json` na raiz força o projeto a funcionar como site estático, sem framework e sem build. A propriedade `outputDirectory` está definida como `.` porque a raiz contém os HTMLs públicos. Essa declaração explícita é importante quando existe uma pasta `public/` legada, já que a detecção automática do preset Other pode escolher essa pasta em vez da raiz.
+
+A configuração também usa `cleanUrls: true` e `trailingSlash: true`. O servidor estático da Vercel resolve diretórios que contêm `index.html`, portanto `/blog/` usa `blog/index.html` e `/sobre/` usa `sobre/index.html`. Não deve existir um rewrite genérico de SPA que envie todas as rotas para o `index.html` da home. Rewrites individuais não são necessários para a resolução nativa desses arquivos.
+
+### Conferência no dashboard
+
+1. Abra o projeto em Vercel e acesse `Project Settings`, depois `General` e `Build and Deployment`.
+2. Em `Framework Preset`, selecione `Other`.
+3. Em `Build Command`, deixe o campo vazio com `Override` ativado se a interface permitir essa edição. O valor `buildCommand: null` do `vercel.json` deve prevalecer no deployment.
+4. Em `Install Command`, deixe o campo vazio ou sem comando personalizado. O valor `installCommand: null` do arquivo evita depender do pacote React legado.
+5. Em `Output Directory`, informe `.` com `Override` ativado se o dashboard exigir confirmação manual. Não use `dist` nem `public`.
+6. Em `Root Directory`, confirme que o projeto aponta para a raiz do repositório, onde estão `index.html`, `vercel.json`, `blog/`, `sobre/` e as demais pastas.
+7. Salve as alterações e faça um novo deploy da branch de produção. Um deploy antigo não muda retroativamente quando o dashboard é editado.
+8. Na inspeção do deployment, confirme que não houve execução de `vite build` e que os arquivos estáticos da raiz foram incluídos.
+9. Teste em janela anônima `/`, `/blog/`, `/sobre/`, `/projetos/`, `/empresas/`, `/contato/`, `/atuacao/` e uma página filha, como `/atuacao/usinas/`. Teste também `/blog/index.html`, que deve ser normalizado pelas regras de URL limpa e barra final.
+10. Se ainda houver 404, verifique nos logs qual diretório de saída foi usado e se o deploy realmente contém o commit com `vercel.json`. Não adicione rewrite de SPA como tentativa de correção.
+
+Referências oficiais consultadas: `https://vercel.com/docs/project-configuration/vercel-json` e `https://vercel.com/docs/builds/configure-a-build`.
+
+## Blog editorial com filtros progressivos
+
+A listagem do blog tem artigo em destaque, capas, categorias, tempo de leitura e filtros com contadores. No mobile, os cards usam lista horizontal com capa lateral. Em telas maiores, a apresentação muda para grade editorial assimétrica.
+
+Os filtros são aprimoramento progressivo em `js/main.js`. Sem JavaScript, todos os artigos continuam visíveis e os chips funcionam como âncoras para a listagem. O estado vazio de energia solar só aparece quando o filtro correspondente é ativado com JavaScript.
+
 ## Formulário: configuração obrigatória
 
 Os formulários da home e de `/contato/` têm o action placeholder:

@@ -178,4 +178,65 @@
       updateServiceCarousel();
     }
   }
+
+  var blogExplorer = document.querySelector("[data-blog-explorer]");
+
+  if (blogExplorer) {
+    var blogFilters = Array.prototype.slice.call(blogExplorer.querySelectorAll("[data-filter]"));
+    var blogItems = Array.prototype.slice.call(blogExplorer.querySelectorAll("[data-blog-item]"));
+    var blogStatus = blogExplorer.querySelector("[data-blog-status]");
+    var blogEmpty = blogExplorer.querySelector("[data-blog-empty]");
+    var blogShowAll = blogExplorer.querySelector("[data-blog-show-all]");
+
+    function filterBlog(theme) {
+      var visibleItems = 0;
+
+      blogItems.forEach(function (item) {
+        var themes = (item.getAttribute("data-tema") || "").split(/\s+/);
+        var visible = theme === "todos" || themes.indexOf(theme) !== -1;
+        item.hidden = !visible;
+        if (visible) visibleItems += 1;
+      });
+
+      blogFilters.forEach(function (filter) {
+        var active = filter.getAttribute("data-filter") === theme;
+        filter.classList.toggle("is-active", active);
+        filter.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+
+      if (blogStatus) {
+        if (visibleItems === 0) blogStatus.textContent = "Nenhum artigo publicado neste tema";
+        else if (visibleItems === 1) blogStatus.textContent = "1 artigo disponível";
+        else blogStatus.textContent = visibleItems + " artigos disponíveis";
+      }
+      if (blogEmpty) blogEmpty.hidden = visibleItems !== 0;
+    }
+
+    if (blogFilters.length && blogItems.length && blogStatus && blogEmpty) {
+      blogExplorer.classList.add("is-enhanced");
+      blogFilters.forEach(function (filter) {
+        filter.setAttribute("role", "button");
+        filter.addEventListener("click", function (event) {
+          event.preventDefault();
+          filterBlog(filter.getAttribute("data-filter"));
+        });
+        filter.addEventListener("keydown", function (event) {
+          if (event.key === " ") {
+            event.preventDefault();
+            filter.click();
+          }
+        });
+      });
+
+      if (blogShowAll) {
+        blogShowAll.addEventListener("click", function (event) {
+          event.preventDefault();
+          filterBlog("todos");
+          blogFilters[0].focus();
+        });
+      }
+
+      filterBlog("todos");
+    }
+  }
 })();
